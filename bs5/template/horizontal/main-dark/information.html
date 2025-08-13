@@ -1,0 +1,2779 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<link rel="icon" href="../../../images/favicon.ico">
+
+	<title>EV Admin - Dashboard</title>
+
+	<!-- Vendors Style-->
+	<link rel="stylesheet" href="../src/css/vendors_css.css">
+
+	<!-- Style-->
+	<link rel="stylesheet" href="../src/css/horizontal-menu.css">
+	<link rel="stylesheet" href="../src/css/style.css">
+	<link rel="stylesheet" href="../src/css/skin_color.css">
+	<link rel="stylesheet" href="../src/css/custom.css">
+
+</head>
+<style>
+	.media-hover {
+		cursor: pointer;
+		transition: background-color 0.2s ease;
+	}
+
+	.media-hover:hover {
+		background-color: rgba(0, 0, 0, 0.07);
+		/* 7% black transparent */
+	}
+</style>
+
+<style>
+	/* Apply only for md and above (≥768px) */
+	@media (min-width: 768px) {
+	  .h-md-27 {
+		height: 27px;
+	  }
+	}
+  </style>
+  <style>
+	/* Apply only for md and above (≥768px) */
+	@media (max-width: 1200px) {
+	  .gap-md-20 {
+		margin-bottom: 20px;
+	  }
+	}
+  </style>
+<style>
+	/* Make the chart fill its parent width and have a responsive height */
+	.chart-wrap {
+		display: flex;
+		justify-content: center;
+		/* keeps it centered horizontally */
+		align-items: center;
+		/* keeps it centered vertically in the wrap */
+		width: 100%;
+	}
+
+	#activity_chart {
+		width: 100%;
+		/* Responsive height: min 220px, ideal 280px, max 360px */
+		height: clamp(220px, 35vw, 360px);
+	}
+</style>
+
+<body class="layout-top-nav dark-skin theme-primary fixed">
+
+	<div class="wrapper">
+		<div id="loader"></div>
+
+		<header class="main-header" style="z-index: 99999;">
+			<div class="inside-header">
+				<div class="d-flex align-items-center logo-box justify-content-start">
+					<!-- Logo -->
+					<a href="index.html" class="logo">
+						<!-- logo-->
+						<div class="logo-lg">
+							<span class="light-logo"><img src="../../../images/logo-white-text.png" alt="logo"></span>
+							<span class="dark-logo"><img src="../../../images/logo-white-text.png" alt="logo"></span>
+						</div>
+					</a>
+				</div>
+				<!-- Header Navbar -->
+				<nav class="navbar navbar-static-top">
+					<!-- Sidebar toggle button-->
+					<div class="app-menu">
+						<ul class="header-megamenu nav">
+							<li class="btn-group d-md-inline-flex d-none">
+								<div class="app-menu">
+									<div class="search-bx mx-5">
+										<form>
+											<div class="input-group">
+												<input type="search" class="form-control" placeholder="Search">
+												<div class="input-group-append">
+													<button class="btn" type="submit" id="button-addon3"><i
+															class="icon-Search"><span class="path1"></span><span
+																class="path2"></span></i></button>
+												</div>
+											</div>
+										</form>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+
+					<div class="navbar-custom-menu r-side">
+						<ul class="nav navbar-nav">
+							<li class="dropdown notifications-menu btn-group">
+								<label class="switch">
+									<a class="waves-effect waves-light btn-primary-light svg-bt-icon">
+										<input type="checkbox" data-mainsidebarskin="toggle"
+											id="toggle_left_sidebar_skin">
+										<span class="switch-on"><i data-feather="moon"></i></span>
+										<span class="switch-off"><i data-feather="sun"></i></span>
+									</a>
+								</label>
+							</li>
+							<li class="dropdown notifications-menu btn-group">
+								<a href="#" class="waves-effect waves-light btn-primary-light svg-bt-icon"
+									data-bs-toggle="dropdown" title="Notifications">
+									<i data-feather="bell"></i>
+									<div class="pulse-wave"></div>
+								</a>
+								<ul class="dropdown-menu animated bounceIn">
+									<li class="header">
+										<div class="p-20">
+											<div class="flexbox">
+												<div>
+													<h4 class="mb-0 mt-0">Notifications</h4>
+												</div>
+												<div>
+													<a href="#" class="text-danger">Clear All</a>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li>
+										<!-- inner menu: contains the actual data -->
+										<ul class="menu sm-scrol">
+											<li>
+												<a href="#">
+													<i class="fa fa-users text-info"></i> Curabitur id eros quis nunc
+													suscipit blandit.
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													<i class="fa fa-warning text-warning"></i> Duis malesuada justo eu
+													sapien elementum, in semper diam posuere.
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													<i class="fa fa-users text-danger"></i> Donec at nisi sit amet
+													tortor commodo porttitor pretium a erat.
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													<i class="fa fa-shopping-cart text-success"></i> In gravida mauris
+													et nisi
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													<i class="fa fa-user text-danger"></i> Praesent eu lacus in libero
+													dictum fermentum.
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													<i class="fa fa-user text-primary"></i> Nunc fringilla lorem
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													<i class="fa fa-user text-success"></i> Nullam euismod dolor ut quam
+													interdum, at scelerisque ipsum imperdiet.
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li class="footer">
+										<a href="component_notification.html">View all</a>
+									</li>
+								</ul>
+							</li>
+							<li class="btn-group nav-item d-xl-inline-flex d-none">
+								<a href="#" class="waves-effect waves-light nav-link btn-primary-light svg-bt-icon"
+									title="" id="live-chat">
+									<i data-feather="message-circle"></i>
+								</a>
+							</li>
+
+							<li class="btn-group d-xl-inline-flex d-none">
+								<a href="#"
+									class="waves-effect waves-light nav-link btn-primary-light svg-bt-icon dropdown-toggle"
+									data-bs-toggle="dropdown">
+									<img class="rounded-circle" src="../../../images/svg-icon/usa.svg" alt="">
+								</a>
+								<div class="dropdown-menu">
+									<a class="dropdown-item my-5" href="#"><img class="w-20 rounded me-10"
+											src="../../../images/svg-icon/usa.svg" alt=""> English</a>
+									<a class="dropdown-item my-5" href="#"><img class="w-20 rounded me-10"
+											src="../../../images/svg-icon/spain.svg" alt=""> Spanish</a>
+									<a class="dropdown-item my-5" href="#"><img class="w-20 rounded me-10"
+											src="../../../images/svg-icon/ger.svg" alt=""> German</a>
+									<a class="dropdown-item my-5" href="#"><img class="w-20 rounded me-10"
+											src="../../../images/svg-icon/jap.svg" alt=""> Japanese</a>
+									<a class="dropdown-item my-5" href="#"><img class="w-20 rounded me-10"
+											src="../../../images/svg-icon/fra.svg" alt=""> French</a>
+								</div>
+							</li>
+
+							<li class="btn-group nav-item d-xl-inline-flex d-none">
+								<a href="#" data-provide="fullscreen"
+									class="waves-effect waves-light nav-link btn-primary-light svg-bt-icon"
+									title="Full Screen">
+									<i data-feather="maximize"></i>
+								</a>
+							</li>
+
+							<!-- User Account-->
+							<li class="dropdown user user-menu">
+								<a href="#"
+									class="waves-effect waves-light dropdown-toggle w-auto l-h-12 bg-transparent p-0 no-shadow"
+									title="User" data-bs-toggle="modal" data-bs-target="#quick_user_toggle">
+									<img src="../../../images/avatar/avatar-13.png"
+										class="avatar rounded-circle bg-primary-light h-40 w-40" alt="">
+								</a>
+							</li>
+							<!-- Control Sidebar Toggle Button -->
+							<li class="btn-group nav-item d-xl-inline-flex d-none">
+								<a href="#" data-toggle="control-sidebar" title="Setting"
+									class="waves-effect waves-light nav-link btn-primary-light svg-bt-icon me-0">
+									<i data-feather="sliders"></i>
+								</a>
+							</li>
+
+						</ul>
+					</div>
+				</nav>
+			</div>
+		</header>
+
+		<nav class="main-nav" role="navigation" style="z-index: 99999;">
+
+			<!-- Mobile menu toggle button (hamburger/x icon) -->
+			<input id="main-menu-state" type="checkbox" />
+			<label class="main-menu-btn" for="main-menu-state">
+				<span class="main-menu-btn-icon"></span> Toggle main menu visibility
+			</label>
+
+			<!-- Sample menu definition -->
+			<ul id="main-menu" class="sm sm-blue">
+				<li><a href="index.html"><i data-feather="home"><span class="path1"></span><span
+								class="path2"></span></i>Dashboard</a></li>
+				<li><a href="information.html"><i data-feather="info"><span class="path1"></span><span
+								class="path2"></span></i>Performance Analytics</a></li>
+				<li><a href="#"><i data-feather="headphones"></i>User
+						Management</a>
+					<ul>
+						<li><a href="extra_app_ticket.html"><i class="icon-Commit"><span class="path1"></span><span
+										class="path2"></span></i>Overview</a></li>
+						<li><a href="contact_app_chat.html"><i class="icon-Commit"><span class="path1"></span><span
+										class="path2"></span></i>Customers</a></li>
+						<li><a href="contact_app_chat.html"><i class="icon-Commit"><span class="path1"></span><span
+										class="path2"></span></i>Enterprise partners</a></li>
+						<li><a href="contact_app_chat.html"><i class="icon-Commit"><span class="path1"></span><span
+										class="path2"></span></i>Technicians</a></li>
+						<li><a href="contact_app_chat.html"><i class="icon-Commit"><span class="path1"></span><span
+										class="path2"></span></i>Staff Users</a></li>
+					</ul>
+				</li>
+				<li><a href="management.html"><i data-feather="list"><span class="path1"></span><span
+								class="path2"></span></i>Roles & Permissions</a>
+				</li>
+				<li><a href="#"><i data-feather="book"><span class="path1"></span><span class="path2"></span></i>Loyalty
+						Points & Reward</a>
+					<ul>
+						<li><a href="booking.html"><i class="icon-Commit"><span class="path1"></span><span
+										class="path2"></span></i>Admin Loyalty Dashboard</a></li>
+						<li><a href="booking.html"><i class="icon-Commit"><span class="path1"></span><span
+										class="path2"></span></i>Customers Loyalty Management</a></li>
+						<li><a href="booking.html"><i class="icon-Commit"><span class="path1"></span><span
+										class="path2"></span></i>Rewards Catalog Management</a></li>
+						<li><a href="booking.html"><i class="icon-Commit"><span class="path1"></span><span
+										class="path2"></span></i>Redemption Requests Management</a></li>
+						<li><a href="booking.html"><i class="icon-Commit"><span class="path1"></span><span
+										class="path2"></span></i>Loyalty Settings</a></li>
+					</ul>
+				</li>
+
+				<li><a href="#"><i data-feather="home"><span class="path1"></span><span
+								class="path2"></span></i>Ecommerce Management</a>
+					<ul>
+						<li><a href="booking.html"><i class="icon-Commit"><span class="path1"></span><span
+										class="path2"></span></i>Product & category Management</a></li>
+						<li><a href="booking.html"><i class="icon-Commit"><span class="path1"></span><span
+										class="path2"></span></i>Category Management</a></li>
+						<li><a href="booking.html"><i class="icon-Commit"><span class="path1"></span><span
+										class="path2"></span></i>Product Moderation Queue</a></li>
+						<li><a href="booking.html"><i class="icon-Commit"><span class="path1"></span><span
+										class="path2"></span></i>Order & Fulfillment Management</a></li>
+						<li><a href="booking.html"><i class="icon-Commit"><span class="path1"></span><span
+										class="path2"></span></i>Financial & Revenue Management</a></li>
+						<li><a href="booking.html"><i class="icon-Commit"><span class="path1"></span><span
+										class="path2"></span></i>Delivery Method Management</a></li>
+						<li><a href="booking.html"><i class="icon-Commit"><span class="path1"></span><span
+										class="path2"></span></i>Audit and Activity Management</a></li>
+					</ul>
+				</li>
+				<li><a href="#"><i data-feather="home"><span class="path1"></span><span class="path2"></span></i>Booking
+						Management</a>
+					<ul>
+						<li><a href="booking.html"><i class="icon-Commit"><span class="path1"></span><span
+										class="path2"></span></i>Booking Dashboard</a></li>
+						<li><a href="booking.html"><i class="icon-Commit"><span class="path1"></span><span
+										class="path2"></span></i>Monitoring</a></li>
+						<li><a href="booking.html"><i class="icon-Commit"><span class="path1"></span><span
+										class="path2"></span></i>Booking Policy Settings</a></li>
+						<li><a href="booking.html"><i class="icon-Commit"><span class="path1"></span><span
+										class="path2"></span></i>Session Logs</a></li>
+					</ul>
+				</li>
+				<li><a href="#"><i data-feather="home"><span class="path1"></span><span class="path2"></span></i>Station
+						Management</a>
+					<ul>
+						<li><a href="booking.html"><i class="icon-Commit"><span class="path1"></span><span
+										class="path2"></span></i>Stations</a></li>
+						<li><a href="booking.html"><i class="icon-Commit"><span class="path1"></span><span
+										class="path2"></span></i>Stations Monitoring</a></li>
+						<li><a href="booking.html"><i class="icon-Commit"><span class="path1"></span><span
+										class="path2"></span></i>Station Alert</a></li>
+						<li><a href="booking.html"><i class="icon-Commit"><span class="path1"></span><span
+										class="path2"></span></i>Station Assignment</a></li>
+					</ul>
+				</li>
+				<li><a href="#"><i data-feather="home"><span class="path1"></span><span class="path2"></span></i>Kiosk
+						Management</a>
+					<ul>
+						<li><a href="booking.html"><i class="icon-Commit"><span class="path1"></span><span
+										class="path2"></span></i>Kiosk Overview</a></li>
+						<li><a href="booking.html"><i class="icon-Commit"><span class="path1"></span><span
+										class="path2"></span></i>Kiosk Monitoring</a></li>
+						<li><a href="booking.html"><i class="icon-Commit"><span class="path1"></span><span
+										class="path2"></span></i>Service management</a></li>
+					</ul>
+				</li>
+				<li><a href="#"><i data-feather="home"><span class="path1"></span><span class="path2"></span></i>Explore
+						Service Management</a>
+					<ul>
+						<li><a href="booking.html"><i class="icon-Commit"><span class="path1"></span><span
+										class="path2"></span></i>Admin Explore Services Management</a></li>
+						<li><a href="booking.html"><i class="icon-Commit"><span class="path1"></span><span
+										class="path2"></span></i>Partner Services Management</a></li>
+						<li><a href="booking.html"><i class="icon-Commit"><span class="path1"></span><span
+										class="path2"></span></i>Category & Filter Settings</a></li>
+						<li><a href="booking.html"><i class="icon-Commit"><span class="path1"></span><span
+										class="path2"></span></i>Content Approvals & Moderation</a></li>
+						<li><a href="booking.html"><i class="icon-Commit"><span class="path1"></span><span
+										class="path2"></span></i>Services Analytics & Report</a></li>
+					</ul>
+				</li>
+
+
+				<li><a href="#"><i data-feather="home"><span class="path1"></span><span
+								class="path2"></span></i>Revenue</a>
+					<ul>
+						<li><a href="booking.html"><i class="icon-Commit"><span class="path1"></span><span
+										class="path2"></span></i>Revenue Analytics</a></li>
+						<li><a href="booking.html"><i class="icon-Commit"><span class="path1"></span><span
+										class="path2"></span></i>Charging</a></li>
+						<li><a href="booking.html"><i class="icon-Commit"><span class="path1"></span><span
+										class="path2"></span></i>Advertisement</a></li>
+						<li><a href="booking.html"><i class="icon-Commit"><span class="path1"></span><span
+										class="path2"></span></i>Subscription</a></li>
+						<li><a href="booking.html"><i class="icon-Commit"><span class="path1"></span><span
+										class="path2"></span></i>Ecommerce</a></li>
+						<li><a href="booking.html"><i class="icon-Commit"><span class="path1"></span><span
+										class="path2"></span></i>Refund Management</a></li>
+					</ul>
+				</li>
+				<li><a href="#"><i data-feather="home"><span class="path1"></span><span
+								class="path2"></span></i>Inventory Management</a>
+					<ul>
+						<li><a href="booking.html"><i class="icon-Commit"><span class="path1"></span><span
+										class="path2"></span></i>Inventory Overview</a></li>
+					</ul>
+				</li>
+				<li><a href="#"><i data-feather="home"><span class="path1"></span><span
+								class="path2"></span></i>Advertisement Management</a>
+					<ul>
+						<li><a href="booking.html"><i class="icon-Commit"><span class="path1"></span><span
+										class="path2"></span></i>Advertisement Dashboard</a></li>
+						<li><a href="booking.html"><i class="icon-Commit"><span class="path1"></span><span
+										class="path2"></span></i>Advertisement Management</a></li>
+						<li><a href="booking.html"><i class="icon-Commit"><span class="path1"></span><span
+										class="path2"></span></i>Ad Insights</a></li>
+						<li><a href="booking.html"><i class="icon-Commit"><span class="path1"></span><span
+										class="path2"></span></i>Rejected Advertisements</a></li>
+						<li><a href="booking.html"><i class="icon-Commit"><span class="path1"></span><span
+										class="path2"></span></i>Advertisement Pricing Settings</a></li>
+					</ul>
+				</li>
+				<li><a href="#"><i data-feather="home"><span class="path1"></span><span
+								class="path2"></span></i>Ticketing and Support</a>
+					<ul>
+						<li><a href="booking.html"><i class="icon-Commit"><span class="path1"></span><span
+										class="path2"></span></i>Support Ticket Dashboard</a></li>
+						<li><a href="booking.html"><i class="icon-Commit"><span class="path1"></span><span
+										class="path2"></span></i>Callback Request Management</a></li>
+					</ul>
+				</li>
+				<li><a href="#"><i data-feather="home"><span class="path1"></span><span class="path2"></span></i>Help &
+						Documentation</a>
+					<ul>
+						<li><a href="booking.html"><i class="icon-Commit"><span class="path1"></span><span
+										class="path2"></span></i>Help Content Management</a></li>
+						<li><a href="booking.html"><i class="icon-Commit"><span class="path1"></span><span
+										class="path2"></span></i>Admin Documentation</a></li>
+					</ul>
+				</li>
+				<li><a href="index.html"><i data-feather="home"><span class="path1"></span><span
+								class="path2"></span></i>Settings</a>
+					<ul>
+						<li><a href="booking.html"><i class="icon-Commit"><span class="path1"></span><span
+										class="path2"></span></i>Platform Configuration</a></li>
+						<li><a href="booking.html"><i class="icon-Commit"><span class="path1"></span><span
+										class="path2"></span></i>Notification Settings</a></li>
+					</ul>
+				</li>
+
+			</ul>
+		</nav>
+
+		<!-- Content Wrapper. Contains page content -->
+		<div class="content-wrapper">
+			<div class="container-full">
+				<!-- Main content -->
+				<!-- Filter -->
+				<div class="row">
+					<!-- Filter Dropdown -->
+					<div class="col-xxl-2-4  col-xl-6 col-lg-6 col-12">
+						<div class="form-group">
+							<label class="form-label">Category</label>
+							<div class="controls">
+								<select name="select" id="customSelect" required class="form-select">
+									<option value="network" selected>Network</option>
+									<option value="industry">Industry</option>
+									<option value="client">Client</option>
+									<option value="location">Location</option>
+								</select>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-xxl-2-4  col-xl-6 col-lg-6 col-12">
+						<div class="form-group">
+							<label class="form-label">Time Period</label>
+							<div class="controls">
+								<select name="select" id="timePeriod" required class="form-select">
+									<option value="Daily">Daily</option>
+									<option value="Weekly">Weekly</option>
+									<option value="Monthly" selected>Monthly</option>
+									<option value="Quarterly">Quarterly</option>
+									<option value="Annually">Annually</option>
+								</select>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="col-xxl-2-4  col-xl-6 col-lg-6 col-12">
+						<div class="form-group">
+							<label class="form-label">Industry Type</label>
+							<div class="controls">
+								<select name="select" id="customSelect" required class="form-select">
+									<option value="All" selected>All Industry</option>
+									<option value="Hospitality">Hospitality</option>
+									<option value="Corporate">Corporate</option>
+									<option value="Retail">Retail</option>
+									<option value="Healthcare">Healthcare</option>
+									<option value="Education">Education</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<div class="col-xxl-2-4  col-xl-6 col-lg-6 col-12">
+						<div class="form-group">
+							<label class="form-label">Region</label>
+							<div class="controls">
+								<select name="select" id="customSelect" required class="form-select">
+									<option value="All" selected>All Regions</option>
+									<option value="Northeast">Northeast</option>
+									<option value="Southeast">Southeast</option>
+									<option value="West">West</option>
+									<option value="Midwest">Midwest</option>
+									<option value="Southwest">Southwest</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<div class="col-xxl-2-4  col-xl-6 col-lg-6 col-12">
+						<div class="form-group">
+							<label class="form-label">Date Range</label>
+							<div class="controls">
+								<select name="select" id="dateRange" required class="form-select">
+									<option value="Last 7 Days">Last 7 Days</option>
+									<option value="Last 30 Days" selected>Last 30 Days</option>
+									<option value="Last 90 Days">Last 90 Days</option>
+									<option value="Last 6 Month">Last 6 Month</option>
+									<option value="Last Year">Last Year</option>
+									<option value="Custom Range">Custom Range</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<!-- Start Date (Initially hidden) -->
+					<div class="col-xxl-2-4 col-xl-6 col-lg-6 col-12" id="startDateGroup" style="display:none;">
+						<div class="form-group">
+							<label class="form-label">Start Date</label>
+							<div class="controls">
+								<input type="date" name="start_date" class="form-control" required>
+							</div>
+						</div>
+					</div>
+
+					<!-- End Date (Initially hidden) -->
+					<div class="col-xxl-2-4 col-xl-6 col-lg-6 col-12" id="endDateGroup" style="display:none;">
+						<div class="form-group">
+							<label class="form-label">End Date</label>
+							<div class="controls">
+								<input type="date" name="end_date" class="form-control" required>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<section class="">
+					<div class="row">
+
+						<!-- Tabs Navigation -->
+						<div class="overflow-auto">
+							<ul class="nav nav-tabs nav-bordered mb-3 flex-nowrap">
+								<li class="nav-item">
+									<a href="#bs-modals-station" data-bs-toggle="tab" aria-expanded="false"
+										class="nav-link active">
+										Station Analytics
+									</a>
+								</li>
+								<li class="nav-item">
+									<a href="#bs-modals-revenue" data-bs-toggle="tab" aria-expanded="true"
+										class="nav-link">
+										Revenue Analytics
+									</a>
+								</li>
+								<li class="nav-item">
+									<a href="#bs-modals-advertisement" data-bs-toggle="tab" aria-expanded="true"
+										class="nav-link">
+										Advertisement Analytics
+									</a>
+								</li>
+							</ul>
+						</div>
+
+
+						<!-- Tab Contents -->
+						<div class="tab-content">
+							<div class="tab-pane active" id="bs-modals-station">
+								<div class="col-12">
+									<div class="box">
+										<div
+											class="box-header d-flex justify-content-between  flex-column flex-md-row gap-2  ">
+											<h4 class="box-title">
+												<a href="#" class="fill-icon">
+													<i class="fa-solid fa-clock-rotate-left text-fade ps-5"
+														style="margin-right: 2px;"></i>
+												</a>
+												<span>Station Usage Hours</span>
+											</h4>
+											<div class="">
+												<h6 class="box-title">Hourly usage patterns across all stations</h6>
+											</div>
+										</div>
+										<div class="box-body">
+											<div class="chart">
+												<div id="station_usage_hours"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<!-- Station Activity Status -->
+									<div class="col-xxl-6 col-xl-6 col-12 d-flex">
+										<div class="box flex-grow-1">
+											<div
+												class="box-header d-flex justify-content-between  flex-column flex-md-row gap-2  ">
+
+												<h4 class="box-title mb-0"><i
+														class="fa-solid fa-chart-line text-success"
+														style="margin-right: 5px;"></i><span>Station
+														Activity Status</span></h4>
+												<h6 class="box-title">Active vs idle time distribution</h6>
+											</div>
+											<div class="box-body">
+												<div>
+													<div id="activity_chart"></div>
+												</div>
+											</div>
+											<!-- <div class="box-body">
+												<div class="chart-wrap">
+													<div id="activity_chart" style="height:350px;"></div>
+												</div>
+											</div> -->
+										</div>
+									</div>
+
+									<!-- Performance Metrics -->
+									<div class="col-xxl-6 col-xl-6 col-12 d-flex">
+										<div class="box flex-grow-1">
+											<div class="box-header d-flex justify-content-between  flex-column flex-md-row gap-2  ">
+												<h4 class="box-title"><i
+														class="fa-solid fa-arrow-up-right-dots text-primary"
+														style="margin-right: 5px;"></i><span>Performance Metrics</span>
+												</h4>
+												<h6 class="box-title">Key station performance indicators</h6>
+											</div>
+											<div class="box-body">
+												<div class="container mt-5">
+													<div class="row">
+														<div class="col-md-6 mb-4 ">
+															<div class="box box-body pull-up fill-icon bg-primary">
+																<div class="card-body" style="padding: 0px;">
+																	<h5 class="card-title">Peak Usage Hour</h5>
+																	<p class="card-text"
+																		style="font-size: 1.5em; font-weight: bold;">
+																		12:00 PM</p>
+																	<p class="card-text" style="font-size: 1.2em;">78%
+																	</p>
+																</div>
+															</div>
+														</div>
+														<div class="col-md-6 mb-4 ">
+															<div class="box box-body pull-up fill-icon bg-success">
+																<div class="card-body" style="padding: 0px;">
+																	<h5 class="card-title">Average Uptime</h5>
+																	<p class="card-text"
+																		style="font-size: 1.5em; font-weight: bold;">
+																		24/7</p>
+																	<p class="card-text" style="font-size: 1.2em;">98.5%
+																	</p>
+																</div>
+															</div>
+														</div>
+														<div class="col-md-6 mb-4 ">
+															<div class="box box-body pull-up fill-icon  bg-info">
+																<div class="card-body" style="padding: 0px;">
+																	<h5 class="card-title">Maintenance Required</h5>
+																	<p class="card-text"
+																		style="font-size: 1.5em; font-weight: bold;">12
+																		Stations</p>
+																	<p class="card-text" style="font-size: 1.2em;">7%
+																	</p>
+																</div>
+															</div>
+														</div>
+
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-12">
+									<div class="card">
+										<div class="card-header">
+											<h4 class="card-title"><i class="fa-solid fa-location-dot text-fade"
+													style="margin-right: 5px;"></i><span>Regional
+													Performance Comparison</span></h4>
+											<h5 class="mb-0 card-subtitle text-muted" style="color : white !important">
+												Station performance metrics across different regions</h5>
+										</div>
+										<div class="card-body">
+											<div class="table-responsive">
+												<table class="table mb-0 table-hover">
+													<thead>
+														<tr>
+															<th scope="col">Region</th>
+															<th scope="col">Active Stations</th>
+															<th scope="col">Total Stations</th>
+															<th scope="col">Avg Usage %</th>
+															<th scope="col">Performance</th>
+															<th scope="col">Revenue</th>
+
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<th scope="row">Northeast</th>
+															<td class="text-fade">45/50
+															</td>
+															<td class="text-fade">50
+															</td>
+															<td class="text-fade">78.5%</td>
+															<td class="text-fade">
+																<div class="progress mt-5" style="height:10px" ;>
+																	<div class="progress-bar bg-success"
+																		style="width: 40%"></div>
+																</div>
+															</td>
+															<td class="text-fade">$24.5M</td>
+
+														</tr>
+														</tr>
+
+														<tr>
+															<th scope="row">Southeast</th>
+
+															</td>
+															<td class="text-fade">38/42
+															</td>
+															<td class="text-fade">42</td>
+															<td class="text-fade">82.1%</td>
+															<td class="text-fade">
+																<div class="progress mt-5" style="height:10px" ;>
+																	<div class="progress-bar bg-success"
+																		style="width: 50%"></div>
+																</div>
+															</td>
+															<td class="text-fade">$28.9M</td>
+														</tr>
+
+
+														<tr>
+															<th scope="row">West</th>
+
+															</td>
+															<td class="text-fade">52/55
+															</td>
+															<td class="text-fade">55</td>
+															<td class="text-fade">75.3%</td>
+															<td class="text-fade">
+																<div class="progress mt-5" style="height:10px" ;>
+																	<div class="progress-bar bg-success"
+																		style="width: 70%"></div>
+																</div>
+															</td>
+															<td class="text-fade">$31.2M</td>
+														</tr>
+														<tr>
+															<th scope="row">Midwest</th>
+
+															</td>
+															<td class="text-fade">28/32
+															</td>
+															<td class="text-fade">32</td>
+															<td class="text-fade">71.2%</td>
+															<td class="text-fade">
+																<div class="progress mt-5" style="height:10px" ;>
+																	<div class="progress-bar bg-success"
+																		style="width: 25%"></div>
+																</div>
+															</td>
+															<td class="text-fade">$16.8M</td>
+														</tr>
+														<tr>
+															<th scope="row">Southwest</th>
+
+															</td>
+															<td class="text-fade">22/25
+															</td>
+															<td class="text-fade">25</td>
+															<td class="text-fade">68.9%</td>
+															<td class="text-fade">
+																<div class="progress mt-5" style="height:10px" ;>
+																	<div class="progress-bar bg-success"
+																		style="width: 20%"></div>
+																</div>
+															</td>
+															<td class="text-fade">$13.4M</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
+									</div>
+								</div>
+
+
+							</div>
+							<!-- ################################################################################## -->
+							<div class="tab-pane" id="bs-modals-revenue">
+								<div class="row mb-20">
+									<div class="col-xxl-6 col-xl-6 col-12 gap-md-20">
+										<div class="custom-box box d-flex flex-column">
+											<div class="box-header fill-icon">
+												<div class="d-flex justify-content-between  flex-column flex-md-row gap-2  h-md-27">
+													<h4 class="box-title"><i class="fa-solid fa-chart-pie text-fade"
+															style="margin-right: 5px;"></i><span>Revenue Breakdown by
+															Source</span><a href=""></a></h4>
+													<h6>Distribution of revenue across different sources</h6>
+												</div>
+											</div>
+											<div class="custom-box-box-body box-body fill-icon occupancy">
+												<!-- First item - Mall Central - Delhi -->
+												<div class="d-flex flex-column mb-20">
+													<div class="d-flex justify-content-between align-items-center">
+														<p class="fw-400 mb-0">Bookings</p>
+														<p class="mb-0"><b>$42.5M</b></p>
+													</div>
+
+													<div class="progress mt-5" style="height:10px;">
+														<div class="progress-bar bg-success"
+															style="width:65%; cursor: pointer;" role="progressbar"
+															aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"
+															data-bs-toggle="tooltip" data-bs-placement="top"
+															data-bs-title="Bookings: 65% ($42.5M)"></div>
+													</div>
+
+													<div class="d-flex justify-content-end align-items-center"
+														style="margin-top:-15px!important;">
+														<p class="mb-0"><b>65%</b></p>
+													</div>
+												</div>
+
+												<div class="d-flex flex-column mb-20">
+													<div class="d-flex justify-content-between align-items-center">
+														<p class="fw-400 mb-0">Advertisements</p>
+														<p class="mb-0"><b>$15.8M</b></p>
+													</div>
+													<div class="progress mt-5" style="height:10px;">
+														<div class="progress-bar bg-success"
+															style="width:24%; cursor: pointer;" role="progressbar"
+															aria-valuenow="24" aria-valuemin="0" aria-valuemax="100"
+															data-bs-toggle="tooltip" data-bs-placement="top"
+															data-bs-title="Advertisements: 24% ($15.8M)"></div>
+													</div>
+
+													<div class="d-flex justify-content-end align-items-center -mt-5"
+														style="margin-top: -15px !important;">
+														<p class="mb-0"><b>24%</b></p>
+													</div>
+												</div>
+
+												<div class="d-flex flex-column ">
+													<div class="d-flex justify-content-between align-items-center">
+														<p class="fw-400 mb-0">Products</p>
+														<p class="mb-0"><b>$7.2M</b></p>
+													</div>
+													<div class="progress mt-5" style="height:10px;">
+														<div class="progress-bar bg-success"
+															style="width:11%; cursor: pointer;" role="progressbar"
+															aria-valuenow="11" aria-valuemin="0" aria-valuemax="100"
+															data-bs-toggle="tooltip" data-bs-placement="top"
+															data-bs-title="Products: 11% ($7.2M)"></div>
+													</div>
+
+													<div class="d-flex justify-content-end align-items-center -mt-5"
+														style="margin-top: -15px !important;">
+														<p class="mb-0"><b>11%</b></p>
+													</div>
+												</div>
+												<div class="d-flex justify-content-between align-items-center mt-20">
+													<p class="fw-400 mb-0 fw-bold">Total Revenue
+													</p>
+													<p class="mb-0"><b>$65.5M</b></p>
+												</div>
+											</div>
+
+
+										</div>
+									</div>
+									<div class="col-xxl-6 col-xl-6 col-12">
+										<div class="custom-box box d-flex flex-column">
+											<div class="box-header fill-icon">
+												<!-- <div class="d-flex justify-content-between h-md-27" > -->
+													<div class="d-flex justify-content-between  flex-column flex-md-row gap-2  h-md-27">
+													<h4 class="box-title"><i class="fa-solid fa-chart-line text-fade"
+															style="margin-right: 5px;"></i>Revenue Growth Metrics
+
+													</h4>
+													<h6>Key performance indicators and growth trends</h6>
+												</div>
+											</div>
+											<div class="custom-box-box-body box-body fill-icon occupancy">
+												<div class="row">
+													<div class="col-xxl-4 col-xl-6 col-lg-6 col-12 ">
+														<div class="box box-body pull-up fill-icon income">
+															<div class="d-flex flex-column align-items-center gap-3">
+																<h4 class="mb-0 fw-500">
+																	<i
+																		class="fa-solid fa-chart-line fs-26 text-success align-middle"></i>
+																</h4>
+																<h4 class="mb-0 fw-500 text-success"> +12.5%</h4>
+																<div>
+																	<p class="mb-0 text-success">Monthly Growth Rate</p>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="col-xxl-4 col-xl-6 col-lg-6 col-12 ">
+														<div class="box box-body pull-up fill-icon income">
+															<div class="d-flex flex-column align-items-center gap-3">
+																<h4 class="mb-0 fw-500">
+																	<i
+																		class="fa-solid fa-dollar-sign fs-26 text-primary align-middle"></i>
+																</h4>
+																<h4 class="mb-0 fw-500 text-primary">$22.96M</h4>
+																<div>
+																	<p class="mb-0 text-primary">Average Revenue per
+																		Kiosk</p>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="col-xxl-4 col-xl-6 col-lg-6 col-12 ">
+														<div class="box box-body pull-up fill-icon income">
+															<div class="d-flex flex-column align-items-center gap-3">
+																<h4 class="mb-0 fw-500">
+																	<i
+																		class="fa-solid fa-chart-simple fs-26 text-secondary align-middle"></i>
+																</h4>
+																<h4 class="mb-0 fw-500 text-secondary">West</h4>
+																<div>
+																	<p class="mb-0 text-secondary">Best Performing
+																		Region</p>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="row mb-20">
+									<div class="col-12">
+										<div class="custom-box box d-flex flex-column" style="margin-bottom: 0px;">
+											<div class="box-header fill-icon">
+												<div class="d-flex flex-column flex-md-row gap-2  justify-content-between h-md-27">
+													<h4 class="box-title">
+														<i class="fa-solid fa-chart-column text-success"
+															style="margin-right: 5px;"></i>
+														<span>Monthly Revenue Trends</span>
+													</h4>
+													<h6>Revenue breakdown by source over the last 6 months</h6>
+												</div>
+											</div>
+											<div style="padding: 1.5rem;">
+												<div class="row">
+
+													<!-- Month Template -->
+
+													<div class="col-md-12 mb-4">
+														<div class="d-flex justify-content-between align-items-center">
+															<p class="mb-0">Jan</p>
+															<p class="mb-0"><b>$565K</b></p>
+														</div>
+
+														<div class="progress mt-3" style="height: 15px;">
+															<div class="progress-bar bg-primary"
+																style="width: 40%; cursor: pointer;"
+																data-bs-toggle="tooltip" data-bs-placement="top"
+																title="Jan : 40% Bookings">
+															</div>
+															<div class="progress-bar bg-success"
+																style="width: 20%;  cursor: pointer;"
+																data-bs-toggle="tooltip" data-bs-placement="top"
+																title="20% Advertisements">
+															</div>
+															<div class="progress-bar"
+																style="width: 40%; background-color: #6f42c1;  cursor: pointer;"
+																data-bs-toggle="tooltip" data-bs-placement="top"
+																title="40% Products">
+															</div>
+														</div>
+
+														<div class="d-flex"
+															style="margin-top: -15px; font-size: 0.9em;">
+															<div style="width: 40%; text-align: center;">40% Bookings
+															</div>
+															<div style="width: 20%; text-align: center;">20%
+																Advertisements</div>
+															<div style="width: 40%; text-align: center;">40% Products
+															</div>
+														</div>
+													</div>
+
+													<div class="col-md-12 mb-4">
+														<div class="d-flex justify-content-between align-items-center">
+															<p class="mb-0">Feb</p>
+															<p class="mb-0"><b>$627K</b></p>
+														</div>
+														<div class="progress mt-3" style="height: 15px;">
+															<div class="progress-bar bg-primary"
+																style="width: 67%; cursor: pointer;"
+																data-bs-toggle="tooltip" data-bs-placement="top"
+																title="Feb : 67% Bookings">
+															</div>
+															<div class="progress-bar bg-success"
+																style="width: 22%; cursor: pointer;"
+																data-bs-toggle="tooltip" data-bs-placement="top"
+																title="Feb : 22% Advertisements">
+															</div>
+															<div class="progress-bar"
+																style="width: 11%; background-color: #6f42c1; cursor: pointer;"
+																data-bs-toggle="tooltip" data-bs-placement="top"
+																title="Feb : 11% Products">
+															</div>
+														</div>
+														<div class="d-flex"
+															style="margin-top: -15px; font-size: 0.9em;">
+															<div style="width: 67%; text-align: center;">67% Bookings
+															</div>
+															<div style="width: 22%; text-align: center;">22%
+																Advertisements</div>
+															<div style="width: 11%; text-align: center;">11% Products
+															</div>
+														</div>
+													</div>
+
+													<div class="col-md-12 mb-4">
+														<div class="d-flex justify-content-between align-items-center">
+															<p class="mb-0">Mar</p>
+															<p class="mb-0"><b>$676K</b></p>
+														</div>
+														<div class="progress mt-3" style="height: 15px;">
+															<div class="progress-bar bg-primary"
+																style="width: 42%; cursor: pointer;"
+																data-bs-toggle="tooltip" data-bs-placement="top"
+																title="Mar : 42% Bookings">
+															</div>
+															<div class="progress-bar bg-success"
+																style="width: 35%; cursor: pointer;"
+																data-bs-toggle="tooltip" data-bs-placement="top"
+																title="Mar : 35% Advertisements">
+															</div>
+															<div class="progress-bar"
+																style="width: 23%; background-color: #6f42c1; cursor: pointer;"
+																data-bs-toggle="tooltip" data-bs-placement="top"
+																title="Mar : 23% Products">
+															</div>
+														</div>
+														<div class="d-flex"
+															style="margin-top: -15px; font-size: 0.9em;">
+															<div style="width: 42%; text-align: center;">42% Bookings
+															</div>
+															<div style="width: 35%; text-align: center;">35%
+																Advertisements</div>
+															<div style="width: 23%; text-align: center;">23% Products
+															</div>
+														</div>
+													</div>
+
+													<div class="col-md-12 mb-4">
+														<div class="d-flex justify-content-between align-items-center">
+															<p class="mb-0">Apr</p>
+															<p class="mb-0"><b>$732K</b></p>
+														</div>
+														<div class="progress mt-3" style="height: 15px;">
+															<div class="progress-bar bg-primary"
+																style="width: 66%; cursor: pointer;"
+																data-bs-toggle="tooltip" data-bs-placement="top"
+																title="Apr : 66% Bookings">
+															</div>
+															<div class="progress-bar bg-success"
+																style="width: 22%; cursor: pointer;"
+																data-bs-toggle="tooltip" data-bs-placement="top"
+																title="Apr : 22% Advertisements">
+															</div>
+															<div class="progress-bar"
+																style="width: 12%; background-color: #6f42c1; cursor: pointer;"
+																data-bs-toggle="tooltip" data-bs-placement="top"
+																title="Apr : 12% Products">
+															</div>
+														</div>
+														<div class="d-flex"
+															style="margin-top: -15px; font-size: 0.9em;">
+															<div style="width: 66%; text-align: center;">66% Bookings
+															</div>
+															<div style="width: 22%; text-align: center;">22%
+																Advertisements</div>
+															<div style="width: 12%; text-align: center;">12% Products
+															</div>
+														</div>
+													</div>
+
+													<div class="col-md-12 mb-4">
+														<div class="d-flex justify-content-between align-items-center">
+															<p class="mb-0">May</p>
+															<p class="mb-0"><b>$787K</b></p>
+														</div>
+														<div class="progress mt-3" style="height: 15px;">
+															<div class="progress-bar bg-primary"
+																style="width: 66%; cursor: pointer;"
+																data-bs-toggle="tooltip" data-bs-placement="top"
+																title="May : 66% Bookings">
+															</div>
+															<div class="progress-bar bg-success"
+																style="width: 22%; cursor: pointer;"
+																data-bs-toggle="tooltip" data-bs-placement="top"
+																title="May : 22% Advertisements">
+															</div>
+															<div class="progress-bar"
+																style="width: 12%; background-color: #6f42c1; cursor: pointer;"
+																data-bs-toggle="tooltip" data-bs-placement="top"
+																title="May : 12% Products">
+															</div>
+														</div>
+														<div class="d-flex"
+															style="margin-top: -15px; font-size: 0.9em;">
+															<div style="width: 66%; text-align: center;">66% Bookings
+															</div>
+															<div style="width: 22%; text-align: center;">22%
+																Advertisements</div>
+															<div style="width: 12%; text-align: center;">12% Products
+															</div>
+														</div>
+													</div>
+
+													<div class="col-md-12 mb-4">
+														<div class="d-flex justify-content-between align-items-center">
+															<p class="mb-0">Jun</p>
+															<p class="mb-0"><b>$851K</b></p>
+														</div>
+														<div class="progress mt-3" style="height: 15px;">
+															<div class="progress-bar bg-primary"
+																style="width: 28%; cursor: pointer;"
+																data-bs-toggle="tooltip" data-bs-placement="top"
+																title="Jun : 28% Bookings">
+															</div>
+															<div class="progress-bar bg-success"
+																style="width: 54%; cursor: pointer;"
+																data-bs-toggle="tooltip" data-bs-placement="top"
+																title="Jun : 54% Advertisements">
+															</div>
+															<div class="progress-bar"
+																style="width: 18%; background-color: #6f42c1; cursor: pointer;"
+																data-bs-toggle="tooltip" data-bs-placement="top"
+																title="Jun : 18%Products">
+															</div>
+														</div>
+														<div class="d-flex"
+															style="margin-top: -15px; font-size: 0.9em;">
+															<div style="width: 28%; text-align: center;">28% Bookings
+															</div>
+															<div style="width: 54%; text-align: center;">54%
+																Advertisements</div>
+															<div style="width: 18%; text-align: center;">18% Products
+															</div>
+														</div>
+													</div>
+
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="row mb-20">
+									<div class="col-12">
+										<div class="custom-box box d-flex flex-column" style="margin-bottom: 0px;">
+											<div class="box-header fill-icon">
+													<div class="d-flex flex-column flex-md-row gap-2  justify-content-between h-md-27">
+													<h4 class="box-title"><i
+															class="fa-solid fa-dollar-sign text-secondary"
+															style="margin-right: 5px;"></i><span>Top Clients by
+															Revenue</span></h4>
+													<h6>Client performance comparison across regions</h6>
+												</div>
+											</div>
+											<div class="box-body p-0 table-hover">
+												<div class="media-list bb-1  border-light">
+													<div class="media align-items-center media-hover">
+														<div class="media-body">
+															<p class="fs-16">
+																<a class="hover-primary" href="#">TechCorp Solutions
+																</a>
+																<span class="badge badge-pill badge-primary-light"
+																	style="margin-left: 5px;">North</span>
+															</p>
+															<span class="text-fade fs-12">Revenue: $8.5M</span>
+														</div>
+														<div class="media-right d-flex flex-column gap-2">
+															<span class="text-success">+15.2%</span>
+															<span>Growth</span>
+														</div>
+													</div>
+												</div>
+												<div class="media-list bb-1  border-light">
+													<div class="media align-items-center media-hover">
+														<div class="media-body">
+															<p class="fs-16">
+																<a class="hover-primary" href="#">Hospitality Plus</a>
+																<span class="badge badge-pill badge-primary-light"
+																	style="margin-left: 5px;">South</span>
+															</p>
+															<span class="text-fade fs-12">Revenue: $7.2M</span>
+														</div>
+														<div class="media-right d-flex flex-column gap-2">
+															<span class="text-success">+8.7%</span>
+															<span>Growth</span>
+														</div>
+													</div>
+												</div>
+												<div class="media-list bb-1  border-light">
+													<div class="media align-items-center media-hover">
+														<div class="media-body">
+															<p class="fs-16">
+																<a class="hover-primary" href="#">Retail Chain Ltd</a>
+																<span class="badge badge-pill badge-primary-light"
+																	style="margin-left: 5px;">West</span>
+															</p>
+															<span class="text-fade fs-12">Revenue: $12M</span>
+														</div>
+														<div class="media-right d-flex flex-column gap-2">
+															<span class="text-success">25%</span>
+															<span>Growth</span>
+														</div>
+													</div>
+												</div>
+												<div class="media-list bb-1  border-light">
+													<div class="media align-items-center media-hover">
+														<div class="media-body">
+															<p class="fs-16">
+																<a class="hover-primary" href="#">Healthcare Network
+																</a>
+																<span class="badge badge-pill badge-primary-light"
+																	style="margin-left: 5px;">East</span>
+															</p>
+															<span class="text-fade fs-12">Revenue: $5.9M</span>
+														</div>
+														<div class="media-right d-flex flex-column gap-2">
+															<span class="text-success">+12.4%</span>
+															<span>Growth</span>
+														</div>
+													</div>
+												</div>
+												<div class="media-list bb-1  border-light">
+													<div class="media align-items-center media-hover">
+														<div class="media-body">
+															<p class="fs-16">
+																<a class="hover-primary" href="#">Education Hub
+																</a>
+																<span class="badge badge-pill badge-primary-light"
+																	style="margin-left: 5px;">Central</span>
+															</p>
+															<span class="text-fade fs-12">Revenue: $4.2M</span>
+														</div>
+														<div class="media-right d-flex flex-column gap-2">
+															<span class="text-success">+6.8%</span>
+															<span>Growth</span>
+														</div>
+													</div>
+												</div>
+											</div>
+
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="tab-pane" id="bs-modals-advertisement">
+								<div class="row">
+									<div class="col-xxl-3 col-xl-6 col-lg-6 col-12 ">
+										<div class="box box-body pull-up fill-icon income">
+											<div class="d-flex flex-column align-items-center gap-3">
+												<h4 class="mb-0 fw-500">
+													<i class="fa-solid fa-eye fs-26 text-success align-middle"></i>
+												</h4>
+												<h4 class="mb-0 fw-500"> 508,120</h4>
+												<div>
+													<p class="mb-0">Total Impressions</p>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-xxl-3 col-xl-6 col-lg-6 col-12 ">
+										<div class="box box-body pull-up fill-icon income">
+											<div class="d-flex flex-column align-items-center gap-3">
+												<h4 class="mb-0 fw-500"><i
+														class="fa-solid fa-hand-pointer  fs-26 text-success align-middle"></i>
+												</h4>
+												<h4 class="mb-0 fw-500">13,679</h4>
+												<div>
+													<p class="mb-0">Total Clicks</p>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-xxl-3 col-xl-6 col-lg-6 col-12 ">
+										<div class="box box-body pull-up fill-icon income">
+											<div class="d-flex flex-column align-items-center gap-3">
+												<h4 class="mb-0 fw-500">
+													<i
+														class="fa-solid fa-gauge-simple fs-26 text-success align-middle"></i>
+												</h4>
+												<h4 class="mb-0 fw-500">2.69%</h4>
+												<div>
+													<p class="mb-0">Average CTR</p>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-xxl-3 col-xl-6 col-lg-6 col-12 ">
+										<div class="box box-body pull-up fill-icon income">
+											<div class="d-flex flex-column align-items-center gap-3">
+												<h4 class="mb-0 fw-500">
+													<i
+														class="fa-solid fa-chart-line fs-26 text-success align-middle"></i>
+
+												</h4>
+												<h4 class="mb-0 fw-500">6</h4>
+												<div>
+													<p class="mb-0">Active Campaigns</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-12">
+									<div class="card">
+										<div class="card-header">
+											<h4 class="card-title"><i class="fa-solid fa-chart-simple text-fade"
+													style="margin-right :5px"></i><span>Campaign
+													Performance</span></h4>
+											<h6 class="mb-0 card-subtitle text-muted" style="color : white !important">
+												Detailed metrics for all advertisement campaigns</h6>
+										</div>
+										<div class="card-body">
+											<div class="table-responsive">
+												<table class="table mb-0 table-hover">
+													<thead>
+														<tr>
+															<th scope="col">Campaign Name</th>
+															<th scope="col">Status</th>
+															<th scope="col">Impressions</th>
+															<th scope="col">Clicks </th>
+															<th scope="col">CTR </th>
+															<th scope="col">Engagement</th>
+
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<th scope="row">Summer Sale 2024</th>
+															<td class="text-fade"><button type="button"
+																	class="btn bg-primary rounded-5 text-white px-20 button1 btn-sm">Active</button>
+															</td>
+															<td class="text-fade">125,430
+															</td>
+															<td class="text-fade">3,420 </td>
+
+															<td class="text-fade">2.73%
+															</td>
+															<td class="text-fade">
+																<div class="progress mt-5" style="height:10px" ;>
+																	<div class="progress-bar bg-success"
+																		style="width: 85%; cursor: pointer;"
+																		data-bs-toggle="tooltip" data-bs-placement="top"
+																		title="Engagement: 85%">
+																	</div>
+																</div>
+															</td>
+
+														</tr>
+
+														<tr>
+															<th scope="row">New Product Launch</th>
+															<td class="text-fade"><button type="button"
+																	class="btn bg-primary rounded-5 text-white px-20 button1 btn-sm">Active</button>
+															</td>
+															<td class="text-fade">98,750
+															</td>
+															<td class="text-fade">2,890
+															</td>
+
+															<td class="text-fade">2.93%
+															</td>
+															<td class="text-fade">
+																<div class="progress mt-5" style="height:10px" ;>
+																	<div class="progress-bar bg-success"
+																		style="width: 92%; cursor: pointer;"
+																		data-bs-toggle="tooltip" data-bs-placement="top"
+																		title="Engagement: 92%">
+																	</div>
+																</div>
+															</td>
+
+														</tr>
+
+														<tr>
+															<th scope="row">Holiday Special</th>
+															<td class="text-fade"><button type="button"
+																	class="btn bg-secondary rounded-5 text-white px-20 button1 btn-sm">Paused</button>
+															</td>
+															<td class="text-fade">87,650
+
+															</td>
+															<td class="text-fade">2,156 </td>
+
+															<td class="text-fade">2.46%
+															</td>
+															<td class="text-fade">
+																<div class="progress mt-5" style="height:10px;">
+																	<div class="progress-bar bg-success"
+																		style="width: 78%; cursor: pointer;"
+																		data-bs-toggle="tooltip" data-bs-placement="top"
+																		title="Engagement: 78%"></div>
+																</div>
+															</td>
+
+
+														</tr>
+														<tr>
+															<th scope="row">Brand Awareness</th>
+															<td class="text-fade"><button type="button"
+																	class="btn bg-primary rounded-5 text-white px-20 button1 btn-sm">Active</button>
+															</td>
+															<td class="text-fade">76,540
+															</td>
+															<td class="text-fade">1,834
+															</td>
+
+															<td class="text-fade">2.4%
+															</td>
+															<td class="text-fade">
+																<div class="progress mt-5" style="height:10px" ;>
+																	<div class="progress-bar bg-success"
+																		style="width: 72%; cursor: pointer;"
+																		data-bs-toggle="tooltip" data-bs-placement="top"
+																		title="Engagement: 72%"></div>
+																</div>
+															</td>
+
+														</tr>
+														<tr>
+															<th scope="row">Flash Sale Weekend</th>
+															<td class="text-fade"><button type="button"
+																	class="btn rounded-5 btn-success px-20 button1 btn-sm">Completed</button>
+															</td>
+															<td class="text-fade">65,430
+															</td>
+															<td class="text-fade">1,923
+															</td>
+
+															<td class="text-fade">2.94%
+
+															</td>
+															<td class="text-fade">
+
+																<div class="progress mt-5" style="height:10px" ;>
+																	<div class="progress-bar bg-success"
+																		style="width: 88%; cursor: pointer;"
+																		data-bs-toggle="tooltip" data-bs-placement="top"
+																		title="Engagement: 88%"></div>
+																</div>
+															</td>
+														</tr>
+														<tr>
+															<th scope="row">Corporate Partnership</th>
+															<td class="text-fade"><button type="button"
+																	class="btn rounded-5 btn-success px-20 button1 btn-sm">Completed</button>
+															</td>
+															<td class="text-fade">54,320
+
+															</td>
+															<td class="text-fade">1,456
+
+															</td>
+
+															<td class="text-fade">2.68%
+
+															</td>
+															<td class="text-fade">
+																<div class="progress mt-5" style="height:10px" ;>
+																	<div class="progress-bar bg-success"
+																		style="width: 81%" data-bs-toggle="tooltip"
+																		data-bs-placement="top" title="Engagement: 81%">
+																	</div>
+																</div>
+															</td>
+
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="row mb-20">
+									<div class="col-xl-6 col-12 gap-md-20">
+										<div class="custom-box box d-flex flex-column">
+											<div class="box-header fill-icon">
+												<div class="d-flex flex-column flex-md-row gap-2  justify-content-between h-md-27">
+													<h4 class="box-title"><i
+															class="fa-solid fa-group-arrows-rotate text-fade"
+															style="margin-right: 5px;"></i>Kiosk Engagement Heatmap
+													</h4>
+													<h6>Advertisement performance by kiosk location</h6>
+												</div>
+											</div>
+											<div class="custom-box-box-body box-body fill-icon occupancy">
+												<!-- First item - Mall Central - Delhi -->
+												<div class="d-flex flex-column ">
+													<div class="d-flex justify-content-between align-items-center">
+														<p class="fw-400 mb-0">Mall Central - New York</p>
+														<p class="mb-0"><b>2.96% CTR</b></p>
+													</div>
+													<div class="progress mt-5" style="height:10px;">
+														<div class="progress-bar bg-success"
+															style="width: 95%; cursor: pointer;" style="width: 81%"
+															data-bs-toggle="tooltip" data-bs-placement="top"
+															title="81%">
+														</div>
+													</div>
+
+													<div class="d-flex justify-content-between align-items-center -mt-5"
+														style="margin-top: -15px !important;">
+														<p class="fw-400 mb-0">15,420 impressions</p>
+														<p class="mb-0"><b>456 clicks</b></p>
+													</div>
+												</div>
+
+												<div class="d-flex flex-column gap-10 mt-20">
+													<div class="d-flex justify-content-between align-items-center">
+														<p class="fw-400 mb-0">Airport Terminal - Los Angeles</p>
+														<p class="mb-0"><b>2.79% CTR</b></p>
+													</div>
+													<div class="progress mt-5" style="height:10px;">
+														<div class="progress-bar bg-success"
+															style="width: 88%; cursor: pointer;"
+															data-bs-toggle="tooltip" data-bs-placement="top"
+															title="88%">
+														</div>
+													</div>
+
+													<div class="d-flex justify-content-between align-items-center -mt-5"
+														style="margin-top: -15px !important;">
+														<p class="fw-400 mb-0">18,750 impressions</p>
+														<p class="mb-0"><b>523 clicks</b></p>
+													</div>
+												</div>
+												<div class="d-flex flex-column gap-10 mt-20">
+													<div class="d-flex justify-content-between align-items-center">
+														<p class="fw-400 mb-0">Tech Park - Chicago</p>
+														<p class="mb-0"><b>3.06% CTR</b></p>
+													</div>
+													<div class="progress mt-5" style="height:10px;">
+														<div class="progress-bar bg-success"
+															style="width: 98%; cursor: pointer;"
+															data-bs-toggle="tooltip" data-bs-placement="top"
+															title="95%">
+														</div>
+													</div>
+
+													<div class="d-flex justify-content-between align-items-center -mt-5"
+														style="margin-top: -15px !important;">
+														<p class="fw-400 mb-0">12,340 impressions</p>
+														<p class="mb-0"><b>378 clicks</b></p>
+													</div>
+												</div>
+												<div class="d-flex flex-column gap-10 mt-20">
+													<div class="d-flex justify-content-between align-items-center">
+														<p class="fw-400 mb-0">Hospital Complex - Dallas</p>
+														<p class="mb-0"><b>2.48% CTR</b></p>
+													</div>
+													<div class="progress mt-5" style="height:10px;">
+														<div class="progress-bar bg-success"
+															style="width: 76%; cursor: pointer;"
+															data-bs-toggle="tooltip" data-bs-placement="top"
+															title="76%">
+														</div>
+													</div>
+
+													<div class="d-flex justify-content-between align-items-center -mt-5"
+														style="margin-top: -15px !important;">
+														<p class="fw-400 mb-0">9,870 impressions</p>
+														<p class="mb-0"><b>245 clicks</b></p>
+													</div>
+												</div>
+												<div class="d-flex flex-column gap-10 mt-20">
+													<div class="d-flex justify-content-between align-items-center">
+														<p class="fw-400 mb-0">University Campus - Austin</p>
+														<p class="mb-0"><b>2.77% CTR</b></p>
+													</div>
+													<div class="progress mt-5" style="height:10px;">
+														<div class="progress-bar bg-success"
+															style="width: 85%; cursor: pointer;"
+															data-bs-toggle="tooltip" data-bs-placement="top"
+															title="85%">
+														</div>
+													</div>
+
+													<div class="d-flex justify-content-between align-items-center -mt-5"
+														style="margin-top: -15px !important;">
+														<p class="fw-400 mb-0">11,250 impressions</p>
+														<p class="mb-0"><b>312 clicks</b></p>
+													</div>
+												</div>
+											</div>
+
+
+										</div>
+									</div>
+									<div class="col-xl-6 col-12">
+										<div class="custom-box box d-flex flex-column">
+											<div class="box-header fill-icon">
+												<div class="d-flex flex-column flex-md-row gap-2  justify-content-between h-md-27">
+													<h4 class="box-title"><i
+															class="fa-solid fa-arrow-trend-up text-fade"
+															style="margin-right: 5px;"></i>CTR Trend Analysis
+
+													</h4>
+													<h6>Click-through rate trends over time</h6>
+												</div>
+											</div>
+											<div class="custom-box-box-body box-body fill-icon occupancy">
+												<!-- Week 1 Progress -->
+												<div class="d-flex flex-column gap-10">
+													<div class="d-flex justify-content-between align-items-center">
+														<p class="fw-400 mb-0">Week 1</p>
+														<p class="mb-0"><b>2.45%</b></p>
+													</div>
+													<div class="progress mt-5" style="height:10px;">
+														<div class="progress-bar bg-success"
+															style="width: 2.45%; cursor: pointer;"
+															data-bs-toggle="tooltip" data-bs-placement="top"
+															title="2.45%">
+														</div>
+													</div>
+												</div>
+
+												<!-- Week 2 Progress -->
+												<div class="d-flex flex-column gap-10">
+													<div class="d-flex justify-content-between align-items-center">
+														<p class="fw-400 mb-0">Week 2</p>
+														<p class="mb-0"><b>2.67%</b></p>
+													</div>
+													<div class="progress mt-5" style="height:10px;">
+														<div class="progress-bar bg-success"
+															style="width: 2.67%; cursor: pointer;"
+															data-bs-toggle="tooltip" data-bs-placement="top"
+															title="2.67%">
+														</div>
+													</div>
+												</div>
+
+												<!-- Week 3 Progress -->
+												<div class="d-flex flex-column gap-10">
+													<div class="d-flex justify-content-between align-items-center">
+														<p class="fw-400 mb-0">Week 3</p>
+														<p class="mb-0"><b>2.89%</b></p>
+													</div>
+													<div class="progress mt-5" style="height:10px;">
+														<div class="progress-bar bg-success"
+															style="width: 2.89%; cursor: pointer;"
+															data-bs-toggle="tooltip" data-bs-placement="top"
+															title="2.89%">
+														</div>
+													</div>
+												</div>
+
+												<!-- Week 4 Progress -->
+												<div class="d-flex flex-column gap-10">
+													<div class="d-flex justify-content-between align-items-center">
+														<p class="fw-400 mb-0">Week 4</p>
+														<p class="mb-0"><b>2.73%</b></p>
+													</div>
+													<div class="progress mt-5" style="height:10px;">
+														<div class="progress-bar bg-success"
+															style="width: 2.73%; cursor: pointer;"
+															data-bs-toggle="tooltip" data-bs-placement="top"
+															title="2.73%">
+														</div>
+													</div>
+												</div>
+
+												<!-- Average CTR Improvement -->
+												<div class="mt-4">
+													<p><b>Average CTR Improvement</b></p>
+													<div class="progress" style="height: 20px;">
+														<div class="progress-bar bg-success"
+															style="width: 11.4%; cursor: pointer;"
+															data-bs-toggle="tooltip" data-bs-placement="top"
+															title="11.4%">
+														</div>
+													</div>
+													<p class="text-success"><b>+11.4%</b></p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xxl-6 col-xl-6 col-12 d-flex">
+									<div class="box flex-grow-1">
+										<div class="box-header fill-icon">
+											<h4 class="box-title">Occupancy of charging stations <a href=""><i
+														class="fa-solid fa-circle-info text-fade"></i></a></h4>
+										</div>
+										<div class="box-body fill-icon occupancy">
+
+											<div class="d-flex justify-content-between align-items-center">
+												<p class="fw-400 mb-0"><i class="fa-solid fa-location-dot"></i> Dallas,
+													USA
+												</p>
+												<p class="mb-0"><i class="fa-solid fa-plug"></i> <b>140</b>/183</p>
+											</div>
+											<div class="progress mt-5" style="height:10px" ;>
+												<div class="progress-bar bg-success" style="width: 40%"></div>
+											</div>
+
+											<div class="d-flex justify-content-between align-items-center">
+												<p class="fw-400 mb-0"><i class="fa-solid fa-location-dot"></i>
+													Colorado,
+													USA
+												</p>
+												<p class=" mb-0"><i class="fa-solid fa-plug"></i> <b>250</b>/300</p>
+											</div>
+											<div class="progress mt-5" style="height:10px" ;>
+												<div class="progress-bar bg-success" style="width: 70%"></div>
+											</div>
+
+
+											<div class="d-flex justify-content-between align-items-center">
+												<p class="fw-400 mb-0"><i class="fa-solid fa-location-dot"></i> Texas,
+													USA
+												</p>
+												<p class="mb-0"><i class="fa-solid fa-plug"></i> <b>210</b>/250</p>
+											</div>
+											<div class="progress mt-5" style="height:10px" ;>
+												<div class="progress-bar bg-success" style="width: 55%"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-xxl-6 col-xl-6 col-12 d-flex">
+									<div class="box flex-grow-1">
+										<div class="box-header d-flex justify-content-between align-items-center fill-icon"
+											style="height: 66px;">
+											<!-- <div class=""> -->
+											<h4 class="box-title"><i class="fa-solid fa-location-dot "></i> Dallas, USA
+											</h4>
+											<h6 class="text-fade">ID D195821</h6>
+											<!-- </div> -->
+										</div>
+										<div class="box-body march">
+											<h5 class="text-fade mb-10">March/2024</h5>
+											<div class="d-sm-flex justify-content-between align-items-center">
+												<div>
+													<div
+														class="d-flex justify-content-between align-items-center fill-icon">
+														<h6 class="text-fade mb-5"><i
+																class="fa-solid fa-plug text-success"></i>
+															Charges</h6>
+														<h5 class="fw-500 mb-10 ms-20">1254</h5>
+													</div>
+													<div
+														class="d-flex justify-content-between align-items-center fill-icon">
+														<h6 class="text-fade mb-5"><i
+																class="fa-solid fa-bolt text-warning"></i>
+															Instant Power</h6>
+														<h5 class="fw-500 mb-10 ms-20">32 kW</h5>
+													</div>
+													<div
+														class="d-flex justify-content-between align-items-center fill-icon">
+														<h6 class="text-fade mb-5"><i
+																class="fa-regular fa-clock text-primary"></i> Time
+															Consumed
+														</h6>
+														<h5 class="fw-500 mb-10 ms-20">85 h</h5>
+													</div>
+												</div>
+												<div>
+													<div id="chart2"></div>
+													<!-- <div class="text-center">
+														<input class="knob" data-width="180" data-height="180" data-min="-100" data-fgColor="#ff4c52" data-displayPrevious="true" data-angleOffset="-125" data-angleArc="250" value="65" />
+													</div> -->
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+
+						<!-- <div class="row">
+							<div class="col-xxl-3 col-xl-6 col-lg-6 col-12 ">
+								<div class="box box-body pull-up fill-icon">
+									<div class="d-flex justify-content-between align-items-center">
+										<h4 class="mb-0 fw-500"><i
+												class="fa-solid fa-list-check fs-26 text-primary align-middle"></i>
+											Managing
+										</h4>
+										<div>
+											<ul class="box-controls pull-right">
+												<li class="dropdown">
+													<a data-bs-toggle="dropdown" href="#" class="px-10 pt-1"
+														aria-expanded="false"><i class="ti-more-alt"></i></a>
+													<div class="dropdown-menu dropdown-menu-end" style="">
+														<a class="dropdown-item" href="#"><i class="ti-import"></i>
+															Today</a>
+														<a class="dropdown-item" href="#"><i class="ti-export"></i>
+															Weekly</a>
+														<a class="dropdown-item" href="#"><i class="ti-printer"></i>
+															Monthly</a>
+													</div>
+												</li>
+											</ul>
+										</div>
+									</div>
+									<div class="mt-15">
+										<div class="d-flex justify-content-around align-items-center">
+											<h1 class="mb-0">5</h1>
+											<h1 class="mb-0">12</h1>
+										</div>
+										<div class="d-flex justify-content-around align-items-center">
+											<p>Stations</p>
+											<p>Outlets</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-xxl-3 col-xl-6 col-lg-6 col-12 ">
+								<div class="box box-body pull-up fill-icon">
+									<div class="d-flex justify-content-between align-items-center">
+										<h4 class="mb-0 fw-500"><i
+												class="fa-solid fa-charging-station fs-26 text-success align-middle"></i>
+											Currently</h4>
+										<div>
+											<ul class="box-controls pull-right">
+												<li class="dropdown">
+													<a data-bs-toggle="dropdown" href="#" class="px-10 pt-1"
+														aria-expanded="false"><i class="ti-more-alt"></i></a>
+													<div class="dropdown-menu dropdown-menu-end" style="">
+														<a class="dropdown-item" href="#"><i class="ti-import"></i>
+															Today</a>
+														<a class="dropdown-item" href="#"><i class="ti-export"></i>
+															Weekly</a>
+														<a class="dropdown-item" href="#"><i class="ti-printer"></i>
+															Monthly</a>
+													</div>
+												</li>
+											</ul>
+										</div>
+									</div>
+									<div class="mt-15">
+										<div class="d-flex justify-content-around align-items-center">
+											<h1 class="mb-0">3</h1>
+											<h1 class="mb-0">2</h1>
+										</div>
+										<div class="d-flex justify-content-around align-items-center">
+											<p>In Use</p>
+											<p>Not In Use</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-xxl-3 col-xl-6 col-lg-6 col-12 ">
+								<div class="box box-body pull-up fill-icon">
+									<div class="d-flex justify-content-between align-items-center">
+										<h4 class="mb-0 fw-500"><i
+												class="fa-solid fa-arrows-spin fs-26 text-danger align-middle"></i>
+											Consumed
+										</h4>
+										<div>
+											<ul class="box-controls pull-right">
+												<li class="dropdown">
+													<a data-bs-toggle="dropdown" href="#" class="px-10 pt-1"
+														aria-expanded="false"><i class="ti-more-alt"></i></a>
+													<div class="dropdown-menu dropdown-menu-end" style="">
+														<a class="dropdown-item" href="#"><i class="ti-import"></i>
+															Today</a>
+														<a class="dropdown-item" href="#"><i class="ti-export"></i>
+															Weekly</a>
+														<a class="dropdown-item" href="#"><i class="ti-printer"></i>
+															Monthly</a>
+													</div>
+												</li>
+											</ul>
+										</div>
+									</div>
+									<div class="">
+										<div class="text-center">
+											<h1 class="mb-0">2589</h1>
+											<h6 class="mt-0">Kw</h6>
+										</div>
+									</div>
+									<div>
+										<p class="mb-0"><i class="fa-solid fa-arrows-down-to-line text-danger"></i>
+											<strong class="text-danger">3%</strong><span class="text-fade"> vs last
+												month</span>
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-xxl-3 col-xl-6 col-lg-6 col-12 ">
+								<div class="box box-body pull-up fill-icon income">
+									<div class="d-flex justify-content-between align-items-center">
+										<h4 class="mb-0 fw-500"><i
+												class="fa-solid fa-dollar-sign fs-26 text-info align-middle"></i> Income
+										</h4>
+										<div>
+											<ul class="box-controls pull-right">
+												<li class="dropdown">
+													<a data-bs-toggle="dropdown" href="#" class="px-10 pt-1"
+														aria-expanded="false"><i class="ti-more-alt"></i></a>
+													<div class="dropdown-menu dropdown-menu-end" style="">
+														<a class="dropdown-item" href="#"><i class="ti-import"></i>
+															Today</a>
+														<a class="dropdown-item" href="#"><i class="ti-export"></i>
+															Weekly</a>
+														<a class="dropdown-item" href="#"><i class="ti-printer"></i>
+															Monthly</a>
+													</div>
+												</li>
+											</ul>
+										</div>
+									</div>
+									<div class="">
+										<div class="d-flex justify-content-between align-items-center text-center">
+											<div class="col-6">
+												<h1 class="mb-0 mt-0">$584</h1>
+												<p class="mb-0">Earned</p>
+											</div>
+											<div class="col-6">
+												<div>
+													<div id="chart" class="mb-0"></div>
+												</div>
+											</div>
+										</div>
+										<div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+
+							<div class="col-xxl-4 col-xl-5 col-12">
+								<div class="box">
+									<div class="box-header d-flex justify-content-between align-items-center">
+										<h4 class="box-title mb-0">Charger Status</h4>
+										<button type="button"
+											class="btn btn-md border border-0 bg-secondary-light rounded-2 text-dark">View
+											Chargers</button>
+									</div>
+									<div class="box-body">
+										<div>
+											<div id="charts_widget_2_chart"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-xxl-8 col-xl-7 col-12">
+								<div class="box">
+									<div class="box-header">
+										<h4 class="box-title">Usage Summary</h4>
+									</div>
+									<div class="box-body">
+										<div>
+											<div id="line-chart"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+
+
+							<div class="col-xl-12 col-12">
+								<div class="box">
+									<div class="box-header with-border">
+										<h4 class="box-title">All Invoices</h4>
+									</div>
+									<div class="box-body no-padding">
+										<div class="table-responsive">
+											<table class="table table-hover">
+												<tbody>
+													<tr>
+														<th>
+															<div class="form-check">
+																<input class="form-check-input" type="checkbox" value=""
+																	id="flexCheckDefault">
+																<label class="form-check-label" for="flexCheckDefault">
+																	<span class="text-fade">Number</span>
+																</label>
+															</div>
+														</th>
+														<th class="text-fade">Issued On</th>
+														<th class="text-fade">User Name</th>
+														<th class="text-fade">EV Charger Location</th>
+														<th class="text-fade">EV Charger Info</th>
+														<th class="text-fade">Energy</th>
+														<th class="text-fade">Total</th>
+														<th class="text-fade">Payment Status</th>
+													</tr>
+													<tr>
+														<td>
+															<div class="form-check">
+																<input class="form-check-input" type="checkbox" value=""
+																	id="flexCheckDefault1">
+																<label class="form-check-label" for="flexCheckDefault1">
+																	<span class="text-primary">#123456</span>
+																</label>
+															</div><a href="javascript:void(0)" class="text-primary"></a>
+														</td>
+														<td>22/1/2024</td>
+														<td>John</td>
+														<td><i class="fa-solid fa-map-pin text-danger"></i> Charger
+															Location
+														</td>
+														<td>Charger Type 1</td>
+														<td>60 kWh</td>
+														<td>$58.00</td>
+														<td><button
+																class="btn-sm bg-success-light border border-3 border-success rounded-2">Paid</button>
+														</td>
+													</tr>
+													<tr>
+														<td>
+															<div class="form-check">
+																<input class="form-check-input" type="checkbox" value=""
+																	id="flexCheckDefault2">
+																<label class="form-check-label" for="flexCheckDefault2">
+																	<span class="text-primary">#458789</span>
+																</label>
+															</div><a href="javascript:void(0)" class="text-primary"></a>
+														</td>
+														<td>25/3/2024</td>
+														<td>Diana</td>
+														<td><i class="fa-solid fa-map-pin text-danger"></i> Charger
+															Location
+														</td>
+														<td>Charger Type 2</td>
+														<td>50 kWh</td>
+														<td>$61.00</td>
+														<td><button
+																class="btn-sm bg-success-light border border-3 border-success rounded-2">Paid</button>
+														</td>
+													</tr>
+													<tr>
+														<td>
+															<div class="form-check">
+																<input class="form-check-input" type="checkbox" value=""
+																	id="flexCheckDefault3">
+																<label class="form-check-label" for="flexCheckDefault3">
+																	<span class="text-primary">#84532</span>
+																</label>
+															</div><a href="javascript:void(0)" class="text-primary"></a>
+														</td>
+														<td>18/4/2024</td>
+														<td>Michael</td>
+														<td><i class="fa-solid fa-map-pin text-danger"></i> Charger
+															Location
+														</td>
+														<td>Charger Type 1</td>
+														<td>80 kWh</td>
+														<td>$45.00</td>
+														<td><button
+																class="btn-sm bg-success-light border border-3 border-success rounded-2">Paid</button>
+														</td>
+													</tr>
+													<tr>
+														<td>
+															<div class="form-check">
+																<input class="form-check-input" type="checkbox" value=""
+																	id="flexCheckDefault4">
+																<label class="form-check-label" for="flexCheckDefault4">
+																	<span class="text-primary">#458789</span>
+																</label>
+															</div><a href="javascript:void(0)" class="text-primary"></a>
+														</td>
+														<td>12/8/2024</td>
+														<td>Joe</td>
+														<td><i class="fa-solid fa-map-pin text-danger"></i> Charger
+															Location
+														</td>
+														<td>Charger Type 2</td>
+														<td>70 kWh</td>
+														<td>$25.00</td>
+														<td><button
+																class="btn-sm bg-success-light border border-3 border-success rounded-2">Paid</button>
+														</td>
+													</tr>
+													<tr>
+														<td>
+															<div class="form-check">
+																<input class="form-check-input" type="checkbox" value=""
+																	id="flexCheckDefault5">
+																<label class="form-check-label" for="flexCheckDefault5">
+																	<span class="text-primary">#92154</span>
+																</label>
+															</div><a href="javascript:void(0)" class="text-primary"></a>
+														</td>
+														<td>22/4/2024</td>
+														<td>Lina</td>
+														<td><i class="fa-solid fa-map-pin text-danger"></i> Charger
+															Location
+														</td>
+														<td>Charger Type 1</td>
+														<td>50 kWh</td>
+														<td>$50.00</td>
+														<td><button
+																class="btn-sm bg-success-light border border-3 border-success rounded-2">Paid</button>
+														</td>
+													</tr>
+													<tr>
+														<td>
+															<div class="form-check">
+																<input class="form-check-input" type="checkbox" value=""
+																	id="flexCheckDefault6">
+																<label class="form-check-label" for="flexCheckDefault6">
+																	<span class="text-primary">#62154</span>
+																</label>
+															</div><a href="javascript:void(0)" class="text-primary"></a>
+														</td>
+														<td>01/7/2024</td>
+														<td>Erica</td>
+														<td><i class="fa-solid fa-map-pin text-danger"></i> Charger
+															Location
+														</td>
+														<td>Charger Type 1</td>
+														<td>50 kWh</td>
+														<td>$40.00</td>
+														<td><button
+																class="btn-sm bg-success-light border border-3 border-success rounded-2">Paid</button>
+														</td>
+													</tr>
+													<tr>
+														<td>
+															<div class="form-check">
+																<input class="form-check-input" type="checkbox" value=""
+																	id="flexCheckDefault7">
+																<label class="form-check-label" for="flexCheckDefault7">
+																	<span class="text-primary">#38754</span>
+																</label>
+															</div><a href="javascript:void(0)" class="text-primary"></a>
+														</td>
+														<td>18/5/2024</td>
+														<td>Eva</td>
+														<td><i class="fa-solid fa-map-pin text-danger"></i> Charger
+															Location
+														</td>
+														<td>Charger Type 2</td>
+														<td>25 kWh</td>
+														<td>$18.00</td>
+														<td><button
+																class="btn-sm bg-success-light border border-3 border-success rounded-2">Paid</button>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div> -->
+					</div>
+				</section>
+				<!-- /.content -->
+			</div>
+		</div>
+		<!-- /.content-wrapper -->
+		<footer class="main-footer">
+			<div class="pull-right d-none d-sm-inline-block">
+				<ul class="nav nav-primary nav-dotted nav-dot-separated justify-content-center justify-content-md-end">
+					<li class="nav-item">
+						<a class="nav-link" href="#" target="_blank">Purchase Now</a>
+					</li>
+				</ul>
+			</div>
+			&copy;
+			<script>document.write(new Date().getFullYear())</script> <a
+				href="https://www.multipurposethemes.com/">Multipurpose Themes</a>. All Rights Reserved.
+		</footer>
+		<!-- Side panel -->
+		<!-- quick_user_toggle -->
+		<div class="modal modal-right fade" id="quick_user_toggle" tabindex="-1">
+			<div class="modal-dialog">
+				<div class="modal-content slim-scroll3">
+					<div class="modal-body p-30 bg-white">
+						<div class="d-flex align-items-center justify-content-between pb-30">
+							<h4 class="m-0">User Profile
+								<small class="text-fade fs-12 ms-5">12 messages</small>
+							</h4>
+							<a href="#" class="btn btn-icon btn-danger-light btn-sm no-shadow" data-bs-dismiss="modal">
+								<span class="fa fa-close"></span>
+							</a>
+						</div>
+						<div>
+							<div class="d-flex flex-row">
+								<div class=""><img src="../../../images/avatar/avatar-2.png" alt="user"
+										class="rounded bg-danger-light w-150" width="100"></div>
+								<div class="ps-20">
+									<h5 class="mb-0">Nil Yeager</h5>
+									<p class="my-5 text-fade">Web Designer</p>
+									<a href="mailto:dummy@gmail.com"><span
+											class="icon-Mail-notification me-5 text-success"><span
+												class="path1"></span><span class="path2"></span></span>
+										dummy@gmail.com</a>
+									<button class="btn btn-success-light btn-sm mt-5"><i class="ti-plus"></i>
+										Follow</button>
+								</div>
+							</div>
+						</div>
+						<div class="dropdown-divider my-30"></div>
+						<div>
+							<div class="d-flex align-items-center mb-30">
+								<div class="me-15 bg-primary-light h-50 w-50 l-h-60 rounded text-center">
+									<span class="icon-Library fs-24"><span class="path1"></span><span
+											class="path2"></span></span>
+								</div>
+								<div class="d-flex flex-column fw-500">
+									<a href="extra_profile.html" class="text-dark hover-primary mb-1 fs-16">My
+										Profile</a>
+									<span class="text-fade">Account settings and more</span>
+								</div>
+							</div>
+							<div class="d-flex align-items-center mb-30">
+								<div class="me-15 bg-danger-light h-50 w-50 l-h-60 rounded text-center">
+									<span class="icon-Write fs-24"><span class="path1"></span><span
+											class="path2"></span></span>
+								</div>
+								<div class="d-flex flex-column fw-500">
+									<a href="mailbox.html" class="text-dark hover-danger mb-1 fs-16">My Messages</a>
+									<span class="text-fade">Inbox and tasks</span>
+								</div>
+							</div>
+							<div class="d-flex align-items-center mb-30">
+								<div class="me-15 bg-success-light h-50 w-50 l-h-60 rounded text-center">
+									<span class="icon-Group-chat fs-24"><span class="path1"></span><span
+											class="path2"></span></span>
+								</div>
+								<div class="d-flex flex-column fw-500">
+									<a href="setting.html" class="text-dark hover-success mb-1 fs-16">Settings</a>
+									<span class="text-fade">Accout Settings</span>
+								</div>
+							</div>
+							<div class="d-flex align-items-center mb-30">
+								<div class="me-15 bg-info-light h-50 w-50 l-h-60 rounded text-center">
+									<span class="icon-Attachment1 fs-24"><span class="path1"></span><span
+											class="path2"></span><span class="path3"></span><span
+											class="path4"></span></span>
+								</div>
+								<div class="d-flex flex-column fw-500">
+									<a href="extra_taskboard.html" class="text-dark hover-info mb-1 fs-16">Project</a>
+									<span class="text-fade">latest tasks and projects</span>
+								</div>
+							</div>
+						</div>
+						<div class="dropdown-divider my-30"></div>
+						<div>
+							<div class="media-list">
+								<a class="media media-single px-0" href="#">
+									<h4 class="w-50 text-gray fw-500">10:10</h4>
+									<div class="media-body ps-15 bs-5 rounded border-primary">
+										<p>Morbi quis ex eu arcu auctor sagittis.</p>
+										<span class="text-fade">by Johne</span>
+									</div>
+								</a>
+
+								<a class="media media-single px-0" href="#">
+									<h4 class="w-50 text-gray fw-500">08:40</h4>
+									<div class="media-body ps-15 bs-5 rounded border-success">
+										<p>Proin iaculis eros non odio ornare efficitur.</p>
+										<span class="text-fade">by Amla</span>
+									</div>
+								</a>
+
+								<a class="media media-single px-0" href="#">
+									<h4 class="w-50 text-gray fw-500">07:10</h4>
+									<div class="media-body ps-15 bs-5 rounded border-info">
+										<p>In mattis mi ut posuere consectetur.</p>
+										<span class="text-fade">by Josef</span>
+									</div>
+								</a>
+
+								<a class="media media-single px-0" href="#">
+									<h4 class="w-50 text-gray fw-500">01:15</h4>
+									<div class="media-body ps-15 bs-5 rounded border-danger">
+										<p>Morbi quis ex eu arcu auctor sagittis.</p>
+										<span class="text-fade">by Rima</span>
+									</div>
+								</a>
+
+								<a class="media media-single px-0" href="#">
+									<h4 class="w-50 text-gray fw-500">23:12</h4>
+									<div class="media-body ps-15 bs-5 rounded border-warning">
+										<p>Morbi quis ex eu arcu auctor sagittis.</p>
+										<span class="text-fade">by Alaxa</span>
+									</div>
+								</a>
+								<a class="media media-single px-0" href="#">
+									<h4 class="w-50 text-gray fw-500">10:10</h4>
+									<div class="media-body ps-15 bs-5 rounded border-primary">
+										<p>Morbi quis ex eu arcu auctor sagittis.</p>
+										<span class="text-fade">by Johne</span>
+									</div>
+								</a>
+
+								<a class="media media-single px-0" href="#">
+									<h4 class="w-50 text-gray fw-500">08:40</h4>
+									<div class="media-body ps-15 bs-5 rounded border-success">
+										<p>Proin iaculis eros non odio ornare efficitur.</p>
+										<span class="text-fade">by Amla</span>
+									</div>
+								</a>
+
+								<a class="media media-single px-0" href="#">
+									<h4 class="w-50 text-gray fw-500">07:10</h4>
+									<div class="media-body ps-15 bs-5 rounded border-info">
+										<p>In mattis mi ut posuere consectetur.</p>
+										<span class="text-fade">by Josef</span>
+									</div>
+								</a>
+
+								<a class="media media-single px-0" href="#">
+									<h4 class="w-50 text-gray fw-500">01:15</h4>
+									<div class="media-body ps-15 bs-5 rounded border-danger">
+										<p>Morbi quis ex eu arcu auctor sagittis.</p>
+										<span class="text-fade">by Rima</span>
+									</div>
+								</a>
+
+								<a class="media media-single px-0" href="#">
+									<h4 class="w-50 text-gray fw-500">23:12</h4>
+									<div class="media-body ps-15 bs-5 rounded border-warning">
+										<p>Morbi quis ex eu arcu auctor sagittis.</p>
+										<span class="text-fade">by Alaxa</span>
+									</div>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /quick_user_toggle -->
+
+
+		<!-- Control Sidebar -->
+		<aside class="control-sidebar">
+
+			<div class="rpanel-title"><span class="pull-right btn btn-circle btn-danger"
+					data-toggle="control-sidebar"><i class="ion ion-close text-white"></i></span> </div>
+			<!-- Create the tabs -->
+			<ul class="nav nav-tabs control-sidebar-tabs">
+				<li class="nav-item"><a href="#control-sidebar-home-tab" data-bs-toggle="tab"><i
+							class="mdi mdi-message-text"></i></a></li>
+				<li class="nav-item"><a href="#control-sidebar-settings-tab" data-bs-toggle="tab"><i
+							class="mdi mdi-playlist-check"></i></a></li>
+			</ul>
+			<!-- Tab panes -->
+			<div class="tab-content">
+				<!-- Home tab content -->
+				<div class="tab-pane" id="control-sidebar-home-tab">
+					<div class="flexbox">
+						<a href="javascript:void(0)" class="text-grey">
+							<i class="ti-more"></i>
+						</a>
+						<p>Users</p>
+						<a href="javascript:void(0)" class="text-end text-grey"><i class="ti-plus"></i></a>
+					</div>
+					<div class="lookup lookup-sm lookup-right d-none d-lg-block">
+						<input type="text" name="s" placeholder="Search" class="w-p100">
+					</div>
+					<div class="media-list media-list-hover mt-20">
+						<div class="media py-10 px-0">
+							<a class="avatar avatar-lg status-success" href="#">
+								<img src="../../../images/avatar/1.jpg" alt="...">
+							</a>
+							<div class="media-body">
+								<p class="fs-16">
+									<a class="hover-primary" href="#"><strong>Tyler</strong></a>
+								</p>
+								<p>Praesent tristique diam...</p>
+								<span>Just now</span>
+							</div>
+						</div>
+
+						<div class="media py-10 px-0">
+							<a class="avatar avatar-lg status-danger" href="#">
+								<img src="../../../images/avatar/2.jpg" alt="...">
+							</a>
+							<div class="media-body">
+								<p class="fs-16">
+									<a class="hover-primary" href="#"><strong>Luke</strong></a>
+								</p>
+								<p>Cras tempor diam ...</p>
+								<span>33 min ago</span>
+							</div>
+						</div>
+
+						<div class="media py-10 px-0">
+							<a class="avatar avatar-lg status-warning" href="#">
+								<img src="../../../images/avatar/3.jpg" alt="...">
+							</a>
+							<div class="media-body">
+								<p class="fs-16">
+									<a class="hover-primary" href="#"><strong>Evan</strong></a>
+								</p>
+								<p>In posuere tortor vel...</p>
+								<span>42 min ago</span>
+							</div>
+						</div>
+
+						<div class="media py-10 px-0">
+							<a class="avatar avatar-lg status-primary" href="#">
+								<img src="../../../images/avatar/4.jpg" alt="...">
+							</a>
+							<div class="media-body">
+								<p class="fs-16">
+									<a class="hover-primary" href="#"><strong>Evan</strong></a>
+								</p>
+								<p>In posuere tortor vel...</p>
+								<span>42 min ago</span>
+							</div>
+						</div>
+
+						<div class="media py-10 px-0">
+							<a class="avatar avatar-lg status-success" href="#">
+								<img src="../../../images/avatar/1.jpg" alt="...">
+							</a>
+							<div class="media-body">
+								<p class="fs-16">
+									<a class="hover-primary" href="#"><strong>Tyler</strong></a>
+								</p>
+								<p>Praesent tristique diam...</p>
+								<span>Just now</span>
+							</div>
+						</div>
+
+						<div class="media py-10 px-0">
+							<a class="avatar avatar-lg status-danger" href="#">
+								<img src="../../../images/avatar/2.jpg" alt="...">
+							</a>
+							<div class="media-body">
+								<p class="fs-16">
+									<a class="hover-primary" href="#"><strong>Luke</strong></a>
+								</p>
+								<p>Cras tempor diam ...</p>
+								<span>33 min ago</span>
+							</div>
+						</div>
+
+						<div class="media py-10 px-0">
+							<a class="avatar avatar-lg status-warning" href="#">
+								<img src="../../../images/avatar/3.jpg" alt="...">
+							</a>
+							<div class="media-body">
+								<p class="fs-16">
+									<a class="hover-primary" href="#"><strong>Evan</strong></a>
+								</p>
+								<p>In posuere tortor vel...</p>
+								<span>42 min ago</span>
+							</div>
+						</div>
+
+						<div class="media py-10 px-0">
+							<a class="avatar avatar-lg status-primary" href="#">
+								<img src="../../../images/avatar/4.jpg" alt="...">
+							</a>
+							<div class="media-body">
+								<p class="fs-16">
+									<a class="hover-primary" href="#"><strong>Evan</strong></a>
+								</p>
+								<p>In posuere tortor vel...</p>
+								<span>42 min ago</span>
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+				<!-- /.tab-pane -->
+				<!-- Settings tab content -->
+				<div class="tab-pane" id="control-sidebar-settings-tab">
+					<div class="flexbox">
+						<a href="javascript:void(0)" class="text-grey">
+							<i class="ti-more"></i>
+						</a>
+						<p>Todo List</p>
+						<a href="javascript:void(0)" class="text-end text-grey"><i class="ti-plus"></i></a>
+					</div>
+					<ul class="todo-list mt-20">
+						<li class="py-15 px-5 by-1">
+							<!-- checkbox -->
+							<input type="checkbox" id="basic_checkbox_1" class="filled-in">
+							<label for="basic_checkbox_1" class="mb-0 h-15"></label>
+							<!-- todo text -->
+							<span class="text-line">Nulla vitae purus</span>
+							<!-- Emphasis label -->
+							<small class="badge bg-danger"><i class="fa fa-clock-o"></i> 2 mins</small>
+							<!-- General tools such as edit or delete-->
+							<div class="tools">
+								<i class="fa fa-edit"></i>
+								<i class="fa fa-trash-o"></i>
+							</div>
+						</li>
+						<li class="py-15 px-5">
+							<!-- checkbox -->
+							<input type="checkbox" id="basic_checkbox_2" class="filled-in">
+							<label for="basic_checkbox_2" class="mb-0 h-15"></label>
+							<span class="text-line">Phasellus interdum</span>
+							<small class="badge bg-info"><i class="fa fa-clock-o"></i> 4 hours</small>
+							<div class="tools">
+								<i class="fa fa-edit"></i>
+								<i class="fa fa-trash-o"></i>
+							</div>
+						</li>
+						<li class="py-15 px-5 by-1">
+							<!-- checkbox -->
+							<input type="checkbox" id="basic_checkbox_3" class="filled-in">
+							<label for="basic_checkbox_3" class="mb-0 h-15"></label>
+							<span class="text-line">Quisque sodales</span>
+							<small class="badge bg-warning"><i class="fa fa-clock-o"></i> 1 day</small>
+							<div class="tools">
+								<i class="fa fa-edit"></i>
+								<i class="fa fa-trash-o"></i>
+							</div>
+						</li>
+						<li class="py-15 px-5">
+							<!-- checkbox -->
+							<input type="checkbox" id="basic_checkbox_4" class="filled-in">
+							<label for="basic_checkbox_4" class="mb-0 h-15"></label>
+							<span class="text-line">Proin nec mi porta</span>
+							<small class="badge bg-success"><i class="fa fa-clock-o"></i> 3 days</small>
+							<div class="tools">
+								<i class="fa fa-edit"></i>
+								<i class="fa fa-trash-o"></i>
+							</div>
+						</li>
+						<li class="py-15 px-5 by-1">
+							<!-- checkbox -->
+							<input type="checkbox" id="basic_checkbox_5" class="filled-in">
+							<label for="basic_checkbox_5" class="mb-0 h-15"></label>
+							<span class="text-line">Maecenas scelerisque</span>
+							<small class="badge bg-primary"><i class="fa fa-clock-o"></i> 1 week</small>
+							<div class="tools">
+								<i class="fa fa-edit"></i>
+								<i class="fa fa-trash-o"></i>
+							</div>
+						</li>
+						<li class="py-15 px-5">
+							<!-- checkbox -->
+							<input type="checkbox" id="basic_checkbox_6" class="filled-in">
+							<label for="basic_checkbox_6" class="mb-0 h-15"></label>
+							<span class="text-line">Vivamus nec orci</span>
+							<small class="badge bg-info"><i class="fa fa-clock-o"></i> 1 month</small>
+							<div class="tools">
+								<i class="fa fa-edit"></i>
+								<i class="fa fa-trash-o"></i>
+							</div>
+						</li>
+						<li class="py-15 px-5 by-1">
+							<!-- checkbox -->
+							<input type="checkbox" id="basic_checkbox_7" class="filled-in">
+							<label for="basic_checkbox_7" class="mb-0 h-15"></label>
+							<!-- todo text -->
+							<span class="text-line">Nulla vitae purus</span>
+							<!-- Emphasis label -->
+							<small class="badge bg-danger"><i class="fa fa-clock-o"></i> 2 mins</small>
+							<!-- General tools such as edit or delete-->
+							<div class="tools">
+								<i class="fa fa-edit"></i>
+								<i class="fa fa-trash-o"></i>
+							</div>
+						</li>
+						<li class="py-15 px-5">
+							<!-- checkbox -->
+							<input type="checkbox" id="basic_checkbox_8" class="filled-in">
+							<label for="basic_checkbox_8" class="mb-0 h-15"></label>
+							<span class="text-line">Phasellus interdum</span>
+							<small class="badge bg-info"><i class="fa fa-clock-o"></i> 4 hours</small>
+							<div class="tools">
+								<i class="fa fa-edit"></i>
+								<i class="fa fa-trash-o"></i>
+							</div>
+						</li>
+						<li class="py-15 px-5 by-1">
+							<!-- checkbox -->
+							<input type="checkbox" id="basic_checkbox_9" class="filled-in">
+							<label for="basic_checkbox_9" class="mb-0 h-15"></label>
+							<span class="text-line">Quisque sodales</span>
+							<small class="badge bg-warning"><i class="fa fa-clock-o"></i> 1 day</small>
+							<div class="tools">
+								<i class="fa fa-edit"></i>
+								<i class="fa fa-trash-o"></i>
+							</div>
+						</li>
+						<li class="py-15 px-5">
+							<!-- checkbox -->
+							<input type="checkbox" id="basic_checkbox_10" class="filled-in">
+							<label for="basic_checkbox_10" class="mb-0 h-15"></label>
+							<span class="text-line">Proin nec mi porta</span>
+							<small class="badge bg-success"><i class="fa fa-clock-o"></i> 3 days</small>
+							<div class="tools">
+								<i class="fa fa-edit"></i>
+								<i class="fa fa-trash-o"></i>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<!-- /.tab-pane -->
+			</div>
+		</aside>
+		<!-- /.control-sidebar -->
+
+		<!-- Add the sidebar's background. This div must be placed immediately after the control sidebar -->
+		<div class="control-sidebar-bg"></div>
+
+
+
+
+	</div>
+	<!-- ./wrapper -->
+
+
+
+	<div id="chat-box-body">
+		<div id="chat-circle" class="waves-effect waves-circle btn btn-circle btn-sm btn-warning l-h-50">
+			<div id="chat-overlay"></div>
+			<span class="icon-Group-chat fs-18"><span class="path1"></span><span class="path2"></span></span>
+		</div>
+
+		<div class="chat-box">
+			<div class="chat-box-header p-15 d-flex justify-content-between align-items-center">
+				<div class="btn-group">
+					<button
+						class="waves-effect waves-circle btn btn-circle btn-primary-light h-40 w-40 rounded-circle l-h-45"
+						type="button" data-bs-toggle="dropdown">
+						<span class="icon-Add-user fs-22"><span class="path1"></span><span class="path2"></span></span>
+					</button>
+					<div class="dropdown-menu min-w-200">
+						<a class="dropdown-item fs-16" href="#">
+							<span class="icon-Color me-15"></span>
+							New Group</a>
+						<a class="dropdown-item fs-16" href="#">
+							<span class="icon-Clipboard me-15"><span class="path1"></span><span
+									class="path2"></span><span class="path3"></span><span class="path4"></span></span>
+							Contacts</a>
+						<a class="dropdown-item fs-16" href="#">
+							<span class="icon-Group me-15"><span class="path1"></span><span class="path2"></span></span>
+							Groups</a>
+						<a class="dropdown-item fs-16" href="#">
+							<span class="icon-Active-call me-15"><span class="path1"></span><span
+									class="path2"></span></span>
+							Calls</a>
+						<a class="dropdown-item fs-16" href="#">
+							<span class="icon-Settings1 me-15"><span class="path1"></span><span
+									class="path2"></span></span>
+							Settings</a>
+						<div class="dropdown-divider"></div>
+						<a class="dropdown-item fs-16" href="#">
+							<span class="icon-Question-circle me-15"><span class="path1"></span><span
+									class="path2"></span></span>
+							Help</a>
+						<a class="dropdown-item fs-16" href="#">
+							<span class="icon-Notifications me-15"><span class="path1"></span><span
+									class="path2"></span></span>
+							Privacy</a>
+					</div>
+				</div>
+				<div class="text-center flex-grow-1">
+					<div class="text-dark fs-18">Mayra Sibley</div>
+					<div>
+						<span class="badge badge-sm badge-dot badge-primary"></span>
+						<span class="text-muted fs-12">Active</span>
+					</div>
+				</div>
+				<div class="chat-box-toggle">
+					<button id="chat-box-toggle"
+						class="waves-effect waves-circle btn btn-circle btn-danger-light h-40 w-40 rounded-circle l-h-45"
+						type="button">
+						<span class="icon-Close fs-22"><span class="path1"></span><span class="path2"></span></span>
+					</button>
+				</div>
+			</div>
+			<div class="chat-box-body">
+				<div class="chat-box-overlay">
+				</div>
+				<div class="chat-logs">
+					<div class="chat-msg user">
+						<div class="d-flex align-items-center">
+							<span class="msg-avatar">
+								<img src="../../../images/avatar/2.jpg" class="avatar avatar-lg">
+							</span>
+							<div class="mx-10">
+								<a href="#" class="text-dark hover-primary fw-bold">Mayra Sibley</a>
+								<p class="text-muted fs-12 mb-0">2 Hours</p>
+							</div>
+						</div>
+						<div class="cm-msg-text">
+							Hi there, I'm Jesse and you?
+						</div>
+					</div>
+					<div class="chat-msg self">
+						<div class="d-flex align-items-center justify-content-end">
+							<div class="mx-10">
+								<a href="#" class="text-dark hover-primary fw-bold">You</a>
+								<p class="text-muted fs-12 mb-0">3 minutes</p>
+							</div>
+							<span class="msg-avatar">
+								<img src="../../../images/avatar/3.jpg" class="avatar avatar-lg">
+							</span>
+						</div>
+						<div class="cm-msg-text">
+							My name is Anne Clarc.
+						</div>
+					</div>
+					<div class="chat-msg user">
+						<div class="d-flex align-items-center">
+							<span class="msg-avatar">
+								<img src="../../../images/avatar/2.jpg" class="avatar avatar-lg">
+							</span>
+							<div class="mx-10">
+								<a href="#" class="text-dark hover-primary fw-bold">Mayra Sibley</a>
+								<p class="text-muted fs-12 mb-0">40 seconds</p>
+							</div>
+						</div>
+						<div class="cm-msg-text">
+							Nice to meet you Anne.<br>How can i help you?
+						</div>
+					</div>
+				</div><!--chat-log -->
+			</div>
+			<div class="chat-input">
+				<form>
+					<input type="text" id="chat-input" placeholder="Send a message..." />
+					<button type="submit" class="chat-submit" id="chat-submit">
+						<span class="icon-Send fs-22"></span>
+					</button>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<!-- Page Content overlay -->
+
+
+	<script type="text/javascript"
+		src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-slimScroll/1.3.8/jquery.slimscroll.min.js"></script>
+	<!-- Vendor JS -->
+	<script src="../src/js/vendors.min.js"></script>
+	<script src="../src/js/pages/chat-popup.js"></script>
+	<script src="../../../assets/icons/feather-icons/feather.min.js"></script>
+
+	<script src="../../../assets/vendor_components/apexcharts-bundle/dist/apexcharts.js"></script>
+	<script src="../../../assets/vendor_components/apexcharts-bundle/irregular-data-series.js"></script>
+	<script src="../../../assets/vendor_components/raphael/raphael.min.js"></script>
+	<script src="../../../assets/vendor_components/morris.js/morris.min.js"></script>
+	<script src="../../../assets/vendor_components/moment/min/moment.min.js"></script>
+	<script src="../../../assets/vendor_components/jquery-knob/js/jquery.knob.js"></script>
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"></script>
+
+	<script src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+	<!-- EV Admin App -->
+	<script src="../src/js/demo.js"></script>
+	<script src="../src/js/template.js"></script>
+	<script src="../src/js/jquery.smartmenus.js"></script>
+	<script src="../src/js/menus.js"></script>
+	<script src="../src/js/pages/information.js"></script>
+	<script src="../src/js/pages/widget-inline-charts.js"></script>
+	<script src="../src/js/pages/calendar.js"></script>
+	<script src="../src/js/pages/performation.js"></script>
+</body>
+
+</html>
