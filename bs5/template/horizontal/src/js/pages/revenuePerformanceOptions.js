@@ -2,7 +2,7 @@ var revenuePerformanceOptions = {
   series: [
     {
       name: "Revenue",
-      data: [12000, 8000, 25000, 45000, 38000, 32000], // Revenue values for the different times
+      data: [12000, 8000, 25000, 45000, 38000, 32000, 34000, 40000, 32000, 50000, 45000, 41000], // Revenue values for the different times
     },
   ],
   chart: {
@@ -37,7 +37,7 @@ var revenuePerformanceOptions = {
     yaxis: { lines: { show: true } },
   },
   xaxis: {
-    categories: ["00:00", "04:00", "08:00", "12:00", "16:00", "20:00"],
+    categories: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
     labels: {
       style: { colors: "#333" },
     },

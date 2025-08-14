@@ -398,19 +398,34 @@
             <div class="container-full">
                 <!-- Content Header (Page header) -->
                 <div class="content-header">
-                    <div class="d-flex align-items-center">
-                        <div class="me-auto">
-                            <h3 class="page-title">Calendar</h3>
-                            <div class="d-inline-block align-items-center">
-                                <nav>
-                                    <ol class="breadcrumb">
-                                        <li class="breadcrumb-item"><a href="#"><i class="mdi mdi-home-outline"></i></a>
-                                        </li>
-                                        <li class="breadcrumb-item" aria-current="page">Extra</li>
-                                        <li class="breadcrumb-item active" aria-current="page">Calendar</li>
-                                    </ol>
-                                </nav>
+                        <div class="row">
+                            <div class="col-xxl-4 col-xl-6 col-lg-6 col-12">
+                                <div class="form-group">
+                                    <label class="form-label">Charging Type</label>
+                                    <div class="controls">
+                                        <select name="select" id="customSelect" required class="form-select">
+                                            <option value="1">Slow Charging (120V AC)</option>
+                                            <option value="2" selected>Fast Charging (240V AC)</option>
+                                            <option value="3">Rapid Charging / DC Fast Charging</option>
+                                        </select>
+                                    </div>
+                                </div>
                             </div>
+                            <div class="col-xxl-4 col-xl-6 col-lg-6 col-12">
+                                <div class="form-group">
+                                    <label class="form-label">City</label>
+                                    <div class="controls">
+                                        <select name="select" id="customSelect" required class="form-select">
+                                            <option value="1">New York</option>
+                                            <option value="2" selected>Los Angeles</option>
+                                            <option value="3">Chicago</option>
+                                            <option value="4">Miami</option>
+                                            <option value="5">San Francisco</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            
                         </div>
 
                     </div>
@@ -432,9 +447,9 @@
                                 </div>
                                 <div class="col-xl-3">
                                     <div class="d-grid">
-                                        <button class="btn btn-danger" id="btn-new-event">Create New Event</button>
+                                        <button class="btn btn-danger" id="btn-new-event">Book Appointment</button>
                                     </div>
-                                    <div id="external-events" class="mt-20">
+                                    <!-- <div id="external-events" class="mt-20">
                                         <br>
                                         <p class="text-muted">Drag and drop your event or click in the calendar
                                         </p>
@@ -453,7 +468,7 @@
                                         <div class="external-event bg-info" data-class="bg-info">
                                             <i class="mdi mdi-arrow-right me-2 vertical-middle"></i>SLEEP TIGHT
                                         </div>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
 
@@ -699,7 +714,7 @@
 
 
         <!-- Control Sidebar -->
-        <aside class="control-sidebar">
+        <aside class="control-sidebar" style="z-index: 99999;">
 
             <div class="rpanel-title"><span class="pull-right btn btn-circle btn-danger"
                     data-toggle="control-sidebar"><i class="ion ion-close text-white"></i></span> </div>
@@ -1103,7 +1118,7 @@
 
     <script src="../../../assets/vendor_components/full-calendar/moment.js"></script>
     <script src="../../../assets/vendor_components/full-calendar/fullcalendar.min.js"></script>
-    <script src="../src/js/pages/demo.calendar.js"></script>
+    <script src="../src/js/pages/democalender2.js"></script>
 
     <!-- EV Admin App -->
     <script src="../src/js/demo.js"></script>

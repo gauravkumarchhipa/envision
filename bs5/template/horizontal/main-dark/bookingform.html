@@ -287,7 +287,7 @@
                     <ul>
                         <li><a href="booking.html"><i class="icon-Commit"><span class="path1"></span><span
                                         class="path2"></span></i>Stations</a></li>
-                        <li><a href="bookingform.html"><i class="icon-Commit"><span class="path1"></span><span
+                        <li><a href="booking.html"><i class="icon-Commit"><span class="path1"></span><span
                                         class="path2"></span></i>Booking Form</a></li>
                         <li><a href="booking.html"><i class="icon-Commit"><span class="path1"></span><span
                                         class="path2"></span></i>Station Alert</a></li>
@@ -408,48 +408,119 @@
                                 </div>
                                 <div class="box-body">
                                     <div class="row">
-                                        <div class="col-lg-4 col-12">
+                                        <div class="col-lg-6 col-12">
                                             <div class="form-group">
-                                                <label class="form-label">Text input</label>
+                                                <label class="form-label">Customer Name</label>
                                                 <input type="text" class="form-control">
                                             </div>
                                         </div>
-                                        <div class="col-lg-4 col-12">
+                                        <div class="col-lg-6 col-12">
                                             <div class="form-group">
-                                                <label class="form-label">Password input</label>
-                                                <input type="password" class="form-control">
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4 col-12">
-                                            <div class="form-group">
-                                                <label class="form-label">Input with helper</label>
+                                                <label class="form-label">Email Address</label>
                                                 <input type="text" class="form-control">
                                             </div>
                                         </div>
-                                    </div>
+                                        <div class="col-lg-6 col-12">
+                                            <div class="form-group">
+                                                <label class="form-label">Phone Number</label>
+                                                <input type="text" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-12">
+                                            <div class="form-group">
+                                                <label class="form-label">Vehicle Modal</label>
+                                                <input type="text" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class=" col-12">
+                                            <div class="form-group">
+                                                <label class="form-label">Vehicle Plate Number</label>
+                                                <input type="text" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-12">
+                                            <div class="form-group">
+                                                <label class="form-label">Station Location</label>
+                                                <input type="text" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-12">
+                                            <div class="form-group">
+                                                <label class="form-label">Kiosk</label>
+                                                <input type="text" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-12">
+                                            <div class="form-group">
+                                                <label class="form-label">Charging Method</label>
+                                                <div class="controls">
+                                                    <select name="select" id="timePeriod" required class="form-select">
+                                                        <option value="Daily">Type 1 (SAE J1772)</option>
+                                                        <option value="Weekly">Type 2 (Mennekes)</option>
+                                                        <option value="Monthly" selected>CCS Type 1 </option>
+                                                        <option value="Quarterly">Tesla Connector (NACS)</option>
+                                                        <option value="Annually">GB/T DC </option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-12">
+                                            <div class="form-group">
+                                                <label class="form-label">Charging Type</label>
+                                                <div class="controls">
+                                                    <select name="select" id="timePeriod" required class="form-select">
+                                                        <option value="Daily">AC Slow Charging </option>
+                                                        <option value="Weekly">AC Fast Charging </option>
+                                                        <option value="Monthly" selected>DC Fast Charging</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-12">
+                                            <div class="form-group">
+                                                <label class="form-label">Start Date</label>
+                                                <div class="controls">
+                                                    <input type="date" name="start_date" class="form-control" required>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-12">
+                                            <div class="form-group row">
+                                                <div class="form-group">
+                                                    <label class="form-label">Start Time</label>
+                                                    <div class="controls">
+                                                        <input class="form-control" type="time" value="13:45:00"
+                                                            id="example-time-input">
+                                                    </div>
+                                                </div>
 
-                                    <div class="form-group">
-                                        <label class="text-success form-label">Contextual input helper</label>
-                                        <div class="form-group-feedback form-group-feedback-right">
-                                            <input type="text" class="form-control border-success">
-                                            <div class="form-control-feedback text-success">
-                                                <i class="fa fa-check"></i>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-6 col-12">
+                                            <div class="form-group">
+                                                <label class="form-label">End Date</label>
+                                                <div class="controls">
+                                                    <input type="date" name="end_date" class="form-control" required>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-12">
+                                            <div class="form-group row">
+                                                <div class="form-group">
+                                                    <label class="form-label">End Time</label>
+                                                    <div class="controls">
+                                                        <input class="form-control" type="time" value="13:45:00"
+                                                            id="example-time-input">
+                                                    </div>
+                                                </div>
+
                                             </div>
                                         </div>
                                     </div>
 
                                     <div class="form-group">
-                                        <label class="form-label">Readonly input field</label>
-                                        <input type="text" class="form-control" readonly>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label class="form-label">Disabled input field</label>
-                                        <input type="text" class="form-control" disabled>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label class="form-label">Textarea</label>
+                                        <label class="form-label">Special Instruction</label>
                                         <textarea rows="5" cols="5" class="form-control"></textarea>
                                     </div>
 
@@ -640,7 +711,7 @@
 
 
         <!-- Control Sidebar -->
-        <aside class="control-sidebar">
+        <aside class="control-sidebar" style="z-index: 99999;">
 
             <div class="rpanel-title"><span class="pull-right btn btn-circle btn-danger"
                     data-toggle="control-sidebar"><i class="ion ion-close text-white"></i></span> </div>
