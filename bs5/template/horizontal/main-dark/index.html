@@ -75,27 +75,29 @@
 	}
 </style>
 
-	<style>
-		.hidden { display: none !important; }
-	  </style>
-	  
-	  <script>
-		document.addEventListener('DOMContentLoaded', function () {
-		  const select = document.getElementById('customSelect');
-		  const startDateGroup = document.getElementById('startDateGroup');
-		  const endDateGroup   = document.getElementById('endDateGroup');
-	  
-		  function syncDateVisibility() {
+<style>
+	.hidden {
+		display: none !important;
+	}
+</style>
+
+<script>
+	document.addEventListener('DOMContentLoaded', function () {
+		const select = document.getElementById('customSelect');
+		const startDateGroup = document.getElementById('startDateGroup');
+		const endDateGroup = document.getElementById('endDateGroup');
+
+		function syncDateVisibility() {
 			const isCustom = select.value === '5';
 			startDateGroup.classList.toggle('hidden', !isCustom);
 			endDateGroup.classList.toggle('hidden', !isCustom);
-		  }
-	  
-		  select.addEventListener('change', syncDateVisibility);
-		  syncDateVisibility(); // set correct state on load
-		});
-	  </script>
-  
+		}
+
+		select.addEventListener('change', syncDateVisibility);
+		syncDateVisibility(); // set correct state on load
+	});
+</script>
+
 
 <body class="layout-top-nav dark-skin theme-primary fixed">
 
@@ -292,6 +294,19 @@
 								class="path2"></span></i>Dashboard</a></li>
 				<li><a href="information.html"><i data-feather="info"><span class="path1"></span><span
 								class="path2"></span></i>Performance Analytics</a></li>
+				<li><a href="#"><i data-feather="home"><span class="path1"></span><span class="path2"></span></i>Booking
+						Management</a>
+					<ul>
+						<li><a href="evbooking.html"><i class="icon-Commit"><span class="path1"></span><span
+										class="path2"></span></i>Booking Dashboard</a></li>
+						<li><a href="bookingform.html"><i class="icon-Commit"><span class="path1"></span><span
+										class="path2"></span></i>Booking Form</a></li>
+						<li><a href="bookingtable.html"><i class="icon-Commit"><span class="path1"></span><span
+										class="path2"></span></i>Booking Data</a></li>
+						<li><a href="booking.html"><i class="icon-Commit"><span class="path1"></span><span
+										class="path2"></span></i>Session Logs</a></li>
+					</ul>
+				</li>
 				<li><a href="#"><i data-feather="headphones"></i>User
 						Management</a>
 					<ul>
@@ -345,28 +360,16 @@
 										class="path2"></span></i>Audit and Activity Management</a></li>
 					</ul>
 				</li>
-				<li><a href="#"><i data-feather="home"><span class="path1"></span><span class="path2"></span></i>Booking
-						Management</a>
-					<ul>
-						<li><a href="booking.html"><i class="icon-Commit"><span class="path1"></span><span
-										class="path2"></span></i>Booking Dashboard</a></li>
-						<li><a href="booking.html"><i class="icon-Commit"><span class="path1"></span><span
-										class="path2"></span></i>Monitoring</a></li>
-						<li><a href="booking.html"><i class="icon-Commit"><span class="path1"></span><span
-										class="path2"></span></i>Booking Policy Settings</a></li>
-						<li><a href="booking.html"><i class="icon-Commit"><span class="path1"></span><span
-										class="path2"></span></i>Session Logs</a></li>
-					</ul>
-				</li>
+
 				<li><a href="#"><i data-feather="home"><span class="path1"></span><span class="path2"></span></i>Station
 						Management</a>
 					<ul>
 						<li><a href="booking.html"><i class="icon-Commit"><span class="path1"></span><span
 										class="path2"></span></i>Stations</a></li>
-						<li><a href="booking.html"><i class="icon-Commit"><span class="path1"></span><span
-										class="path2"></span></i>Stations Monitoring</a></li>
-						<li><a href="booking.html"><i class="icon-Commit"><span class="path1"></span><span
-										class="path2"></span></i>Station Alert</a></li>
+						<li><a href="bookingform.html"><i class="icon-Commit"><span class="path1"></span><span
+										class="path2"></span></i>Booking Form</a></li>
+						<li><a href="bookingtable.html"><i class="icon-Commit"><span class="path1"></span><span
+										class="path2"></span></i>Booking Data</a></li>
 						<li><a href="booking.html"><i class="icon-Commit"><span class="path1"></span><span
 										class="path2"></span></i>Station Assignment</a></li>
 					</ul>
