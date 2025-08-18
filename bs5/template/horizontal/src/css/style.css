@@ -45570,3 +45570,13 @@ div.dt-container .dt-input:focus,
   box-shadow: none !important;
   outline: 0;
 }
+
+
+
+#donut-chart .legend table,
+#donut-chart .legend td,
+#donut-chart .legend tr {
+  color: #fff !important;  /* white text */
+  background: transparent !important; /* fully transparent bg */
+  background-color: #0E0E23 !important;
+}

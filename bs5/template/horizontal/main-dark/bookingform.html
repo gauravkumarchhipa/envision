@@ -20,6 +20,20 @@
     <link rel="stylesheet" href="../src/css/skin_color.css">
 
 </head>
+<style>
+    .dark-skin .select2-container--default .select2-selection--single {
+        border: 1px solid #ffffff2b !important;
+    }
+
+    .theme-primary .select2-container--default .select2-search--dropdown .select2-search__field {
+        border: 1px solid #ffffff2b !important;
+    }
+
+    .theme-primary .select2-container--default .select2-results__option--highlighted[aria-selected] {
+        background-color: white !important;
+        color: black !important;
+    }
+</style>
 
 <body class="layout-top-nav dark-skin theme-primary fixed">
 
@@ -441,24 +455,65 @@
                                                 <input type="text" class="form-control">
                                             </div>
                                         </div>
-                                      
+
+
                                         <div class="col-lg-6 col-12">
+
                                             <div class="form-group">
                                                 <label class="form-label">Station Location</label>
-                                                <input type="text" class="form-control">
+                                                <select class="form-control select2" style="width: 100%;">
+                                                    <option selected="selected">Downtown Mall Station - Downtime
+                                                        District</option>
+                                                    <option>Airport Terminal 1 - Airport Zone</option>
+                                                    <option>City Central Plaza - City Center</option>
+                                                    <option>Shopping District Hub - Shopping District</option>
+                                                    <option>Business Park Station - Business District</option>
+                                                </select>
                                             </div>
+                                            <!-- <div class="form-group">
+                                                <label class="form-label">Station Location</label>
+                                                <div class="controls">
+                                                    <select name="select" id="timePeriod" required class="form-select"
+                                                        style="background-color: transparent !important;">
+                                                        <option value="1">New York</option>
+                                                        <option value="2" selected>Los Angeles</option>
+                                                        <option value="3">Chicago</option>
+                                                        <option value="4">Miami</option>
+                                                        <option value="5">San Francisco</option>
+                                                    </select>
+                                                </div>
+                                            </div> -->
                                         </div>
                                         <div class="col-lg-6 col-12">
                                             <div class="form-group">
                                                 <label class="form-label">Kiosk</label>
-                                                <input type="text" class="form-control">
+                                                <select class="form-control select2"
+                                                    style="width: 100%; border : 1px solid #ffffff2b">
+                                                    <option selected="selected">Kiosk K001</option>
+                                                    <option>Kiosk K002</option>
+                                                    <option>Kiosk K003</option>
+                                                </select>
                                             </div>
+                                            <!-- <div class="form-group">
+                                                <label class="form-label">Kiosk</label>
+                                                <div class="controls">
+                                                    <select name="select" id="timePeriod" required class="form-select"
+                                                        style="background-color: transparent !important;">
+                                                        <option value="1">New York</option>
+                                                        <option value="2" selected>Los Angeles</option>
+                                                        <option value="3">Chicago</option>
+                                                        <option value="4">Miami</option>
+                                                        <option value="5">San Francisco</option>
+                                                    </select>
+                                                </div>
+                                            </div> -->
                                         </div>
                                         <div class="col-lg-6 col-12">
                                             <div class="form-group">
                                                 <label class="form-label">Charging Method</label>
                                                 <div class="controls">
-                                                    <select name="select" id="timePeriod" required class="form-select" style="background-color: transparent !important;">
+                                                    <select name="select" id="timePeriod" required class="form-select"
+                                                        style="background-color: transparent !important;">
                                                         <option value="Daily">Type 1 (SAE J1772)</option>
                                                         <option value="Weekly">Type 2 (Mennekes)</option>
                                                         <option value="Monthly" selected>CCS Type 1 </option>
@@ -472,7 +527,8 @@
                                             <div class="form-group">
                                                 <label class="form-label">Charging Type</label>
                                                 <div class="controls">
-                                                    <select name="select" id="timePeriod" required class="form-select"style="background-color: transparent !important;">
+                                                    <select name="select" id="timePeriod" required class="form-select"
+                                                        style="background-color: transparent !important;">
                                                         <option value="Daily">AC Slow Charging </option>
                                                         <option value="Weekly">AC Fast Charging </option>
                                                         <option value="Monthly" selected>DC Fast Charging</option>
@@ -548,8 +604,8 @@
                 </ul>
             </div>
             &copy;
-            <script>document.write(new Date().getFullYear())</script> <a
-            href="https://envisioncharging.com/index.html" target="_blank">Envision Charging</a>. All Rights Reserved.
+            <script>document.write(new Date().getFullYear())</script> <a href="https://envisioncharging.com/index.html"
+                target="_blank">Envision Charging</a>. All Rights Reserved.
         </footer>
         <!-- Side panel -->
         <!-- quick_user_toggle -->
@@ -1125,7 +1181,8 @@
     <script src="../src/js/menus.js"></script>
     <script src="../src/js/template.js"></script>
 
-
+    <script src="../src/js/pages/advanced-form-element.js"></script>
+    <script src="../../../assets/vendor_components/select2/dist/js/select2.full.js"></script>
 </body>
 
 </html>

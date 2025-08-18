@@ -98,6 +98,47 @@
 	});
 </script>
 
+<style>
+	.stat {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		height: 100%;
+		border-radius: 8px;
+		background: #0f1123;
+		color: #fff;
+		padding: 1rem;
+	}
+
+	.stat-head {
+		min-height: 40px;
+		/* keeps titles same height */
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-weight: 500;
+		font-size: 20px;
+	}
+
+	.stat-number {
+		margin-top: 10px;
+		font-size: 2rem;
+		font-weight: 600;
+		line-height: 1;
+		font-size: 30px;
+	}
+
+	.stat-foot {
+		/* margin-top: auto; */
+		margin-top: 10px;
+		display: flex;
+		flex-direction: column;
+		gap: .25rem;
+		font-size: .9rem;
+		color: #ccc;
+	}
+</style>
+
 
 <body class="layout-top-nav dark-skin theme-primary fixed">
 
@@ -514,10 +555,9 @@
 
 				<!-- ******************************************************************************************** -->
 				<!-- Card -->
-				<div class="row d-flex align-items-stretch"> <!-- Added d-flex and align-items-stretch to the row -->
+				<!-- <div class="row d-flex align-items-stretch"> 
 					<div class="col-xxl-2 col-xl-6 col-lg-6 col-12">
 						<div class="box box-body pull-up fill-icon h-170 text-center align-items-center">
-							<!-- Added h-100 here -->
 							<div class="d-flex justify-content-between align-items-center">
 								<h5 class="mb-0 fw-500">
 									<i class="fa-solid fa-user text-primary"></i>
@@ -525,7 +565,7 @@
 								</h5>
 							</div>
 							<div class="mt-11 ga-2 d-flex flex-column">
-								<h3 class="fw-500">12,850</h3>
+								<h1 class="fw-500">12,850</h1>
 								<div><i class="fa-solid fa-arrow-up text-success margin-right-2"></i><span
 										class="text-success">8.2%</span> from last period</div>
 								<div>Currently online users</div>
@@ -534,7 +574,6 @@
 					</div>
 					<div class="col-xxl-2 col-xl-6 col-lg-6 col-12">
 						<div class="box box-body pull-up fill-icon h-170 text-center align-items-center">
-							<!-- Added h-150 here -->
 							<div class="d-flex justify-content-between align-items-center">
 								<h5 class="mb-0 fw-500">
 									<i class="fa-solid fa-dollar-sign fs-20 text-primary align-middle"></i>
@@ -542,7 +581,7 @@
 								</h5>
 							</div>
 							<div class="mt-11 ga-2 d-flex flex-column">
-								<h3 class="fw-500">$28.5M</h3>
+								<h1 class="fw-500">$28.5M</h1>
 								<div><i class="fa-solid fa-arrow-up text-success margin-right-2"></i><span
 										class="text-success">15.3%</span> from last period</div>
 								<div>Year to date revenue</div>
@@ -551,14 +590,13 @@
 					</div>
 					<div class="col-xxl-2 col-xl-6 col-lg-6 col-12">
 						<div class="box box-body pull-up fill-icon h-170 text-center align-items-center">
-							<!-- Added h-150 here -->
 							<div class="d-flex justify-content-between align-items-center">
 								<h5 class="mb-0 fw-500"><i
 										class="fa-solid fa-charging-station fs-20 text-success align-middle"></i> Active
 									Kiosks</h5>
 							</div>
 							<div class="mt-11 ga-2 d-flex flex-column">
-								<h3 class="fw-500">156</h3>
+								<h1 class="fw-500">156</h1>
 								<div><i class="fa-solid fa-arrow-down text-danger margin-right-2"></i><span
 										class="text-danger">2.1%</span> from last period</div>
 								<div>Operational kiosks</div>
@@ -567,7 +605,6 @@
 					</div>
 					<div class="col-xxl-2 col-xl-6 col-lg-6 col-12">
 						<div class="box box-body pull-up fill-icon h-170 text-center align-items-center">
-							<!-- Added h-150 here -->
 							<div class="d-flex justify-content-between align-items-center">
 								<h5 class="mb-0 fw-500">
 									<i class="fa-solid fa-rectangle-ad fs-20 text-danger align-middle"></i>
@@ -575,7 +612,7 @@
 								</h5>
 							</div>
 							<div class="mt-11 ga-2 d-flex flex-column">
-								<h3 class="fw-500">2</h3>
+								<h1 class="fw-500">2</h1>
 								<div><i class="fa-solid fa-arrow-up text-success margin-right-2"></i><span
 										class="text-success">12.5%</span> from last period</div>
 								<div>Unresolved tickets</div>
@@ -584,7 +621,6 @@
 					</div>
 					<div class="col-xxl-2 col-xl-6 col-lg-6 col-12">
 						<div class="box box-body pull-up fill-icon h-170 text-center align-items-center">
-							<!-- Added h-150 here -->
 							<div class="d-flex justify-content-between align-items-center">
 								<h5 class="mb-0 fw-500">
 									<i class="fa-solid fa-ticket fs-20 text-info align-middle"></i>
@@ -592,7 +628,7 @@
 								</h5>
 							</div>
 							<div class="mt-11 ga-2 d-flex flex-column">
-								<h3 class="fw-500">8</h3>
+								<h1 class="fw-500">8</h1>
 								<div><i class="fa-solid fa-arrow-up text-success margin-right-2"></i><span
 										class="text-success">25%</span> from last period</div>
 								<div>Unresolved tickets</div>
@@ -601,7 +637,6 @@
 					</div>
 					<div class="col-xxl-2 col-xl-6 col-lg-6 col-12">
 						<div class="box box-body pull-up fill-icon h-170 text-center align-items-center">
-							<!-- Added h-100 here -->
 							<div class="d-flex justify-content-between align-items-center">
 								<h5 class="mb-0 fw-500">
 									<i class="fa-solid fa-user text-primary"></i>
@@ -609,18 +644,108 @@
 								</h5>
 							</div>
 							<div class="mt-11 ga-2 d-flex flex-column">
-								<h3 class="fw-500">1,705,234 kWh</h3>
+								<h1 class="fw-500">17,563,20 <span style="font-size: 14px;">kWh</span></h1>
 								<div><i class="fa-solid fa-arrow-up text-success margin-right-2"></i><span
 										class="text-success">8.2%</span> from last period</div>
 								<div>Energy consumed this period</div>
 							</div>
 						</div>
 					</div>
+				</div> -->
+
+				<div class=" py-5">
+					<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xxl-6 g-3">
+
+						<div class="col">
+							<div class="stat text-center">
+								<div class="stat-head">
+									<i class="fa-solid fa-user text-primary me-2"></i> Total Active Users
+								</div>
+								<div class="stat-number">12,850</div>
+								<div class="stat-foot">
+									<div><i class="fa-solid fa-arrow-up text-success me-1"></i><span
+											class="text-success">8.2%</span> from last period</div>
+									<div>Currently online users</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="col">
+							<div class="stat text-center">
+								<div class="stat-head">
+									<i class="fa-solid fa-dollar-sign text-primary me-2"></i> Total Revenue
+								</div>
+								<div class="stat-number">$28.5M</div>
+								<div class="stat-foot">
+									<div><i class="fa-solid fa-arrow-up text-success me-1"></i><span
+											class="text-success">15.3%</span> from last period</div>
+									<div>Year to date revenue</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="col">
+							<div class="stat text-center">
+								<div class="stat-head">
+									<i class="fa-solid fa-charging-station text-success me-2"></i> Active Kiosks
+								</div>
+								<div class="stat-number">156</div>
+								<div class="stat-foot">
+									<div><i class="fa-solid fa-arrow-down text-danger me-1"></i><span
+											class="text-danger">2.1%</span> from last period</div>
+									<div>Operational kiosks</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="col">
+							<div class="stat text-center">
+								<div class="stat-head">
+									<i class="fa-solid fa-rectangle-ad text-danger me-2"></i> Pending Ads
+								</div>
+								<div class="stat-number">2</div>
+								<div class="stat-foot">
+									<div><i class="fa-solid fa-arrow-up text-success me-1"></i><span
+											class="text-success">12.5%</span> from last period</div>
+									<div>Unresolved tickets</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="col">
+							<div class="stat text-center">
+								<div class="stat-head">
+									<i class="fa-solid fa-ticket text-info me-2"></i> Support Tickets Open
+								</div>
+								<div class="stat-number">8</div>
+								<div class="stat-foot">
+									<div><i class="fa-solid fa-arrow-up text-success me-1"></i><span
+											class="text-success">25%</span> from last period</div>
+									<div>Unresolved tickets</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="col">
+							<div class="stat text-center">
+								<div class="stat-head">
+									<i class="fa-solid fa-bolt text-warning me-2"></i> Total Energy
+								</div>
+								<div class="stat-number">17,563,20 <span style="font-size:14px;">kWh</span></div>
+								<div class="stat-foot">
+									<div><i class="fa-solid fa-arrow-up text-success me-1"></i><span
+											class="text-success">8.2%</span> from last period</div>
+									<div>Energy consumed this period</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
 				</div>
 
 				<!-- ******************************************************************************************** -->
 				<!-- Chart -->
-				<div class="row">
+				<div class="row" style="margin-top: 14px;">
 					<!-- <div class="col-xxl-4 col-xl-6 col-lg-12 col-12">
 						<div class="box">
 							<div class="box-header  d-flex flex-column flex-md-row gap-2  justify-content-between">
@@ -679,39 +804,47 @@
 								<h4 class="box-title">Charging Stations</h4>
 							</div>
 							<div class="box-body">
-								<div class="row align-items-center gap-10 gap-md-0">
+								<div class="row align-items-center gap-8 gap-md-0">
 									<!-- LEFT: numbers -->
-									<div class="col-md-8 col-lg-8 order-2 order-md-1">
+									<div class="col-md-6 col-lg-6 order-2 order-md-1">
 										<div class="box body p-10 pull-up">
 											<div class="d-flex justify-content-between">
-												<p class="text-fade mb-0">Total</p>
-												<p class="text-fade mb-0">Online</p>
-												<p class="text-fade mb-0">Offline</p>
+												<div class="d-flex flex-column">
+													<p class="text-fade mb-0">Total</p>
+													<h1 class="text-fade mt-0">225</h1>
+												</div>
+												<div class="d-flex flex-column">
+													<p class="text-fade mb-0">Online</p>
+													<h1 class="text-fade mt-0">90%</h1>
+												</div>
+												<div class="d-flex flex-column">
+													<p class="text-fade mb-0">Offline</p>
+													<h1 class="text-fade mt-0">10%</h1>
+												</div>
 											</div>
+										</div>
+										<div class="box body p-10 pull-up">
 											<div class="d-flex justify-content-between">
-												<h1 class="text-fade mt-0">225</h1>
-												<h1 class="text-fade mt-0">90%</h1>
-												<h1 class="text-fade mt-0">10%</h1>
+												<div class="d-flex flex-column">
+													<p class="text-fade mb-0">Available</p>
+													<h1 class=" mt-0" style="color:#51ce8a;">145</h1>
+												</div>
+												<div class="d-flex flex-column">
+													<p class="text-fade mb-0">In Use</p>
+													<h1 class=" mt-0" style="color:#4d7cff;">65</h1>
+												</div>
+												<div class="d-flex flex-column">
+													<p class="text-fade mb-0">Unavailable</p>
+													<h1 class="mt-0" style="color:#f2426d;">&nbsp;&nbsp; &nbsp;10</h1>
+												</div>
 											</div>
 										</div>
 
-										<div class="mt-2">
-											<div class="d-flex justify-content-between align-items-center">
-												<p class="text-fade mb-0 mt-10">Available</p>
-												<p class="text-fade mb-0 mt-10">In Use</p>
-												<p class="text-fade mb-0 mt-10">Unavailable</p>
-											</div>
-											<div class="d-flex justify-content-between align-items-center">
-												<h1 class="mt-0" style="color:#51ce8a;">145</h1>
-												<h1 class="mt-0" style="color:#4d7cff;">65</h1>
-												<h1 class="mt-0" style="color:#f2426d;">15</h1>
-											</div>
-										</div>
 									</div>
 
 									<!-- RIGHT: donut chart -->
-									<div class="col-md-4 col-lg-4 order-1 order-md-2 text-center">
-										<div id="donut-chart" class="mt-20" style="height:220px; width:100%;"></div>
+									<div class="col-md-6 col-lg-6 order-1 order-md-2 text-center">
+										<div id="donut-chart" class="mt-20" style="height:220px; width:100%; "></div>
 									</div>
 								</div>
 							</div>
