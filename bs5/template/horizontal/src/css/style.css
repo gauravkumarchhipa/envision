@@ -45534,3 +45534,39 @@ table.dataTable thead .sorting_desc_disabled:after {
   flex-grow: 1;
   overflow-y: auto;
 }
+
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(1);   /* turns black icon to white */
+  cursor: pointer;
+}
+
+input[type="time"]::-webkit-calendar-picker-indicator {
+  filter: invert(1);   /* turns the icon white */
+  cursor: pointer;
+}
+
+
+
+/* Closed select box */
+div.dt-container .dt-input,
+.form-select {
+  background-color: #0f1222 !important; /* black-ish */
+  color: #fff !important;
+  border-color: #2f3545 !important;
+  color-scheme: dark; /* helps native popup use dark UI (Firefox/Chromium) */
+}
+
+/* The opened dropdown list (Chrome/Edge/Safari) */
+div.dt-container .dt-input option,
+.form-select option {
+  background-color: #0f1222;
+  color: #fff;
+}
+
+/* Optional: remove blue glow */
+div.dt-container .dt-input:focus,
+.form-select:focus {
+  box-shadow: none !important;
+  outline: 0;
+}
