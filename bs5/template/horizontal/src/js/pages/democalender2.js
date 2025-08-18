@@ -75,16 +75,51 @@
 
     var initialEvents = [
       {
+        title: "DMC-0001",
+        start: ymd(y, m, d - 2) + "T13:15:00",
+        end: ymd(y, m, d - 2) + "T15:00:00",
+        className: "bg-primary",
+        extendedProps: { name: "Adam" },
+      },
+      {
+        title: "DMC-9658",
+        start: ymd(y, m, d - 1) + "T16:08:00",
+        end: ymd(y, m, d - 1) + "T17:45:00",
+        className: "bg-success",
+        extendedProps: { name: "Roy" },
+      },
+      {
         title: "DMC-4583",
         start: ymd(y, m, d) + "T17:00:00",
-        end: ymd(y, m, d) + "T18:00:00",
+        end: ymd(y, m, d) + "T18:30:00",
         className: "bg-success",
         extendedProps: { name: "Alice" },
       },
       {
+        title: "DMC-4783",
+        start: ymd(y, m, d) + "T19:00:00",
+        end: ymd(y, m, d) + "T21:30:00",
+        className: "bg-warning",
+        extendedProps: { name: "Jack" },
+      },
+      {
+        title: "DMC-4583",
+        start: ymd(y, m, d) + "T11:00:00",
+        end: ymd(y, m, d) + "T13:00:00",
+        className: "bg-primary",
+        extendedProps: { name: "William" },
+      },
+      {
+        title: "DMC-0798",
+        start: ymd(y, m, d + 1) + "T18:15:00",
+        end: ymd(y, m, d + 1) + "T20:22:00",
+        className: "bg-success",
+        extendedProps: { name: "Paul" },
+      },
+      {
         title: "DMC-5685",
         start: ymd(y, m, d + 2) + "T13:15:00",
-        end: ymd(y, m, d + 2) + "T14:00:00",
+        end: ymd(y, m, d + 2) + "T15:00:00",
         className: "bg-primary",
         extendedProps: { name: "Bob" },
       },
@@ -92,15 +127,78 @@
         title: "DMC-7596",
         start: ymd(y, m, d + 2) + "T16:08:00",
         end: ymd(y, m, d + 2) + "T17:45:00",
-        className: "bg-warning",
+        className: "bg-success",
         extendedProps: { name: "Charlie" },
       },
       {
+        title: "DMC-5963",
+        start: ymd(y, m, d + 2) + "T14:15:00",
+        end: ymd(y, m, d + 2) + "T16:00:00",
+        className: "bg-warning",
+        extendedProps: { name: "Charles" },
+      },
+      {
+        title: "DMC-4863",
+        start: ymd(y, m, d + 2) + "T18:08:00",
+        end: ymd(y, m, d + 2) + "T20:45:00",
+        className: "bg-warning",
+        extendedProps: { name: " David" },
+      },
+      {
+        title: "DMC-1563",
+        start: ymd(y, m, d + 3) + "T14:15:00",
+        end: ymd(y, m, d + 3) + "T16:00:00",
+        className: "bg-primary",
+        extendedProps: { name: "Dennis" },
+      },
+      {
+        title: "DMC-7563",
+        start: ymd(y, m, d + 3) + "T02:08:00",
+        end: ymd(y, m, d + 3) + "T09:45:00",
+        className: "bg-warning",
+        extendedProps: { name: " Gregory" },
+      },
+      {
         title: "DMC-1598",
-        start: ymd(y, m, d + 4) + "T18:15:00",
-        end: ymd(y, m, d + 4) + "T19:45:00",
+        start: ymd(y, m, d + 4) + "T08:15:00",
+        end: ymd(y, m, d + 4) + "T10:45:00",
+        className: "bg-primary",
+        extendedProps: { name: "Billy" },
+      },
+      {
+        title: "DMC-1698",
+        start: ymd(y, m, d + 4) + "T13:15:00",
+        end: ymd(y, m, d + 4) + "T16:45:00",
+        className: "bg-warning",
+        extendedProps: { name: "Dennis" },
+      },
+      {
+        title: "DMC-0798",
+        start: ymd(y, m, d + 4) + "T19:15:00",
+        end: ymd(y, m, d + 4) + "T2:22:00",
         className: "bg-success",
-        extendedProps: { name: "Dana" },
+        extendedProps: { name: "Joseph" },
+      },
+      {
+        title: "DMC-007",
+        start: ymd(y, m, d + 4) + "T22:15:00",
+        end: ymd(y, m, d + 4) + "T23:45:00",
+        className: "bg-primary",
+        extendedProps: { name: "Thomas" },
+      },
+      {
+        title: "DMC-1298",
+        start: ymd(y, m, d + 5) + "T13:15:00",
+        end: ymd(y, m, d + 5) + "T16:15:00",
+        className: "bg-success",
+        extendedProps: { name: "Steve" },
+      },
+      {
+        title: "DMC-1787",
+        start: ymd(y, m, d + 5) + "T05:15:00",
+        end: ymd(y, m, d + 5) + "T09:45:00",
+        className: "bg-primary",
+        extendedProps: { name: "Harry" },
       },
     ];
 
@@ -119,11 +217,22 @@
 
     self.$calendarObj = new FullCalendar.Calendar(self.$calendar[0], {
       themeSystem: "bootstrap",
-      initialView: "dayGridMonth",
+      initialView: "timeGridWeek",
       headerToolbar: {
         left: "prev,next today",
         center: "title",
         right: "dayGridMonth,timeGridWeek,timeGridDay",
+      },
+      views: {
+        dayGridMonth: {
+          dayMaxEvents: 2, // show 2 events, then “+N more”
+          // (or: dayMaxEventRows: 2)          // either works in month view
+
+          // optional: customize the “more” text
+          moreLinkContent: (args) => `+${args.num} more`,
+          // optional: what happens when clicking “+N more”
+          moreLinkClick: "popover", // 'popover' (default) | 'day' | function
+        },
       },
 
       // show "start – end" on chips & labels

@@ -92,6 +92,7 @@ function makeOption(width) {
       textStyle: { color: "#fff", fontSize: small ? 10 : 12 }
     },
     color: ["#057637", "#ada5a5"],
+    //  color: ["#34C38F", "#E1E4EC"],
     series: [{
       name: "Kiosk Status",
       type: "pie",

@@ -23,39 +23,49 @@
 <!-- Put this AFTER your existing CSS files -->
 <style>
     /* Month/Week/Day header (Sun, Mon, ... ) */
-    #calendar .fc-col-header-cell-cushion { 
-      color: #fff !important;
+    #calendar .fc-col-header-cell-cushion {
+        color: #fff !important;
     }
-  
+
     /* Month view day numbers */
     #calendar .fc-daygrid-day-number {
-      color: #fff !important;
+        color: #fff !important;
     }
-  
+
     /* Week/Day views: left time axis + slot labels */
     #calendar .fc-timegrid-axis-cushion,
     #calendar .fc-timegrid-slot-label-cushion {
-      color: #fff !important;
+        color: #fff !important;
     }
-  
+
     /* Toolbar title (e.g., “August 2025”) */
     #calendar .fc-toolbar-title {
-      color: #fff !important;
+        color: #fff !important;
     }
-  
+
     /* Optional: make "today" cell stand out on dark bg */
     #calendar .fc-day-today .fc-daygrid-day-frame {
-      background: rgba(255,255,255,0.08) !important;
+        background: rgba(255, 255, 255, 0.08) !important;
     }
-  
+
     /* Optional: softer grid lines on dark themes */
     #calendar.fc-theme-standard td,
     #calendar.fc-theme-standard th {
-      border-color: rgba(255,255,255,0.12);
+        border-color: rgba(255, 255, 255, 0.12);
     }
-  </style>
-  
-  
+
+    #calendar .fc-daygrid-more-link {
+        color: #fff !important;
+        opacity: .9;
+        text-decoration: underline;
+    }
+
+    #calendar .fc-daygrid-more-link {
+        opacity: 1;
+    }
+</style>
+
+
 
 <body class="layout-top-nav dark-skin theme-primary fixed">
 
@@ -257,9 +267,11 @@
                         <li><a href="evbooking.html"><i class="fa-solid fa-grip"></i>Booking Dashboard</a></li>
                         <li><a href="bookingform.html"><i class="icon-Commit"><span class="path1"></span><span
                                         class="path2"></span></i>Booking Form</a></li>
-                        <li><a href="bookingtable.html"><<i class="fa-solid fa-database"></i>Booking Data</a></li>
-                        <li><a href="booking.html"><i class="icon-Commit"><span class="path1"></span><span
-                                        class="path2"></span></i>Session Logs</a></li>
+                        <li><a href="bookingtable.html">
+                                <<i class="fa-solid fa-database"></i>Booking Data
+                            </a></li>
+                        <!-- <li><a href="booking.html"><i class="icon-Commit"><span class="path1"></span><span
+                                        class="path2"></span></i>Session Logs</a></li> -->
                     </ul>
                 </li>
                 <li><a href="#"><i data-feather="headphones"></i>User
@@ -470,7 +482,7 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="row">
-                            <div class="col-xl-9">
+                            <div class="col-xl-10">
                                 <div class="card">
                                     <div class="card-body">
                                         <div class="mb-30 mb-xl-0">
@@ -479,7 +491,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-xl-3">
+                            <div class="col-xl-2">
                                 <div class="d-grid">
                                     <a class="nav-link" href="bookingform.html"><button class="btn btn-danger"
                                             id="btn-new-event">Book Appointment</button></a>
@@ -520,9 +532,11 @@
                                             <div class="row">
                                                 <div class="col-12">
                                                     <div class="mb-3">
-                                                        <label class="control-label form-label">Vehicle Plate Number</label>
-                                                        <input class="form-control" placeholder="Insert Vehicle Plate Number"
-                                                            type="text" name="title" id="event-title" required />
+                                                        <label class="control-label form-label">Vehicle Plate
+                                                            Number</label>
+                                                        <input class="form-control"
+                                                            placeholder="Insert Vehicle Plate Number" type="text"
+                                                            name="title" id="event-title" required />
                                                         <div class="invalid-feedback">Please provide a valid event
                                                             name</div>
                                                     </div>
@@ -574,14 +588,14 @@
     <footer class="main-footer">
         <div class="pull-right d-none d-sm-inline-block">
             <ul class="nav nav-primary nav-dotted nav-dot-separated justify-content-center justify-content-md-end">
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                     <a class="nav-link" href="#" target="_blank">Purchase Now</a>
-                </li>
+                </li> -->
             </ul>
         </div>
         &copy;
-        <script>document.write(new Date().getFullYear())</script> <a
-            href="https://www.multipurposethemes.com/">Multipurpose Themes</a>. All Rights Reserved.
+        <script>document.write(new Date().getFullYear())</script> <a href="https://envisioncharging.com/index.html"
+            target="_blank">Envision Charging</a>. All Rights Reserved.
     </footer>
     <!-- Side panel -->
     <!-- quick_user_toggle -->
@@ -1026,10 +1040,10 @@
 
 
     <div id="chat-box-body">
-        <div id="chat-circle" class="waves-effect waves-circle btn btn-circle btn-sm btn-warning l-h-50">
+        <!-- <div id="chat-circle" class="waves-effect waves-circle btn btn-circle btn-sm btn-warning l-h-50">
             <div id="chat-overlay"></div>
             <span class="icon-Group-chat fs-18"><span class="path1"></span><span class="path2"></span></span>
-        </div>
+        </div> -->
 
         <div class="chat-box">
             <div class="chat-box-header p-15 d-flex justify-content-between align-items-center">
