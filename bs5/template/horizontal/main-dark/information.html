@@ -66,6 +66,51 @@
 		height: clamp(220px, 35vw, 360px);
 	}
 </style>
+<style>
+	@media (max-width: 767px) {
+		.main-header>div .logo .logo-lg {
+			line-height: 80px !important;
+			padding-left: 0;
+		}
+	}
+
+	@media (max-width: 370px) {
+		.navbar-custom-menu .navbar-nav li>a.dropdown-toggle {
+			height: 40px !important;
+		}
+	}
+
+	@media (max-width: 767px) {
+		.fixed .content-wrapper {
+			margin-top: 160px !important;
+		}
+	}
+
+	@media (max-width: 767px) {
+		.layout-top-nav .main-header .navbar {
+			border-bottom: 1px solid rgba(255, 255, 255, 0.12) !important
+		}
+	}
+
+	@media (max-width: 767px) {
+		.dark-skin .main-nav {
+			background: transparent !important;
+			border-bottom: none !important;
+		}
+	}
+
+	@media (max-width: 767px) {
+		.layout-top-nav.fixed .main-menu-btn {
+			margin: -12px 10px 0 20px !important;
+		}
+	}
+
+	@media (max-width: 767px) {
+		.main-menu {
+			background-color: #000 !important;
+		}
+	}
+</style>
 
 <body class="layout-top-nav dark-skin theme-primary fixed">
 
@@ -80,7 +125,8 @@
 						<!-- logo-->
 						<div class="logo-lg">
 							<span class="light-logo"><img src="../../../images/logo-white-text.png" alt="logo"></span>
-							<span class="dark-logo"><img src="../../../images/logo-white-text.png" alt="logo"></span>
+							<!-- <span class="dark-logo"><img src="../../../images/logo-white-text.png" alt="logo"></span> -->
+							<span class="dark-logo"><img src="../../../images/logo/logo (1).svg" alt="logo"></span>
 						</div>
 					</a>
 				</div>
@@ -257,7 +303,7 @@
 			</label>
 
 			<!-- Sample menu definition -->
-			<ul id="main-menu" class="sm sm-blue">
+			<ul id="main-menu" class="sm sm-blue"  style="background-color: #24243e;">
 				<li><a href="index.html"><i data-feather="home"><span class="path1"></span><span
 								class="path2"></span></i>Dashboard</a></li>
 				<li><a href="information.html"><i class="fa-solid fa-chart-line"></i>Performance Analytics</a></li>
