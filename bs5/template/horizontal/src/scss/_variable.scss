@@ -1,9 +1,9 @@
 // Variables
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
-$bodyfont:'Poppins', sans-serif;
-$headingfont:'Poppins', sans-serif;
+$bodyfont: "Poppins", sans-serif;
+$headingfont: "Poppins", sans-serif;
 
 $p100: 100%;
 
@@ -21,9 +21,8 @@ $default-gutter-width: 1.5rem;
 //
 // Font-size, font-weight
 
-
-$fw-unset:unset;
-$fw-100:100;
+$fw-unset: unset;
+$fw-100: 100;
 $fw-200: 200;
 $fw-300: 300;
 $fw-400: 400;
@@ -64,25 +63,25 @@ $fs-76: 5.428571428571429rem;
 $fs-78: 5.571428571428571rem;
 $fs-80: 5.714rem;
 $fs-100: 7.142857142857143rem;
-$fs-140: 10rem ;
+$fs-140: 10rem;
 $fs-180: 12.857142857142858rem;
-$fs-200: 14.285714285714286rem ;
+$fs-200: 14.285714285714286rem;
 
-$gray-100: 		#f6f9fb !default;
-$gray-200: 		#f0f3f6 !default;
-$gray-300: 		#f0f3f6 !default;
-$gray-400: 		#b6b6c4 !default;
-$gray-500: 		#a1a4b5 !default;
-$gray-600: 		#7f839a !default;
-$gray-700: 		#5f6379 !default;
-$gray-800: 		#2d314c !default;
-$gray-900: 		#0E0E23 !default;
-$text-muted:    $gray-500 !default;
+$gray-100: #f6f9fb !default;
+$gray-200: #f0f3f6 !default;
+$gray-300: #f0f3f6 !default;
+$gray-400: #b6b6c4 !default;
+$gray-500: #a1a4b5 !default;
+$gray-600: #7f839a !default;
+$gray-700: #5f6379 !default;
+$gray-800: #2d314c !default;
+$gray-900: #0e0e23 !default;
+$text-muted: $gray-500 !default;
 
 /*Dark demo*/
-$d-gray-600: 	#b4b7bc !default;
-$d-gray-800:    #0E0E23 !default;
-$d-gray-900:    #171e32 !default;
+$d-gray-600: #b4b7bc !default;
+$d-gray-800: #0e0e23 !default;
+$d-gray-900: #171e32 !default;
 
 /*Social Media Colors*/
 $facebook: #3b5998;
@@ -109,205 +108,220 @@ $github: #4078c0;
 $vk: #45668e;
 
 /*Theme Colors*/
-$dark:          $gray-900;
-$light:         $gray-200;
-$light2:        $gray-300;
-$light3:        $gray-400;
-$light4:        $gray-500;
-$light5:        $gray-600;
-$dx-blue:       $gray-700;
-$lt-border:     $gray-400;
-$white:         #ffffff;
-$black:         #000000;
+$dark: $gray-900;
+$light: $gray-200;
+$light2: $gray-300;
+$light3: $gray-400;
+$light4: $gray-500;
+$light5: $gray-600;
+$dx-blue: $gray-700;
+$lt-border: $gray-400;
+$white: #ffffff;
+$black: #000000;
 
-$primary:           #4d7cff;
-$primary-active:    #2b5cfd;
-$primary-lite:      #e6f0ff;
+$primary: #4d7cff;
+$primary-active: #2b5cfd;
+$primary-lite: #e6f0ff;
 
-$success:           #51ce8a;
-$success-active:    #48bf7e;
-$success-lite:      #defded;
+$success: #51ce8a;
+$success-active: #48bf7e;
+$success-lite: #defded;
 
-$info:              #733aeb;
-$info-active:       #5115d1;
-$info-lite:         #f4efff;
+$info: #733aeb;
+$info-active: #5115d1;
+$info-lite: #f4efff;
 
-$danger:            #f2426d;
-$danger-active:     #da224f;
-$danger-lite:       #fcecf1;
+$danger: #f2426d;
+$danger-active: #da224f;
+$danger-lite: #fcecf1;
 
-$warning:           #fec801;
-$warning-active:    #f0bd01;
-$warning-lite:      #fef5d4;
+$warning: #fec801;
+$warning-active: #f0bd01;
+$warning-lite: #fef5d4;
 
-$secondary:         $gray-300;
-$secondary-active:  $gray-400;
-$secondary-lite:    $gray-100;
+$secondary: $gray-300;
+$secondary-active: $gray-400;
+$secondary-lite: $gray-100;
 
-$mildgray:      #bcc2c8;
+$mildgray: #bcc2c8;
 
 $icon-lite-color: $gray-600;
 $border-color: $gray-400;
 
-$wrapper: #EAEDF7;
-$wrapper-dark: #24243E;
-
+$wrapper: #eaedf7;
+$wrapper-dark: #24243e;
+$white : #fff;
 /*Lite color*/
-
 
 /*Theme Colors For Dark*/
 $body-dark: $gray-900;
 $dark-text: $gray-500;
+$dark-text2: $white;
 $dark2: $gray-800;
 $dark3: $gray-900;
 $dark-title: $gray-300;
 $dark-border: #3c3d54;
 
 $colors: (
-  'primary':   $primary,
-  'secondary':   $secondary,
-  'info':      $info,
-  'success':   $success,
-  'warning':   $warning,
-  'danger':    $danger,
-  'dark':      $dark,
-  'white':     $white,
-  'black':     $black,
-  'light':     $light,
+  "primary": $primary,
+  "secondary": $secondary,
+  "info": $info,
+  "success": $success,
+  "warning": $warning,
+  "danger": $danger,
+  "dark": $dark,
+  "white": $white,
+  "black": $black,
+  "light": $light,
 );
 
+$theme-primary-primary: $primary;
+$theme-primary-success: $success;
+$theme-primary-info: $info;
+$theme-primary-danger: $danger;
+$theme-primary-warning: $warning;
+$theme-primary-secondary: $secondary;
 
+$theme-primary-primary-active: $primary-active;
+$theme-primary-success-active: $success-active;
+$theme-primary-info-active: $info-active;
+$theme-primary-danger-active: $danger-active;
+$theme-primary-warning-active: $warning-active;
+$theme-primary-secondary-active: $secondary-active;
 
-$theme-primary-primary:     $primary;
-$theme-primary-success:     $success;
-$theme-primary-info:        $info;
-$theme-primary-danger:      $danger;
-$theme-primary-warning:     $warning;
-$theme-primary-secondary:   $secondary;
-
-$theme-primary-primary-active:     $primary-active;
-$theme-primary-success-active:     $success-active;
-$theme-primary-info-active:        $info-active;
-$theme-primary-danger-active:      $danger-active;
-$theme-primary-warning-active:     $warning-active;
-$theme-primary-secondary-active:   $secondary-active;
-
-$theme-primary-primary-lite:    $primary-lite;
-$theme-primary-success-lite:    $success-lite;
-$theme-primary-info-lite:       $info-lite;
-$theme-primary-danger-lite:     $danger-lite;
-$theme-primary-warning-lite:    $warning-lite;
-$theme-primary-secondary-lite:  $secondary-lite;
+$theme-primary-primary-lite: $primary-lite;
+$theme-primary-success-lite: $success-lite;
+$theme-primary-info-lite: $info-lite;
+$theme-primary-danger-lite: $danger-lite;
+$theme-primary-warning-lite: $warning-lite;
+$theme-primary-secondary-lite: $secondary-lite;
 
 $theme-primary-grd: linear-gradient(45deg, $primary, $primary-active);
-$theme-primary-grd-dark: linear-gradient(45deg, darken($primary, 20%), darken($primary-active, 25%));
+$theme-primary-grd-dark: linear-gradient(
+  45deg,
+  darken($primary, 20%),
+  darken($primary-active, 25%)
+);
 
 $theme-success-grd: linear-gradient(45deg, $success, $success-active);
-$theme-success-grd-dark: linear-gradient(45deg, darken($success, 20%), darken($success-active, 25%));
+$theme-success-grd-dark: linear-gradient(
+  45deg,
+  darken($success, 20%),
+  darken($success-active, 25%)
+);
 
 $theme-info-grd: linear-gradient(45deg, $info, $info-active);
-$theme-info-grd-dark: linear-gradient(45deg, darken($info, 20%), darken($info-active, 25%));
+$theme-info-grd-dark: linear-gradient(
+  45deg,
+  darken($info, 20%),
+  darken($info-active, 25%)
+);
 
 $theme-danger-grd: linear-gradient(45deg, $danger, $danger-active);
-$theme-danger-grd-dark: linear-gradient(45deg, darken($danger, 20%), darken($danger-active, 25%));
+$theme-danger-grd-dark: linear-gradient(
+  45deg,
+  darken($danger, 20%),
+  darken($danger-active, 25%)
+);
 
 $theme-warning-grd: linear-gradient(45deg, $warning, $warning-active);
-$theme-warning-grd-dark: linear-gradient(45deg, darken($warning, 20%), darken($warning-active, 25%));
+$theme-warning-grd-dark: linear-gradient(
+  45deg,
+  darken($warning, 20%),
+  darken($warning-active, 25%)
+);
 
 $theme-secondary-grd: linear-gradient(45deg, $secondary, $secondary-active);
-$theme-secondary-grd-dark: linear-gradient(45deg, darken($secondary, 20%), darken($secondary-active, 25%));
-
+$theme-secondary-grd-dark: linear-gradient(
+  45deg,
+  darken($secondary, 20%),
+  darken($secondary-active, 25%)
+);
 
 /*theme-danger*/
-$theme-danger-primary:     $danger;
-$theme-danger-success:     $success;
-$theme-danger-info:        $info;
-$theme-danger-danger:      $primary;
-$theme-danger-warning:     $warning;
-$theme-danger-secondary:   $secondary;
+$theme-danger-primary: $danger;
+$theme-danger-success: $success;
+$theme-danger-info: $info;
+$theme-danger-danger: $primary;
+$theme-danger-warning: $warning;
+$theme-danger-secondary: $secondary;
 
-$theme-danger-primary-active:     $danger-active;
-$theme-danger-success-active:     $success-active;
-$theme-danger-info-active:        $info-active;
-$theme-danger-danger-active:      $primary-active;
-$theme-danger-warning-active:     $warning-active;
-$theme-danger-secondary-active:   $secondary-active;
+$theme-danger-primary-active: $danger-active;
+$theme-danger-success-active: $success-active;
+$theme-danger-info-active: $info-active;
+$theme-danger-danger-active: $primary-active;
+$theme-danger-warning-active: $warning-active;
+$theme-danger-secondary-active: $secondary-active;
 
-$theme-danger-primary-lite:    $danger-lite;
-$theme-danger-success-lite:    $success-lite;
-$theme-danger-info-lite:       $info-lite;
-$theme-danger-danger-lite:     $primary-lite;
-$theme-danger-warning-lite:    $warning-lite;
-$theme-danger-secondary-lite:  $secondary-lite;
+$theme-danger-primary-lite: $danger-lite;
+$theme-danger-success-lite: $success-lite;
+$theme-danger-info-lite: $info-lite;
+$theme-danger-danger-lite: $primary-lite;
+$theme-danger-warning-lite: $warning-lite;
+$theme-danger-secondary-lite: $secondary-lite;
 
 /*theme-info*/
-$theme-info-primary:     $info;
-$theme-info-success:     $success;
-$theme-info-info:        $primary;
-$theme-info-danger:      $danger;
-$theme-info-warning:     $warning;
-$theme-info-secondary:   $secondary;
+$theme-info-primary: $info;
+$theme-info-success: $success;
+$theme-info-info: $primary;
+$theme-info-danger: $danger;
+$theme-info-warning: $warning;
+$theme-info-secondary: $secondary;
 
-$theme-info-primary-active:     $info-active;
-$theme-info-success-active:     $success-active;
-$theme-info-info-active:        $primary-active;
-$theme-info-danger-active:      $danger-active;
-$theme-info-warning-active:     $warning-active;
-$theme-info-secondary-active:   $secondary-active;
+$theme-info-primary-active: $info-active;
+$theme-info-success-active: $success-active;
+$theme-info-info-active: $primary-active;
+$theme-info-danger-active: $danger-active;
+$theme-info-warning-active: $warning-active;
+$theme-info-secondary-active: $secondary-active;
 
-$theme-info-primary-lite:    $info-lite;
-$theme-info-success-lite:    $success-lite;
-$theme-info-info-lite:       $primary-lite;
-$theme-info-danger-lite:     $danger-lite;
-$theme-info-warning-lite:    $warning-lite;
-$theme-info-secondary-lite:  $secondary-lite;
+$theme-info-primary-lite: $info-lite;
+$theme-info-success-lite: $success-lite;
+$theme-info-info-lite: $primary-lite;
+$theme-info-danger-lite: $danger-lite;
+$theme-info-warning-lite: $warning-lite;
+$theme-info-secondary-lite: $secondary-lite;
 
 /*theme-success*/
-$theme-success-primary:     $success;
-$theme-success-success:     $primary;
-$theme-success-info:        $info;
-$theme-success-danger:      $danger;
-$theme-success-warning:     $warning;
-$theme-success-secondary:   $secondary;
+$theme-success-primary: $success;
+$theme-success-success: $primary;
+$theme-success-info: $info;
+$theme-success-danger: $danger;
+$theme-success-warning: $warning;
+$theme-success-secondary: $secondary;
 
-$theme-success-primary-active:     $success-active;
-$theme-success-success-active:     $primary-active;
-$theme-success-info-active:        $info-active;
-$theme-success-danger-active:      $danger-active;
-$theme-success-warning-active:     $warning-active;
-$theme-success-secondary-active:   $secondary-active;
+$theme-success-primary-active: $success-active;
+$theme-success-success-active: $primary-active;
+$theme-success-info-active: $info-active;
+$theme-success-danger-active: $danger-active;
+$theme-success-warning-active: $warning-active;
+$theme-success-secondary-active: $secondary-active;
 
-$theme-success-primary-lite:    $success-lite;
-$theme-success-success-lite:    $primary-lite;
-$theme-success-info-lite:       $info-lite;
-$theme-success-danger-lite:     $danger-lite;
-$theme-success-warning-lite:    $warning-lite;
-$theme-success-secondary-lite:  $secondary-lite;
+$theme-success-primary-lite: $success-lite;
+$theme-success-success-lite: $primary-lite;
+$theme-success-info-lite: $info-lite;
+$theme-success-danger-lite: $danger-lite;
+$theme-success-warning-lite: $warning-lite;
+$theme-success-secondary-lite: $secondary-lite;
 
 /*theme-warning*/
-$theme-warning-primary:     $warning;
-$theme-warning-success:     $success;
-$theme-warning-info:        $info;
-$theme-warning-danger:      $danger;
-$theme-warning-warning:     $primary;
-$theme-warning-secondary:   $secondary;
+$theme-warning-primary: $warning;
+$theme-warning-success: $success;
+$theme-warning-info: $info;
+$theme-warning-danger: $danger;
+$theme-warning-warning: $primary;
+$theme-warning-secondary: $secondary;
 
-$theme-warning-primary-active:     $warning-active;
-$theme-warning-success-active:     $success-active;
-$theme-warning-info-active:        $info-active;
-$theme-warning-danger-active:      $danger-active;
-$theme-warning-warning-active:     $primary-active;
-$theme-warning-secondary-active:   $secondary-active;
+$theme-warning-primary-active: $warning-active;
+$theme-warning-success-active: $success-active;
+$theme-warning-info-active: $info-active;
+$theme-warning-danger-active: $danger-active;
+$theme-warning-warning-active: $primary-active;
+$theme-warning-secondary-active: $secondary-active;
 
-$theme-warning-primary-lite:    $warning-lite;
-$theme-warning-success-lite:    $success-lite;
-$theme-warning-info-lite:       $info-lite;
-$theme-warning-danger-lite:     $danger-lite;
-$theme-warning-warning-lite:    $primary-lite;
-$theme-warning-secondary-lite:  $secondary-lite;
-
-
-
-
-
-
+$theme-warning-primary-lite: $warning-lite;
+$theme-warning-success-lite: $success-lite;
+$theme-warning-info-lite: $info-lite;
+$theme-warning-danger-lite: $danger-lite;
+$theme-warning-warning-lite: $primary-lite;
+$theme-warning-secondary-lite: $secondary-lite;

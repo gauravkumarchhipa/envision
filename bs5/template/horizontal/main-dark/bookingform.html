@@ -33,6 +33,13 @@
         background-color: white !important;
         color: black !important;
     }
+
+    .form-control {
+        color: white !important
+    }
+    .select2-selection__rendered{
+        color: white !important
+    }
 </style>
 
 <script>
@@ -588,7 +595,8 @@
                                                     <select id="charging-type" required class="
                                                         form-select" style="background-color: transparent !important;">
                                                         <option value="AC Slow Charging">AC Slow Charging </option>
-                                                        <option value="AC Fast Charging" selected>AC Fast Charging </option>
+                                                        <option value="AC Fast Charging" selected>AC Fast Charging
+                                                        </option>
                                                         <option value="DC Fast Charging">DC Fast Charging
                                                         </option>
                                                     </select>
@@ -674,7 +682,7 @@
         </footer>
         <!-- Side panel -->
         <!-- quick_user_toggle -->
-        <div class="modal modal-right fade" id="quick_user_toggle" tabindex="-1">
+        <div class="modal modal-right fade" id="quick_user_toggle" style="z-index: 99999;" tabindex="-1">
             <div class="modal-dialog">
                 <div class="modal-content slim-scroll3">
                     <div class="modal-body p-30 bg-white">

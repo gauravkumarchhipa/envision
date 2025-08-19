@@ -358,7 +358,7 @@ body{
         color: rgba($white, 0.85);  
     }
     a{
-        color: $dark-text; 
+        color: $dark-text2; 
         &.bg-light{
             @include hover-focus-state{
                 background-color: lighten($body-dark, 30%) !important;
@@ -367,7 +367,7 @@ body{
     }
     .form-control, .form-select{
         background-color: $dark3;
-	    color: $dark-text; 
+	    color:$dark-text2; 
     }
     .form-control{
         &:focus {
