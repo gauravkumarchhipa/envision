@@ -39,7 +39,7 @@ var revenuePerformanceOptions = {
   xaxis: {
     categories: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
     labels: {
-      style: { colors: "#333" },
+      style: { colors: "#333",fontSize: "12px", },
     },
   },
   tooltip: {
@@ -55,6 +55,9 @@ var revenuePerformanceOptions = {
       show: true,
       formatter: function (val) {
         return "$" + val.toLocaleString();
+      },
+      style: {
+        fontSize: "12px",
       },
     },
   },
