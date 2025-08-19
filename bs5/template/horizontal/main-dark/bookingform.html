@@ -35,6 +35,63 @@
     }
 </style>
 
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const chargingCostMap = {
+            "Type 1 (SAE J1772)": {
+                "AC Slow Charging": 10,
+                "AC Fast Charging": 15,
+                "DC Fast Charging": 20,
+            },
+            "Type 2 (Mennekes)": {
+                "AC Slow Charging": 12,
+                "AC Fast Charging": 17,
+                "DC Fast Charging": 21,
+            },
+            "CCS Type 1": {
+                "AC Slow Charging": 13,
+                "AC Fast Charging": 18,
+                "DC Fast Charging": 22,
+            },
+            "Tesla Connector (NACS)": {
+                "AC Slow Charging": 14,
+                "AC Fast Charging": 19,
+                "DC Fast Charging": 23,
+            },
+            "GB/T DC": {
+                "AC Slow Charging": 15,
+                "AC Fast Charging": 20,
+                "DC Fast Charging": 25,
+            }
+        };
+
+        const methodSelect = document.getElementById("charging-method");
+        const typeSelect = document.getElementById("charging-type");
+        const costInput = document.getElementById("vehicle-cost");
+
+        function updateVehicleCost() {
+            const selectedMethod = methodSelect.value.trim();
+            const selectedType = typeSelect.value.trim();
+            const cost = chargingCostMap[selectedMethod]?.[selectedType];
+            if (cost !== undefined) {
+                costInput.value = `$${cost.toLocaleString()}`;
+            } else {
+                costInput.value = "N/A";
+            }
+        }
+
+        // Attach event listeners
+        methodSelect.addEventListener("change", updateVehicleCost);
+        typeSelect.addEventListener("change", updateVehicleCost);
+        console.log({ methodSelect, typeSelect, costInput });
+        // Run once on load
+        updateVehicleCost();
+    });
+</script>
+
+
+
+
 <body class="layout-top-nav dark-skin theme-primary fixed">
 
     <div class="wrapper">
@@ -512,13 +569,14 @@
                                             <div class="form-group">
                                                 <label class="form-label">Charging Method</label>
                                                 <div class="controls">
-                                                    <select name="select" id="timePeriod" required class="form-select"
+                                                    <select id="charging-method" required class="form-select"
                                                         style="background-color: transparent !important;">
-                                                        <option value="Daily">Type 1 (SAE J1772)</option>
-                                                        <option value="Weekly">Type 2 (Mennekes)</option>
-                                                        <option value="Monthly" selected>CCS Type 1 </option>
-                                                        <option value="Quarterly">Tesla Connector (NACS)</option>
-                                                        <option value="Annually">GB/T DC </option>
+                                                        <option value="Type 1 (SAE J1772)">Type 1 (SAE J1772)</option>
+                                                        <option value="Type 2 (Mennekes)">Type 2 (Mennekes)</option>
+                                                        <option value="CCS Type 1" selected>CCS Type 1 </option>
+                                                        <option value="Tesla Connector (NACS)">Tesla Connector (NACS)
+                                                        </option>
+                                                        <option value="GB/T DC">GB/T DC </option>
                                                     </select>
                                                 </div>
                                             </div>
@@ -527,13 +585,20 @@
                                             <div class="form-group">
                                                 <label class="form-label">Charging Type</label>
                                                 <div class="controls">
-                                                    <select name="select" id="timePeriod" required class="form-select"
-                                                        style="background-color: transparent !important;">
-                                                        <option value="Daily">AC Slow Charging </option>
-                                                        <option value="Weekly">AC Fast Charging </option>
-                                                        <option value="Monthly" selected>DC Fast Charging</option>
+                                                    <select id="charging-type" required class="
+                                                        form-select" style="background-color: transparent !important;">
+                                                        <option value="AC Slow Charging">AC Slow Charging </option>
+                                                        <option value="AC Fast Charging" selected>AC Fast Charging </option>
+                                                        <option value="DC Fast Charging">DC Fast Charging
+                                                        </option>
                                                     </select>
                                                 </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="form-group">
+                                                <label class="form-label">Vehicle Charging Cost</label>
+                                                <input type="text" class="form-control" id="vehicle-cost" readonly>
                                             </div>
                                         </div>
                                         <div class="col-lg-6 col-12">
@@ -584,7 +649,7 @@
                                         <textarea rows="5" cols="5" class="form-control"></textarea>
                                     </div>
                                     <div class="text-xs-right">
-                                        <button type="submit" class="btn btn-info">Pay Now</button>
+                                        <button type="submit" class="btn btn-info">Book Now</button>
                                     </div>
                                 </div>
                             </div>

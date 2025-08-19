@@ -18,6 +18,23 @@ var options = {
   ],
   xaxis: {
     categories: ["00:00", "04:00", "08:00", "12:00", "16:00", "20:00"],
+    labels: {
+      style: {
+        fontSize: "14px", // <-- Increase Y-axis font size here
+        fontWeight: "bold",
+        colors: isDarkMode ? "#ffffff" : "#000000",
+      },
+    },
+  },
+  yaxis: {
+    labels: {
+      style: {
+        fontSize: "12px", // <-- Increase Y-axis font size here
+        fontWeight: "bold",
+        colors: isDarkMode ? "#ffffff" : "#000000",
+      },
+    },
+    
   },
   plotOptions: {
     bar: {
@@ -31,7 +48,7 @@ var options = {
       return val + "%";
     },
     style: {
-      fontSize: "14px",
+      fontSize: "12px",
       fontWeight: "bold",
       // Dynamic color based on dark or light mode
       colors: isDarkMode ? ["#fff"] : ["#000"], // White color in dark mode, black in light mode

@@ -139,6 +139,55 @@
 	}
 </style>
 
+<style>
+	.custom-grid {
+		display: grid;
+		grid-template-columns: repeat(1, 1fr);
+		/* Default 1 column */
+		gap: 1rem;
+	}
+
+	@media (min-width: 768px) {
+		.custom-grid {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+
+	@media (min-width: 992px) {
+		.custom-grid {
+			grid-template-columns: repeat(3, 1fr);
+		}
+	}
+
+	@media (min-width: 1400px) {
+		.custom-grid {
+			grid-template-columns: repeat(3, 1fr);
+			/* mimic row-cols-xxl-3 */
+		}
+	}
+
+	@media (min-width: 1800px) {
+		.custom-grid {
+			grid-template-columns: repeat(6, 1fr);
+			/* Your custom 6-column layout */
+		}
+	}
+
+	.custom-clamp-1 {
+		display: -webkit-box;
+		-webkit-line-clamp: 1;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+	}
+
+	.custom-text-truncate {
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+</style>
+
+
 
 <body class="layout-top-nav dark-skin theme-primary fixed">
 
@@ -654,7 +703,7 @@
 				</div> -->
 
 				<div class=" py-5">
-					<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xxl-6 g-3">
+					<div class="row custom-grid g-3 ">
 
 						<div class="col">
 							<div class="stat text-center">
@@ -715,7 +764,8 @@
 						<div class="col">
 							<div class="stat text-center">
 								<div class="stat-head">
-									<i class="fa-solid fa-ticket text-info me-2"></i> Support Tickets Open
+									<i class="fa-solid fa-ticket text-info me-2"></i> Support Tickets
+									<!-- Open -->
 								</div>
 								<div class="stat-number">8</div>
 								<div class="stat-foot">
@@ -782,8 +832,16 @@
 					<div class="col-xxl-4 col-xl-12 col-lg-12 col-12">
 						<div class="box smartcharging">
 							<div class="box-header  d-flex  flex-column flex-md-row gap-2 justify-content-between">
-								<h4 class="box-title clamp-1 text-truncate">Kiosk Status<a href="#" class="fill-icon"><i
-											class="fa-solid fa-charging-station text-fade ps-5"></i></a></h4>
+								<h4 class="box-title d-flex align-items-center ">
+									<span class="custom-clamp-1 custom-text-truncate d-block w-100"
+										style="width: 115px !important;">
+										Kiosk Status
+									</span>
+									<a href="#" class="fill-icon ms-2">
+										<i class="fa-solid fa-charging-station text-fade"></i>
+									</a>
+								</h4>
+
 								<div class="">
 									<h6 class="box-title clamp-1 text-truncate">Real-time kiosk operational status</h6>
 								</div>
@@ -1046,12 +1104,12 @@
 									src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d27922998.171458017!2d-110.74713806890304!3d38.185886021067546!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sall%20word%20in%20ev%20station%20show%20and%20usa%20country%20by%20default%20located!5e1!3m2!1sen!2sin!4v1755523543862!5m2!1sen!2sin"
 										class="map" style="border:0; height:364px; width:100%;"
 										allowfullscreen></iframe> -->
-										<iframe
+									<iframe
 										src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d12123892.769586628!2d-105.07468248852173!3d37.82551374301417!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sall%20word%20in%20ev%20station%20show%20and%20usa%20country%20by%20default%20located!5e1!3m2!1sen!2sin!4v1755523656590!5m2!1sen!2sin"
 										class="map" style="border:0; height:500px; width:100%;"
 										allowfullscreen></iframe>
 
-										<!-- <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d12123892.769586628!2d-105.07468248852173!3d37.82551374301417!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sall%20word%20in%20ev%20station%20show%20and%20usa%20country%20by%20default%20located!5e1!3m2!1sen!2sin!4v1755523656590!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
+									<!-- <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d12123892.769586628!2d-105.07468248852173!3d37.82551374301417!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sall%20word%20in%20ev%20station%20show%20and%20usa%20country%20by%20default%20located!5e1!3m2!1sen!2sin!4v1755523656590!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
 
 
 
