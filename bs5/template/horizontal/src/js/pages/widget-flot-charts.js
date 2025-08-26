@@ -239,9 +239,10 @@ $(function () {
      */
 
     var donutData = [
-      { label: 'Jan-Apr', data: 85, color: '#51ce8a' },
-      { label: 'May-Aug', data: 68, color: '#733aeb' },
-      { label: 'Sep-Dec', data: 42, color: '#f2426d' }
+      { label: 'Jan-Mar', data: 85, color: '#51ce8a' },
+      { label: 'Apr-Jun', data: 68, color: '#733aeb' },
+      { label: 'Jul-Sep', data: 42, color: '#f2426d' },
+      { label: 'Oct-Dec', data: 49, color: '#AFAFAF' }
     ]
     $.plot('#donut-chart', donutData, {
       series: {

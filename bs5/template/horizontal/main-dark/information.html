@@ -194,7 +194,7 @@
 									<i data-feather="bell"></i>
 									<div class="pulse-wave"></div>
 								</a>
-								<ul class="dropdown-menu animated bounceIn">
+								<ul class="dropdown-menu animated bounceIn" style="z-index: 99999;">
 									<li class="header">
 										<div class="p-20">
 											<div class="flexbox">
@@ -258,32 +258,7 @@
 									</li>
 								</ul>
 							</li>
-							<li class="btn-group nav-item d-xl-inline-flex d-none">
-								<a href="#" class="waves-effect waves-light nav-link btn-primary-light svg-bt-icon"
-									title="" id="live-chat">
-									<i data-feather="message-circle"></i>
-								</a>
-							</li>
 
-							<li class="btn-group d-xl-inline-flex d-none">
-								<a href="#"
-									class="waves-effect waves-light nav-link btn-primary-light svg-bt-icon dropdown-toggle"
-									data-bs-toggle="dropdown">
-									<img class="rounded-circle" src="../../../images/svg-icon/usa.svg" alt="">
-								</a>
-								<div class="dropdown-menu">
-									<a class="dropdown-item my-5" href="#"><img class="w-20 rounded me-10"
-											src="../../../images/svg-icon/usa.svg" alt=""> English</a>
-									<a class="dropdown-item my-5" href="#"><img class="w-20 rounded me-10"
-											src="../../../images/svg-icon/spain.svg" alt=""> Spanish</a>
-									<a class="dropdown-item my-5" href="#"><img class="w-20 rounded me-10"
-											src="../../../images/svg-icon/ger.svg" alt=""> German</a>
-									<a class="dropdown-item my-5" href="#"><img class="w-20 rounded me-10"
-											src="../../../images/svg-icon/jap.svg" alt=""> Japanese</a>
-									<a class="dropdown-item my-5" href="#"><img class="w-20 rounded me-10"
-											src="../../../images/svg-icon/fra.svg" alt=""> French</a>
-								</div>
-							</li>
 
 							<li class="btn-group nav-item d-xl-inline-flex d-none">
 								<a href="#" data-provide="fullscreen"
@@ -316,7 +291,7 @@
 			</div>
 		</header>
 
-		<nav class="main-nav" role="navigation" style="z-index: 99999;">
+		<nav class="main-nav" role="navigation" style="z-index: 99998;">
 
 			<!-- Mobile menu toggle button (hamburger/x icon) -->
 			<input id="main-menu-state" type="checkbox" />
@@ -333,26 +308,24 @@
 						Management</a>
 					<ul>
 						<li><a href="evbooking.html"><i class="fa-solid fa-grip"></i>Booking Dashboard</a></li>
-						<li><a href="bookingform.html"><i class="icon-Commit"><span class="path1"></span><span
-										class="path2"></span></i>Book a Slot</a></li>
+						<!-- <li><a href="bookingform.html"><i class="icon-Commit"><span class="path1"></span><span
+										class="path2"></span></i>Book a Slot</a></li> -->
 						<li><a href="bookingtable.html"><i class="fa-solid fa-database"></i>Booking List</a></li>
 						<!-- <li><a href="booking.html"><i class="icon-Commit"><span class="path1"></span><span
 										class="path2"></span></i>Session Logs</a></li> -->
 					</ul>
 				</li>
-				<li><a href="#"><i data-feather="headphones"></i>User
+				 <li><a href="#"><i class="fa-solid fa-user"></i>User
 						Management</a>
 					<ul>
-						<li><a href="extra_app_ticket.html"><i class="icon-Commit"><span class="path1"></span><span
+						<li><a href="createuser.html"><i class="icon-Commit"><span class="path1"></span><span
 										class="path2"></span></i>Overview</a></li>
 						<li><a href="contact_app_chat.html"><i class="icon-Commit"><span class="path1"></span><span
 										class="path2"></span></i>Customers</a></li>
-						<li><a href="contact_app_chat.html"><i class="icon-Commit"><span class="path1"></span><span
-										class="path2"></span></i>Enterprise partners</a></li>
-						<li><a href="contact_app_chat.html"><i class="icon-Commit"><span class="path1"></span><span
-										class="path2"></span></i>Technicians</a></li>
-						<li><a href="contact_app_chat.html"><i class="icon-Commit"><span class="path1"></span><span
-										class="path2"></span></i>Staff Users</a></li>
+						<li><a href="enterpricepartner.html"><i class="fa-solid fa-handshake"></i>Enterprise
+								partners</a></li>
+						<li><a href="Technician.html"><i class="fa-solid fa-toolbox"></i>Technicians</a></li>
+						<li><a href="staffUser.html"><i class="fa-solid fa-clipboard-user"></i>Staff Users</a></li>
 					</ul>
 				</li>
 				<li><a href="management.html"><i data-feather="list"><span class="path1"></span><span
@@ -1595,7 +1568,7 @@
 												</h4>
 												<h4 class="mb-0 fw-500">13,679</h4>
 												<div>
-													<p class="mb-0">Total Clicks</p>
+													<p class="mb-0">Total Impressions</p>
 												</div>
 											</div>
 										</div>
@@ -1647,8 +1620,6 @@
 															<th scope="col">Campaign Name</th>
 															<th scope="col">Status</th>
 															<th scope="col">Impressions</th>
-															<th scope="col">Clicks </th>
-															<!-- <th scope="col">CTR </th> -->
 															<th scope="col">Engagement</th>
 
 														</tr>
@@ -1661,10 +1632,6 @@
 															</td>
 															<td class="text-fade">125,430
 															</td>
-															<td class="text-fade">3,420 </td>
-
-															<!-- <td class="text-fade">2.73%
-															</td> -->
 															<td class="text-fade">
 																<div class="progress mt-5" style="height:10px" ;>
 																	<div class="progress-bar bg-success"
@@ -1684,11 +1651,6 @@
 															</td>
 															<td class="text-fade">98,750
 															</td>
-															<td class="text-fade">2,890
-															</td>
-
-															<!-- <td class="text-fade">2.93%
-															</td> -->
 															<td class="text-fade">
 																<div class="progress mt-5" style="height:10px" ;>
 																	<div class="progress-bar bg-success"
@@ -1709,10 +1671,6 @@
 															<td class="text-fade">87,650
 
 															</td>
-															<td class="text-fade">2,156 </td>
-
-															<!-- <td class="text-fade">2.46%
-															</td> -->
 															<td class="text-fade">
 																<div class="progress mt-5" style="height:10px;">
 																	<div class="progress-bar bg-success"
@@ -1731,11 +1689,6 @@
 															</td>
 															<td class="text-fade">76,540
 															</td>
-															<td class="text-fade">1,834
-															</td>
-
-															<!-- <td class="text-fade">2.4%
-															</td> -->
 															<td class="text-fade">
 																<div class="progress mt-5" style="height:10px" ;>
 																	<div class="progress-bar bg-success"
@@ -1753,12 +1706,6 @@
 															</td>
 															<td class="text-fade">65,430
 															</td>
-															<td class="text-fade">1,923
-															</td>
-
-															<!-- <td class="text-fade">2.94%
-
-															</td> -->
 															<td class="text-fade">
 
 																<div class="progress mt-5" style="height:10px" ;>
@@ -1777,11 +1724,6 @@
 															<td class="text-fade">54,320
 
 															</td>
-															<td class="text-fade">1,456
-
-															</td>
-
-															<!-- <td class="text-fade">2.68%
 
 															</td> -->
 															<td class="text-fade">
@@ -1801,7 +1743,7 @@
 									</div>
 								</div>
 								<div class="row mb-20">
-									<div class="col-xl-6 col-12 gap-md-20">
+									<div class="col-xl-12 col-12 gap-md-20">
 										<div class="custom-box box d-flex flex-column">
 											<div class="box-header fill-icon">
 												<div
@@ -1810,7 +1752,7 @@
 															class="fa-solid fa-group-arrows-rotate text-fade"
 															style="margin-right: 5px;"></i>Kiosk Engagement Heatmap
 													</h4>
-													<h6>Advertisement performance by kiosk location</h6>
+													<h6>Advertisement Impression by kiosk location</h6>
 												</div>
 											</div>
 											<div class="custom-box-box-body box-body fill-icon occupancy">
@@ -1818,7 +1760,7 @@
 												<div class="d-flex flex-column ">
 													<div class="d-flex justify-content-between align-items-center">
 														<p class="fw-400 mb-0">Mall Central - New York</p>
-														<p class="mb-0"><b>2.96% CTR</b></p>
+														<p class="fw-400 mb-0">15,420 impressions</p>
 													</div>
 													<div class="progress mt-5" style="height:10px;">
 														<div class="progress-bar bg-success"
@@ -1828,17 +1770,12 @@
 														</div>
 													</div>
 
-													<div class="d-flex justify-content-between align-items-center -mt-5"
-														style="margin-top: -15px !important;">
-														<p class="fw-400 mb-0">15,420 impressions</p>
-														<p class="mb-0"><b>456 clicks</b></p>
-													</div>
 												</div>
 
 												<div class="d-flex flex-column gap-10 mt-20">
 													<div class="d-flex justify-content-between align-items-center">
 														<p class="fw-400 mb-0">Airport Terminal - Los Angeles</p>
-														<p class="mb-0"><b>2.79% CTR</b></p>
+														<p class="fw-400 mb-0">18,750 impressions</p>
 													</div>
 													<div class="progress mt-5" style="height:10px;">
 														<div class="progress-bar bg-success"
@@ -1848,16 +1785,11 @@
 														</div>
 													</div>
 
-													<div class="d-flex justify-content-between align-items-center -mt-5"
-														style="margin-top: -15px !important;">
-														<p class="fw-400 mb-0">18,750 impressions</p>
-														<p class="mb-0"><b>523 clicks</b></p>
-													</div>
 												</div>
 												<div class="d-flex flex-column gap-10 mt-20">
 													<div class="d-flex justify-content-between align-items-center">
 														<p class="fw-400 mb-0">Tech Park - Chicago</p>
-														<p class="mb-0"><b>3.06% CTR</b></p>
+														<p class="fw-400 mb-0">12,340 impressions</p>
 													</div>
 													<div class="progress mt-5" style="height:10px;">
 														<div class="progress-bar bg-success"
@@ -1867,16 +1799,11 @@
 														</div>
 													</div>
 
-													<div class="d-flex justify-content-between align-items-center -mt-5"
-														style="margin-top: -15px !important;">
-														<p class="fw-400 mb-0">12,340 impressions</p>
-														<p class="mb-0"><b>378 clicks</b></p>
-													</div>
 												</div>
 												<div class="d-flex flex-column gap-10 mt-20">
 													<div class="d-flex justify-content-between align-items-center">
 														<p class="fw-400 mb-0">Hospital Complex - Dallas</p>
-														<p class="mb-0"><b>2.48% CTR</b></p>
+														<p class="fw-400 mb-0">9,870 impressions</p>
 													</div>
 													<div class="progress mt-5" style="height:10px;">
 														<div class="progress-bar bg-success"
@@ -1886,16 +1813,11 @@
 														</div>
 													</div>
 
-													<div class="d-flex justify-content-between align-items-center -mt-5"
-														style="margin-top: -15px !important;">
-														<p class="fw-400 mb-0">9,870 impressions</p>
-														<p class="mb-0"><b>245 clicks</b></p>
-													</div>
 												</div>
 												<div class="d-flex flex-column gap-10 mt-20">
 													<div class="d-flex justify-content-between align-items-center">
 														<p class="fw-400 mb-0">University Campus - Austin</p>
-														<p class="mb-0"><b>2.77% CTR</b></p>
+														<p class="fw-400 mb-0">11,250 impressions</p>
 													</div>
 													<div class="progress mt-5" style="height:10px;">
 														<div class="progress-bar bg-success"
@@ -1904,19 +1826,13 @@
 															title="85%">
 														</div>
 													</div>
-
-													<div class="d-flex justify-content-between align-items-center -mt-5"
-														style="margin-top: -15px !important;">
-														<p class="fw-400 mb-0">11,250 impressions</p>
-														<p class="mb-0"><b>312 clicks</b></p>
-													</div>
 												</div>
 											</div>
 
 
 										</div>
 									</div>
-									<div class="col-xl-6 col-12">
+									<!-- <div class="col-xl-6 col-12">
 										<div class="custom-box box d-flex flex-column">
 											<div class="box-header fill-icon">
 												<div
@@ -1930,7 +1846,6 @@
 												</div>
 											</div>
 											<div class="custom-box-box-body box-body fill-icon occupancy">
-												<!-- Week 1 Progress -->
 												<div class="d-flex flex-column gap-10">
 													<div class="d-flex justify-content-between align-items-center">
 														<p class="fw-400 mb-0">Week 1</p>
@@ -1945,7 +1860,6 @@
 													</div>
 												</div>
 
-												<!-- Week 2 Progress -->
 												<div class="d-flex flex-column gap-10">
 													<div class="d-flex justify-content-between align-items-center">
 														<p class="fw-400 mb-0">Week 2</p>
@@ -1960,7 +1874,6 @@
 													</div>
 												</div>
 
-												<!-- Week 3 Progress -->
 												<div class="d-flex flex-column gap-10">
 													<div class="d-flex justify-content-between align-items-center">
 														<p class="fw-400 mb-0">Week 3</p>
@@ -1975,7 +1888,6 @@
 													</div>
 												</div>
 
-												<!-- Week 4 Progress -->
 												<div class="d-flex flex-column gap-10">
 													<div class="d-flex justify-content-between align-items-center">
 														<p class="fw-400 mb-0">Week 4</p>
@@ -1990,7 +1902,6 @@
 													</div>
 												</div>
 
-												<!-- Average CTR Improvement -->
 												<div class="mt-4">
 													<p><b>Average CTR Improvement</b></p>
 													<div class="progress" style="height: 20px;">
@@ -2004,7 +1915,7 @@
 												</div>
 											</div>
 										</div>
-									</div>
+									</div> -->
 								</div>
 							</div>
 							<div class="row">
@@ -2497,7 +2408,7 @@
 					<div class="modal-body p-30 bg-white">
 						<div class="d-flex align-items-center justify-content-between pb-30">
 							<h4 class="m-0">User Profile
-								<small class="text-fade fs-12 ms-5">12 messages</small>
+								<!-- <small class="text-fade fs-12 ms-5">12 messages</small> -->
 							</h4>
 							<a href="#" class="btn btn-icon btn-danger-light btn-sm no-shadow" data-bs-dismiss="modal">
 								<span class="fa fa-close"></span>
@@ -2509,13 +2420,13 @@
 										class="rounded bg-danger-light w-150" width="100"></div>
 								<div class="ps-20">
 									<h5 class="mb-0">Nil Yeager</h5>
-									<p class="my-5 text-fade">Web Designer</p>
-									<a href="mailto:dummy@gmail.com"><span
-											class="icon-Mail-notification me-5 text-success"><span
-												class="path1"></span><span class="path2"></span></span>
-										dummy@gmail.com</a>
-									<button class="btn btn-success-light btn-sm mt-5"><i class="ti-plus"></i>
-										Follow</button>
+									<p class="my-5 text-fade">Admin</p>
+									<div class="d-flex justify-content-center align-items-center">
+										<span class="icon-Mail-notification me-2 text-success">
+											<span class="path1"></span>
+										</span>
+										<span>admin@gmail.com</span>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -2538,113 +2449,19 @@
 											class="path2"></span></span>
 								</div>
 								<div class="d-flex flex-column fw-500">
-									<a href="mailbox.html" class="text-dark hover-danger mb-1 fs-16">My Messages</a>
-									<span class="text-fade">Inbox and tasks</span>
-								</div>
-							</div>
-							<div class="d-flex align-items-center mb-30">
-								<div class="me-15 bg-success-light h-50 w-50 l-h-60 rounded text-center">
-									<span class="icon-Group-chat fs-24"><span class="path1"></span><span
-											class="path2"></span></span>
-								</div>
-								<div class="d-flex flex-column fw-500">
-									<a href="setting.html" class="text-dark hover-success mb-1 fs-16">Settings</a>
-									<span class="text-fade">Accout Settings</span>
+									<a href="mailbox.html" class="text-dark hover-danger mb-1 fs-16">Change
+										Password</a>
+									<span class="text-fade">Change Your Password</span>
 								</div>
 							</div>
 							<div class="d-flex align-items-center mb-30">
 								<div class="me-15 bg-info-light h-50 w-50 l-h-60 rounded text-center">
-									<span class="icon-Attachment1 fs-24"><span class="path1"></span><span
-											class="path2"></span><span class="path3"></span><span
-											class="path4"></span></span>
+
 								</div>
 								<div class="d-flex flex-column fw-500">
-									<a href="extra_taskboard.html" class="text-dark hover-info mb-1 fs-16">Project</a>
-									<span class="text-fade">latest tasks and projects</span>
+									<a href="extra_taskboard.html" class="text-dark hover-info mb-1 fs-16">Logout</a>
+									<span class="text-fade">Logout your device</span>
 								</div>
-							</div>
-						</div>
-						<div class="dropdown-divider my-30"></div>
-						<div>
-							<div class="media-list">
-								<a class="media media-single px-0" href="#">
-									<h4 class="w-50 text-gray fw-500">10:10</h4>
-									<div class="media-body ps-15 bs-5 rounded border-primary">
-										<p>Morbi quis ex eu arcu auctor sagittis.</p>
-										<span class="text-fade">by Johne</span>
-									</div>
-								</a>
-
-								<a class="media media-single px-0" href="#">
-									<h4 class="w-50 text-gray fw-500">08:40</h4>
-									<div class="media-body ps-15 bs-5 rounded border-success">
-										<p>Proin iaculis eros non odio ornare efficitur.</p>
-										<span class="text-fade">by Amla</span>
-									</div>
-								</a>
-
-								<a class="media media-single px-0" href="#">
-									<h4 class="w-50 text-gray fw-500">07:10</h4>
-									<div class="media-body ps-15 bs-5 rounded border-info">
-										<p>In mattis mi ut posuere consectetur.</p>
-										<span class="text-fade">by Josef</span>
-									</div>
-								</a>
-
-								<a class="media media-single px-0" href="#">
-									<h4 class="w-50 text-gray fw-500">01:15</h4>
-									<div class="media-body ps-15 bs-5 rounded border-danger">
-										<p>Morbi quis ex eu arcu auctor sagittis.</p>
-										<span class="text-fade">by Rima</span>
-									</div>
-								</a>
-
-								<a class="media media-single px-0" href="#">
-									<h4 class="w-50 text-gray fw-500">23:12</h4>
-									<div class="media-body ps-15 bs-5 rounded border-warning">
-										<p>Morbi quis ex eu arcu auctor sagittis.</p>
-										<span class="text-fade">by Alaxa</span>
-									</div>
-								</a>
-								<a class="media media-single px-0" href="#">
-									<h4 class="w-50 text-gray fw-500">10:10</h4>
-									<div class="media-body ps-15 bs-5 rounded border-primary">
-										<p>Morbi quis ex eu arcu auctor sagittis.</p>
-										<span class="text-fade">by Johne</span>
-									</div>
-								</a>
-
-								<a class="media media-single px-0" href="#">
-									<h4 class="w-50 text-gray fw-500">08:40</h4>
-									<div class="media-body ps-15 bs-5 rounded border-success">
-										<p>Proin iaculis eros non odio ornare efficitur.</p>
-										<span class="text-fade">by Amla</span>
-									</div>
-								</a>
-
-								<a class="media media-single px-0" href="#">
-									<h4 class="w-50 text-gray fw-500">07:10</h4>
-									<div class="media-body ps-15 bs-5 rounded border-info">
-										<p>In mattis mi ut posuere consectetur.</p>
-										<span class="text-fade">by Josef</span>
-									</div>
-								</a>
-
-								<a class="media media-single px-0" href="#">
-									<h4 class="w-50 text-gray fw-500">01:15</h4>
-									<div class="media-body ps-15 bs-5 rounded border-danger">
-										<p>Morbi quis ex eu arcu auctor sagittis.</p>
-										<span class="text-fade">by Rima</span>
-									</div>
-								</a>
-
-								<a class="media media-single px-0" href="#">
-									<h4 class="w-50 text-gray fw-500">23:12</h4>
-									<div class="media-body ps-15 bs-5 rounded border-warning">
-										<p>Morbi quis ex eu arcu auctor sagittis.</p>
-										<span class="text-fade">by Alaxa</span>
-									</div>
-								</a>
 							</div>
 						</div>
 					</div>
