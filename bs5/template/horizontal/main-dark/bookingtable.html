@@ -20,11 +20,11 @@
 	<link rel="stylesheet" href="../src/css/skin_color.css">
 
 	<style>
-		 .custom-table-shorting{
-			.dt-column-order{
+		.custom-table-shorting {
+			.dt-column-order {
 				color: white !important;
 			}
-		 }
+		}
 	</style>
 	<style>
 		@media (max-width: 767px) {
@@ -33,38 +33,38 @@
 				padding-left: 0;
 			}
 		}
-	
+
 		@media (max-width: 370px) {
 			.navbar-custom-menu .navbar-nav li>a.dropdown-toggle {
 				height: 40px !important;
 			}
 		}
-	
+
 		@media (max-width: 767px) {
 			.fixed .content-wrapper {
 				margin-top: 160px !important;
 			}
 		}
-	
+
 		@media (max-width: 767px) {
 			.layout-top-nav .main-header .navbar {
 				border-bottom: 1px solid rgba(255, 255, 255, 0.12) !important
 			}
 		}
-	
+
 		@media (max-width: 767px) {
 			.dark-skin .main-nav {
 				background: transparent !important;
 				border-bottom: none !important;
 			}
 		}
-	
+
 		@media (max-width: 767px) {
 			.layout-top-nav.fixed .main-menu-btn {
 				margin: -12px 10px 0 20px !important;
 			}
 		}
-	
+
 		@media (max-width: 767px) {
 			.main-menu {
 				background-color: #000 !important;
@@ -74,7 +74,8 @@
 	<style>
 		/* Apply background on hover for any row */
 		#example1 tbody tr:hover {
-			color: #fff; /* Optional: change text color on hover */
+			color: #fff;
+			/* Optional: change text color on hover */
 		}
 	</style>
 </head>
@@ -278,8 +279,8 @@
 					<ul>
 						<li><a href="evbooking.html"><i class="fa-solid fa-grip"></i>Booking Dashboard</a></li>
 						<li><a href="bookingform.html"><i class="icon-Commit"><span class="path1"></span><span
-										class="path2"></span></i>Booking Form</a></li>
-						<li><a href="bookingtable.html"><i class="fa-solid fa-database"></i>Booking Data</a></li>
+										class="path2"></span></i>Book a Slot</a></li>
+						<li><a href="bookingtable.html"><i class="fa-solid fa-database"></i>Booking List</a></li>
 						<!-- <li><a href="booking.html"><i class="icon-Commit"><span class="path1"></span><span
 										class="path2"></span></i>Session Logs</a></li> -->
 					</ul>
@@ -344,9 +345,9 @@
 						<li><a href="booking.html"><i class="icon-Commit"><span class="path1"></span><span
 										class="path2"></span></i>Stations</a></li>
 						<li><a href="bookingform.html"><i class="icon-Commit"><span class="path1"></span><span
-										class="path2"></span></i>Booking Form</a></li>
+										class="path2"></span></i>Book a Slot</a></li>
 						<li><a href="booking.html"><i class="icon-Commit"><span class="path1"></span><span
-										class="path2"></span></i>Booking Data</a></li>
+										class="path2"></span></i>Booking List</a></li>
 						<li><a href="booking.html"><i class="icon-Commit"><span class="path1"></span><span
 										class="path2"></span></i>Station Assignment</a></li>
 					</ul>
@@ -460,10 +461,86 @@
 
 							<div class="box">
 								<div class="box-header with-border">
-									<h4 class="box-title">Data Table With Full Features</h4>
+									<h4 class="box-title">Book a Slot List</h4>
 								</div>
 								<!-- /.box-header -->
 								<div class="box-body">
+									<div class="row">
+										<div class="col-xxl-2-4  col-xl-4 col-lg-6 col-12">
+											<div class="form-group">
+												<label class="form-label">Enterprise Partner</label>
+												<div class="controls">
+													<select name="select" id="customSelect" required
+														class="form-select">
+														<option value="All" selected>All Enterprise Partner</option>
+														<option value="Hospitality Plus">Hospitality Plus </option>
+														<option value="Retail Chain Ltd">Retail Chain Ltd</option>
+														<option value="Healthcare Network">Healthcare Network</option>
+														<option value="Education Hub">Education Hub </option>
+													</select>
+												</div>
+											</div>
+										</div>
+										<div class="col-xxl-2-4  col-xl-4 col-lg-6 col-12">
+											<div class="form-group">
+												<label class="form-label">Venue</label>
+												<div class="controls">
+													<select name="select" id="timePeriod" required class="form-select">
+														<option value="All" selected>All Venue</option>
+														<option value="Airport">Airport</option>
+														<option value="ParkingGarage">ParkingGarage</option>
+														<option value="Hotel">Hotel</option>
+														<option value="Mall">Mall</option>
+														<option value="Restaurant">Restaurant</option>
+														<option value="University">University</option>
+														<option value="Residential">Residential</option>
+													</select>
+												</div>
+											</div>
+										</div>
+
+										<div class="col-xxl-2-4  col-xl-4 col-lg-6 col-12">
+											<div class="form-group">
+												<label class="form-label">Kiosk</label>
+												<div class="controls">
+													<select name="select" id="timePeriod" required class="form-select">
+														<option value="All" selected>All Kiosk</option>
+														<option value="Daily">Kiosk 1</option>
+														<option value="Weekly">Kiosk 2</option>
+														<option value="Monthly">Kiosk 3</option>
+													</select>
+												</div>
+											</div>
+										</div>
+
+										<div class="col-xxl-2-4  col-xl-4 col-lg-6 col-12">
+											<div class="form-group">
+												<label class="form-label">Charger</label>
+												<div class="controls">
+													<select name="select" id="timePeriod" required class="form-select">
+														<option value="All" selected>All Charger</option>
+														<option value="1">Slow Charging (120V AC)</option>
+														<option value="2">Fast Charging (240V AC)</option>
+														<option value="3">Rapid Charging / DC Fast Charging</option>
+													</select>
+												</div>
+											</div>
+										</div>
+										<div class="col-xxl-2-4  col-xl-4 col-lg-6 col-12">
+											<div class="form-group">
+												<label class="form-label">Connectors</label>
+												<div class="controls">
+													<select name="select" id="timePeriod" required class="form-select">
+														<option value="All" selected>All Connectors</option>
+														<option value="CCS2">CCS Type 2</option>
+														<option value="Type2">Type 2 (Mennekes)</option>
+														<option value="CHAdeMO">CHAdeMO</option>
+														<option value="Tesla">Tesla (NACS)</option>
+													</select>
+												</div>
+											</div>
+										</div>
+									</div>
 									<div class="table-responsive">
 										<table id="example1"
 											class="table text-fade table-bordered table-hover display nowrap margin-top-10 w-p100 custom-table-shorting table-striped">
@@ -472,8 +549,11 @@
 													<th>Booking ID</th>
 													<th>Customer</th>
 													<th>Method</th>
-													<th>Charging Type</th>
-													<th>Station &amp; Kiosk</th>
+													<th>Enterprise Partner</th>
+													<th>Venue</th>
+													<th>Kiosk</th>
+													<th>Charger</th>
+													<th>Connectors</th>
 													<th>Date &amp; Time</th>
 													<th>Status</th>
 													<th>Duration</th>
@@ -490,12 +570,23 @@
 															</div>+123456789</div>
 													</td>
 													<td>Reservation</td>
-													<td>By SOC</td>
+													<td>
+														<div>Hospitality Plus</div>
+													</td>
 													<td>
 														<div>
 															<div>Downtown Mall Station</div>
-															<div>Kiosk K001</div>
+
 														</div>
+													</td>
+													<td>
+														<div>Kiosk K001</div>
+													</td>
+													<td>
+														<div>Slow Charging (120V AC)</div>
+													</td>
+													<td>
+														<div>CCS Type 2</div>
 													</td>
 													<td>
 														<div>
@@ -521,12 +612,22 @@
 															</div>+123456780</div>
 													</td>
 													<td>Walk-in</td>
-													<td>By Duration</td>
+													<td>
+														<div>Retail Chain Ltd</div>
+													</td>
 													<td>
 														<div>
 															<div>Airport Terminal 1</div>
-															<div>Kiosk K015</div>
 														</div>
+													</td>
+													<td>
+														<div>Kiosk K002</div>
+													</td>
+													<td>
+														<div>Slow Charging (120V AC)</div>
+													</td>
+													<td>
+														<div>CCS Type 2</div>
 													</td>
 													<td>
 														<div>
@@ -542,7 +643,7 @@
 															<div>22.5 kWh</div>
 														</div>
 													</td>
-													<td>Card</td>
+													<td>Tap &amp; Pay</td>
 												</tr>
 												<tr>
 													<td class="text-dark">BK003</td>
@@ -552,12 +653,22 @@
 															</div>+123456781</div>
 													</td>
 													<td>Reservation</td>
-													<td>By kWh</td>
+													<td>
+														<div>Retail Chain Ltd</div>
+													</td>
 													<td>
 														<div>
 															<div>City Center Plaza</div>
-															<div>Kiosk K008</div>
 														</div>
+													</td>
+													<td>
+														<div>Kiosk K008</div>
+													</td>
+													<td>
+														<div>Fast Charging (240V AC)</div>
+													</td>
+													<td>
+														<div>CCS Type 2</div>
 													</td>
 													<td>
 														<div>
@@ -583,12 +694,22 @@
 															</div>+123456782</div>
 													</td>
 													<td>Reservation</td>
-													<td>By SOC</td>
+													<td>
+														<div>Healthcare Network</div>
+													</td>
 													<td>
 														<div>
 															<div>Shopping District Hub</div>
-															<div>Kiosk K022</div>
 														</div>
+													</td>
+													<td>
+														<div>Kiosk K022</div>
+													</td>
+													<td>
+														<div>Fast Charging (240V AC)</div>
+													</td>
+													<td>
+														<div>Type 2 (Mennekes)</div>
 													</td>
 													<td>
 														<div>
@@ -613,12 +734,22 @@
 															</div>+123456783</div>
 													</td>
 													<td>Walk-in</td>
-													<td>By Duration</td>
 													<td>
 														<div>
 															<div>Business Park Station</div>
-															<div>Kiosk K033</div>
 														</div>
+													</td>
+													<td>
+														<div>Education Hub</div>
+													</td>
+													<td>
+														<div>Kiosk K033</div>
+													</td>
+													<td>
+														<div>Fast Charging (240V AC)</div>
+													</td>
+													<td>
+														<div>Type 2 (Mennekes)</div>
 													</td>
 													<td>
 														<div>
@@ -633,9 +764,8 @@
 															<div>$0.00</div>
 														</div>
 													</td>
-													<td>Card</td>
+													<td>Tap &amp; Pay</td>
 												</tr>
-												<!-- Repeat more rows with different IDs, names, stations, kiosks, dates, statuses, durations, prices -->
 												<tr>
 													<td class="text-dark">BK006</td>
 													<td>
@@ -644,12 +774,22 @@
 															</div>+123456784</div>
 													</td>
 													<td>Reservation</td>
-													<td>By SOC</td>
+													<td>
+														<div>Hospitality Plus</div>
+													</td>
 													<td>
 														<div>
 															<div>Central Park Station</div>
-															<div>Kiosk K005</div>
 														</div>
+													</td>
+													<td>
+														<div>Kiosk K005</div>
+													</td>
+													<td>
+														<div>Rapid Charging / DC Fast Charging</div>
+													</td>
+													<td>
+														<div>Type 2 (Mennekes)</div>
 													</td>
 													<td>
 														<div>
@@ -665,7 +805,7 @@
 															<div>16.0 kWh</div>
 														</div>
 													</td>
-													<td>Card</td>
+													<td>Tap &amp; Pay</td>
 												</tr>
 												<tr>
 													<td class="text-dark">BK007</td>
@@ -675,12 +815,22 @@
 															</div>+123456785</div>
 													</td>
 													<td>Walk-in</td>
-													<td>By Duration</td>
+													<td>
+														<div>Hospitality Plus</div>
+													</td>
 													<td>
 														<div>
 															<div>Harbor View Station</div>
-															<div>Kiosk K011</div>
 														</div>
+													</td>
+													<td>
+														<div>Kiosk K011</div>
+													</td>
+													<td>
+														<div>Rapid Charging / DC Fast Charging</div>
+													</td>
+													<td>
+														<div>Type 2 (Mennekes)</div>
 													</td>
 													<td>
 														<div>
@@ -706,12 +856,22 @@
 															</div>+123456786</div>
 													</td>
 													<td>Reservation</td>
-													<td>By kWh</td>
+													<td>
+														<div>Education Hub</div>
+													</td>
 													<td>
 														<div>
 															<div>Grand Central Station</div>
-															<div>Kiosk K018</div>
 														</div>
+													</td>
+													<td>
+														<div>Kiosk K018</div>
+													</td>
+													<td>
+														<div>Rapid Charging / DC Fast Charging</div>
+													</td>
+													<td>
+														<div>CHAdeMO</div>
 													</td>
 													<td>
 														<div>
@@ -727,7 +887,7 @@
 															<div>18.3 kWh</div>
 														</div>
 													</td>
-													<td>Card</td>
+													<td>Tap &amp; Pay</td>
 												</tr>
 												<tr>
 													<td class="text-dark">BK009</td>
@@ -737,12 +897,22 @@
 															</div>+123456787</div>
 													</td>
 													<td>Walk-in</td>
-													<td>By Duration</td>
+													<td>
+														<div>Education Hub</div>
+													</td>
 													<td>
 														<div>
 															<div>East Side Plaza</div>
-															<div>Kiosk K027</div>
 														</div>
+													</td>
+													<td>
+														<div>Kiosk K027</div>
+													</td>
+													<td>
+														<div>Rapid Charging / DC Fast Charging</div>
+													</td>
+													<td>
+														<div>CHAdeMO</div>
 													</td>
 													<td>
 														<div>
@@ -767,12 +937,22 @@
 															</div>+123456788</div>
 													</td>
 													<td>Reservation</td>
-													<td>By SOC</td>
+													<td>
+														<div>Retail Chain Ltd</div>
+													</td>
 													<td>
 														<div>
 															<div>West End Station</div>
-															<div>Kiosk K014</div>
 														</div>
+													</td>
+													<td>
+														<div>Kiosk K014</div>
+													</td>
+													<td>
+														<div>Slow Charging (120V AC)</div>
+													</td>
+													<td>
+														<div>Tesla (NACS)</div>
 													</td>
 													<td>
 														<div>
@@ -787,7 +967,7 @@
 															<div>$0.00</div>
 														</div>
 													</td>
-													<td>Card</td>
+													<td>Tap &amp; Pay</td>
 												</tr>
 												<tr>
 													<td class="text-dark">BK011</td>
@@ -797,12 +977,22 @@
 															</div>+1234567890</div>
 													</td>
 													<td>Walk-in</td>
-													<td>By Duration</td>
+													<td>
+														<div>Retail Chain Ltd</div>
+													</td>
 													<td>
 														<div>
 															<div>North Point Station</div>
-															<div>Kiosk K020</div>
 														</div>
+													</td>
+													<td>
+														<div>Kiosk K020</div>
+													</td>
+													<td>
+														<div>Slow Charging (120V AC)</div>
+													</td>
+													<td>
+														<div>Tesla (NACS)</div>
 													</td>
 													<td>
 														<div>
@@ -818,7 +1008,7 @@
 															<div>17.5 kWh</div>
 														</div>
 													</td>
-													<td>Card</td>
+													<td>Tap &amp; Pay</td>
 												</tr>
 												<tr>
 													<td class="text-dark">BK012</td>
@@ -828,12 +1018,22 @@
 															</div>+1234567891</div>
 													</td>
 													<td>Reservation</td>
-													<td>By SOC</td>
+													<td>
+														<div>Retail Chain Ltd</div>
+													</td>
 													<td>
 														<div>
 															<div>Parkside Station</div>
-															<div>Kiosk K012</div>
 														</div>
+													</td>
+													<td>
+														<div>Kiosk K012</div>
+													</td>
+													<td>
+														<div>Slow Charging (120V AC)</div>
+													</td>
+													<td>
+														<div>Tesla (NACS)</div>
 													</td>
 													<td>
 														<div>
@@ -859,12 +1059,22 @@
 															</div>+1234567892</div>
 													</td>
 													<td>Walk-in</td>
-													<td>By kWh</td>
+													<td>
+														<div>Healthcare Network</div>
+													</td>
 													<td>
 														<div>
 															<div>Uptown Station</div>
-															<div>Kiosk K035</div>
 														</div>
+													</td>
+													<td>
+														<div>Kiosk K035</div>
+													</td>
+													<td>
+														<div>Fast Charging (240V AC)</div>
+													</td>
+													<td>
+														<div>Tesla (NACS)</div>
 													</td>
 													<td>
 														<div>
@@ -880,7 +1090,7 @@
 															<div>19.4 kWh</div>
 														</div>
 													</td>
-													<td>Card</td>
+													<td>Tap &amp; Pay</td>
 												</tr>
 												<tr>
 													<td class="text-dark">BK014</td>
@@ -890,12 +1100,22 @@
 															</div>+1234567893</div>
 													</td>
 													<td>Reservation</td>
-													<td>By SOC</td>
+													<td>
+														<div>Healthcare Network</div>
+													</td>
 													<td>
 														<div>
 															<div>Lakeside Station</div>
-															<div>Kiosk K006</div>
 														</div>
+													</td>
+													<td>
+														<div>Kiosk K006</div>
+													</td>
+													<td>
+														<div>Fast Charging (240V AC)</div>
+													</td>
+													<td>
+														<div>Tesla (NACS)</div>
 													</td>
 													<td>
 														<div>
@@ -920,12 +1140,22 @@
 															</div>+1234567894</div>
 													</td>
 													<td>Walk-in</td>
-													<td>By Duration</td>
+													<td>
+														<div>Healthcare Network</div>
+													</td>
 													<td>
 														<div>
 															<div>Greenfield Station</div>
-															<div>Kiosk K019</div>
 														</div>
+													</td>
+													<td>
+														<div>Kiosk K006</div>
+													</td>
+													<td>
+														<div>Fast Charging (240V AC)</div>
+													</td>
+													<td>
+														<div>Tesla (NACS)</div>
 													</td>
 													<td>
 														<div>
@@ -933,6 +1163,7 @@
 															<div>12:00 - 13:00</div>
 														</div>
 													</td>
+
 													<td>Completed</td>
 													<td>65 min</td>
 													<td>
@@ -941,7 +1172,7 @@
 															<div>20.0 kWh</div>
 														</div>
 													</td>
-													<td>Card</td>
+													<td>Tap &amp; Pay</td>
 												</tr>
 												<tr>
 													<td class="text-dark">BK016</td>
@@ -951,12 +1182,22 @@
 															</div>+1234567895</div>
 													</td>
 													<td>Reservation</td>
-													<td>By kWh</td>
+													<td>
+														<div>Retail Chain Ltd</div>
+													</td>
 													<td>
 														<div>
 															<div>Midtown Station</div>
-															<div>Kiosk K025</div>
 														</div>
+													</td>
+													<td>
+														<div>Kiosk K025</div>
+													</td>
+													<td>
+														<div>Fast Charging (240V AC)</div>
+													</td>
+													<td>
+														<div>Tesla (NACS)</div>
 													</td>
 													<td>
 														<div>
@@ -982,12 +1223,23 @@
 															</div>+1234567896</div>
 													</td>
 													<td>Walk-in</td>
-													<td>By SOC</td>
+													<td>
+														<div>Retail Chain Ltd</div>
+													</td>
 													<td>
 														<div>
 															<div>Riverfront Station</div>
-															<div>Kiosk K030</div>
 														</div>
+													</td>
+
+													<td>
+														<div>Kiosk K030</div>
+													</td>
+													<td>
+														<div>Fast Charging (240V AC)</div>
+													</td>
+													<td>
+														<div>Tesla (NACS)</div>
 													</td>
 													<td>
 														<div>
@@ -1003,7 +1255,7 @@
 															<div>17.8 kWh</div>
 														</div>
 													</td>
-													<td>Card</td>
+													<td>Tap &amp; Pay</td>
 												</tr>
 												<tr>
 													<td class="text-dark">BK018</td>
@@ -1013,12 +1265,22 @@
 															</div>+1234567897</div>
 													</td>
 													<td>Reservation</td>
-													<td>By Duration</td>
+													<td>
+														<div>Retail Chain Ltd</div>
+													</td>
 													<td>
 														<div>
 															<div>South Gate Station</div>
-															<div>Kiosk K040</div>
 														</div>
+													</td>
+													<td>
+														<div>Kiosk K040</div>
+													</td>
+													<td>
+														<div>Rapid Charging / DC Fast Charging</div>
+													</td>
+													<td>
+														<div>Type 2 (Mennekes)</div>
 													</td>
 													<td>
 														<div>
@@ -1035,7 +1297,89 @@
 													</td>
 													<td>Wallet</td>
 												</tr>
-												<!-- continue similarly until BK021 -->
+												<tr>
+													<td class="text-dark">BK019</td>
+													<td>
+														<div>Linda Green<div>
+																<div>linda.green@gmail.com</div>
+															</div>+123456784</div>
+													</td>
+													<td>Reservation</td>
+													<td>
+														<div>Hospitality Plus</div>
+													</td>
+													<td>
+														<div>
+															<div>Central Park Station</div>
+														</div>
+													</td>
+													<td>
+														<div>Kiosk K005</div>
+													</td>
+													<td>
+														<div>Rapid Charging / DC Fast Charging</div>
+													</td>
+													<td>
+														<div>Type 2 (Mennekes)</div>
+													</td>
+													<td>
+														<div>
+															<div>2025-07-24</div>
+															<div>10:00 - 11:00</div>
+														</div>
+													</td>
+													<td>Completed</td>
+													<td>60 min</td>
+													<td>
+														<div>
+															<div>$20.00</div>
+															<div>16.0 kWh</div>
+														</div>
+													</td>
+													<td>Tap &amp; Pay</td>
+												</tr>
+												<tr>
+													<td class="text-dark">BK020</td>
+													<td>
+														<div>Robert King<div>
+																<div>robert.king@gmail.com</div>
+															</div>+123456785</div>
+													</td>
+													<td>Walk-in</td>
+													<td>
+														<div>Hospitality Plus</div>
+													</td>
+													<td>
+														<div>
+															<div>Harbor View Station</div>
+														</div>
+													</td>
+													<td>
+														<div>Kiosk K011</div>
+													</td>
+													<td>
+														<div>Rapid Charging / DC Fast Charging</div>
+													</td>
+													<td>
+														<div>Type 2 (Mennekes)</div>
+													</td>
+													<td>
+														<div>
+															<div>2025-07-24</div>
+															<div>12:00 - 13:00</div>
+														</div>
+													</td>
+													<td>In Progress</td>
+													<td>30 min Live</td>
+													<td>
+														<div>
+															<div>$15.00</div>
+															<div>10.5 kWh</div>
+														</div>
+													</td>
+													<td>Wallet</td>
+												</tr>
+
 											</tbody>
 
 										</table>

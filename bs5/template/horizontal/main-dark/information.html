@@ -50,6 +50,14 @@
 	}
 </style>
 <style>
+	/* Apply only for md and above (≥768px) */
+	@media (max-width: 1400px) {
+		.gap-xl-20 {
+			margin-bottom: 20px;
+		}
+	}
+</style>
+<style>
 	/* Make the chart fill its parent width and have a responsive height */
 	.chart-wrap {
 		display: flex;
@@ -119,7 +127,8 @@
 			align-items: start;
 			gap: 10px;
 		}
-		.card-header > *{
+
+		.card-header>* {
 			margin-left: 0px;
 		}
 	}
@@ -325,8 +334,8 @@
 					<ul>
 						<li><a href="evbooking.html"><i class="fa-solid fa-grip"></i>Booking Dashboard</a></li>
 						<li><a href="bookingform.html"><i class="icon-Commit"><span class="path1"></span><span
-										class="path2"></span></i>Booking Form</a></li>
-						<li><a href="bookingtable.html"><i class="fa-solid fa-database"></i>Booking Data</a></li>
+										class="path2"></span></i>Book a Slot</a></li>
+						<li><a href="bookingtable.html"><i class="fa-solid fa-database"></i>Booking List</a></li>
 						<!-- <li><a href="booking.html"><i class="icon-Commit"><span class="path1"></span><span
 										class="path2"></span></i>Session Logs</a></li> -->
 					</ul>
@@ -501,8 +510,7 @@
 			<div class="container-full">
 				<!-- Main content -->
 				<!-- Filter -->
-				<div class="row">
-					<!-- Filter Dropdown -->
+				<!-- <div class="row">
 					<div class="col-xxl-2-4  col-xl-6 col-lg-6 col-12">
 						<div class="form-group">
 							<label class="form-label">Category</label>
@@ -535,7 +543,7 @@
 
 					<div class="col-xxl-2-4  col-xl-6 col-lg-6 col-12">
 						<div class="form-group">
-							<label class="form-label">Industry Type</label>
+							<label class="form-label">Industry</label>
 							<div class="controls">
 								<select name="select" id="customSelect" required class="form-select">
 									<option value="All" selected>All Industry</option>
@@ -578,7 +586,6 @@
 							</div>
 						</div>
 					</div>
-					<!-- Start Date (Initially hidden) -->
 					<div class="col-xxl-2-4 col-xl-6 col-lg-6 col-12" id="startDateGroup" style="display:none;">
 						<div class="form-group">
 							<label class="form-label">Start Date</label>
@@ -588,7 +595,6 @@
 						</div>
 					</div>
 
-					<!-- End Date (Initially hidden) -->
 					<div class="col-xxl-2-4 col-xl-6 col-lg-6 col-12" id="endDateGroup" style="display:none;">
 						<div class="form-group">
 							<label class="form-label">End Date</label>
@@ -597,7 +603,102 @@
 							</div>
 						</div>
 					</div>
+				</div> -->
+
+
+				<div class="row">
+					<div class="col-xxl-2  col-xl-6 col-lg-6 col-12">
+						<div class="form-group">
+							<label class="form-label">Industry</label>
+							<div class="controls">
+								<select name="select" id="customSelect" required class="form-select">
+									<option value="All" selected>All Industry</option>
+									<option value="Hospitality">Hospitality</option>
+									<option value="Corporate">Corporate</option>
+									<option value="Retail">Retail</option>
+									<option value="Healthcare">Healthcare</option>
+									<option value="Education">Education</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<div class="col-xxl-2  col-xl-6 col-lg-6 col-12">
+						<div class="form-group">
+							<label class="form-label">Enterprise Partner</label>
+							<div class="controls">
+								<select name="select" id="customSelect" required class="form-select">
+									<option value="All" selected>All Enterprise Partner</option>
+									<option value="Hospitality Plus">Hospitality Plus </option>
+									<option value="Retail Chain Ltd">Retail Chain Ltd</option>
+									<option value="Healthcare Network">Healthcare Network</option>
+									<option value="Education Hub">Education Hub </option>
+								</select>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-xxl-2  col-xl-6 col-lg-6 col-12">
+						<div class="form-group">
+							<label class="form-label">Venue</label>
+							<div class="controls">
+								<select name="select" id="timePeriod" required class="form-select">
+									<option value="All" selected>All Venue</option>
+									<option value="Airport">Airport</option>
+									<option value="ParkingGarage">ParkingGarage</option>
+									<option value="Hotel">Hotel</option>
+									<option value="Mall">Mall</option>
+									<option value="Restaurant">Restaurant</option>
+									<option value="University">University</option>
+									<option value="Residential">Residential</option>
+								</select>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-xxl-2  col-xl-6 col-lg-6 col-12">
+						<div class="form-group">
+							<label class="form-label">Kiosk</label>
+							<div class="controls">
+								<select name="select" id="timePeriod" required class="form-select">
+									<option value="All" selected>All Kiosk</option>
+									<option value="Daily">Kiosk 1</option>
+									<option value="Weekly">Kiosk 2</option>
+									<option value="Monthly">Kiosk 3</option>
+								</select>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-xxl-2  col-xl-6 col-lg-6 col-12">
+						<div class="form-group">
+							<label class="form-label">Charger</label>
+							<div class="controls">
+								<select name="select" id="timePeriod" required class="form-select">
+									<option value="All" selected>All Charger</option>
+									<option value="1">Slow Charging (120V AC)</option>
+									<option value="2">Fast Charging (240V AC)</option>
+									<option value="3">Rapid Charging / DC Fast Charging</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<div class="col-xxl-2  col-xl-6 col-lg-6 col-12">
+						<div class="form-group">
+							<label class="form-label">Connectors</label>
+							<div class="controls">
+								<select name="select" id="timePeriod" required class="form-select">
+									<option value="All" selected>All Connectors</option>
+									<option value="CCS2">CCS Type 2</option>
+									<option value="Type2">Type 2 (Mennekes)</option>
+									<option value="CHAdeMO">CHAdeMO</option>
+									<option value="Tesla">Tesla (NACS)</option>
+								</select>
+							</div>
+						</div>
+					</div>
+
 				</div>
+
 
 				<section class="">
 					<div class="row">
@@ -608,7 +709,7 @@
 								<li class="nav-item">
 									<a href="#bs-modals-station" data-bs-toggle="tab" aria-expanded="false"
 										class="nav-link active">
-										Station Analytics
+										Venue Analytics
 									</a>
 								</li>
 								<li class="nav-item">
@@ -639,10 +740,10 @@
 													<i class="fa-solid fa-clock-rotate-left text-fade ps-5"
 														style="margin-right: 2px;"></i>
 												</a>
-												<span>Station Usage Hours</span>
+												<span>Venue Usage Hours</span>
 											</h4>
 											<div class="">
-												<h6 class="box-title">Hourly usage patterns across all stations</h6>
+												<h6 class="box-title">Hourly usage patterns across all venue</h6>
 											</div>
 										</div>
 										<div class="box-body">
@@ -661,7 +762,7 @@
 
 												<h4 class="box-title mb-0"><i
 														class="fa-solid fa-chart-line text-success"
-														style="margin-right: 5px;"></i><span>Station
+														style="margin-right: 5px;"></i><span>Venue
 														Activity Status</span></h4>
 												<h6 class="box-title">Active vs idle time distribution</h6>
 											</div>
@@ -687,7 +788,7 @@
 														class="fa-solid fa-arrow-up-right-dots text-primary"
 														style="margin-right: 5px;"></i><span>Performance Metrics</span>
 												</h4>
-												<h6 class="box-title">Key station performance indicators</h6>
+												<h6 class="box-title">Key venue performance indicators</h6>
 											</div>
 											<div class="box-body">
 												<div class="container mt-5">
@@ -722,7 +823,7 @@
 																	<h5 class="card-title">Maintenance Required</h5>
 																	<p class="card-text"
 																		style="font-size: 1.5em; font-weight: bold;">12
-																		Stations</p>
+																		Venue</p>
 																	<p class="card-text" style="font-size: 1.2em;">7%
 																	</p>
 																</div>
@@ -736,7 +837,7 @@
 									</div>
 								</div>
 
-								<div class="col-12">
+								<!-- <div class="col-12">
 									<div class="card">
 										<div class="card-header table-custom-header">
 											<h4 class="card-title"><i class="fa-solid fa-location-dot text-fade"
@@ -849,14 +950,14 @@
 											</div>
 										</div>
 									</div>
-								</div>
+								</div> -->
 
 
 							</div>
 							<!-- ################################################################################## -->
 							<div class="tab-pane" id="bs-modals-revenue">
 								<div class="row mb-20">
-									<div class="col-xxl-6 col-xl-6 col-12 gap-md-20">
+									<div class="col-xxl-8 col-xl-12 col-12 gap-xl-20">
 										<div class="custom-box box d-flex flex-column">
 											<div class="box-header fill-icon">
 												<div
@@ -872,71 +973,114 @@
 												<div class="d-flex flex-column mb-20">
 													<div class="d-flex justify-content-between align-items-center">
 														<p class="fw-400 mb-0">Bookings</p>
-														<p class="mb-0"><b>$42.5M</b></p>
+														<p class="mb-0"><b>$40M</b></p>
 													</div>
 
 													<div class="progress mt-5" style="height:10px;">
-														<div class="progress-bar bg-success"
-															style="width:65%; cursor: pointer;" role="progressbar"
-															aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"
+														<div class="progress-bar bg-primary"
+															style="width:40%; cursor: pointer;" role="progressbar"
+															aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"
 															data-bs-toggle="tooltip" data-bs-placement="top"
-															data-bs-title="Bookings: 65% ($42.5M)"></div>
+															data-bs-title="Bookings: 40% ($40M)"></div>
 													</div>
 
 													<div class="d-flex justify-content-end align-items-center"
 														style="margin-top:-15px!important;">
-														<p class="mb-0"><b>65%</b></p>
+														<p class="mb-0"><b>40%</b></p>
 													</div>
 												</div>
 
 												<div class="d-flex flex-column mb-20">
 													<div class="d-flex justify-content-between align-items-center">
 														<p class="fw-400 mb-0">Advertisements</p>
-														<p class="mb-0"><b>$15.8M</b></p>
+														<p class="mb-0"><b>$10M</b></p>
 													</div>
 													<div class="progress mt-5" style="height:10px;">
 														<div class="progress-bar bg-success"
-															style="width:24%; cursor: pointer;" role="progressbar"
-															aria-valuenow="24" aria-valuemin="0" aria-valuemax="100"
+															style="width:10%; cursor: pointer;" role="progressbar"
+															aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"
 															data-bs-toggle="tooltip" data-bs-placement="top"
-															data-bs-title="Advertisements: 24% ($15.8M)"></div>
+															data-bs-title="Advertisements: 10% ($10M)"></div>
 													</div>
 
 													<div class="d-flex justify-content-end align-items-center -mt-5"
 														style="margin-top: -15px !important;">
-														<p class="mb-0"><b>24%</b></p>
+														<p class="mb-0"><b>10%</b></p>
 													</div>
 												</div>
 
-												<div class="d-flex flex-column ">
+												<div class="d-flex flex-column mb-20">
 													<div class="d-flex justify-content-between align-items-center">
 														<p class="fw-400 mb-0">Products</p>
-														<p class="mb-0"><b>$7.2M</b></p>
+														<p class="mb-0"><b>$16M</b></p>
 													</div>
 													<div class="progress mt-5" style="height:10px;">
-														<div class="progress-bar bg-success"
-															style="width:11%; cursor: pointer;" role="progressbar"
-															aria-valuenow="11" aria-valuemin="0" aria-valuemax="100"
-															data-bs-toggle="tooltip" data-bs-placement="top"
-															data-bs-title="Products: 11% ($7.2M)"></div>
+														<div class="progress-bar"
+															style="width:16%; cursor: pointer; background-color: #6f42c1;"
+															role="progressbar" aria-valuenow="16" aria-valuemin="0"
+															aria-valuemax="100" data-bs-toggle="tooltip"
+															data-bs-placement="top"
+															data-bs-title="Products: 16% ($16M)"></div>
 													</div>
 
 													<div class="d-flex justify-content-end align-items-center -mt-5"
 														style="margin-top: -15px !important;">
-														<p class="mb-0"><b>11%</b></p>
+														<p class="mb-0"><b>16%</b></p>
 													</div>
 												</div>
+
+												<div class="d-flex flex-column mb-20">
+													<div class="d-flex justify-content-between align-items-center">
+														<p class="fw-400 mb-0">Enterprise & E-commerce</p>
+														<p class="mb-0"><b>$20M</b></p>
+													</div>
+													<div class="progress mt-5" style="height:10px;">
+														<div class="progress-bar"
+															style="width:20%; cursor: pointer; background-color: #b56edb;"
+															role="progressbar" aria-valuenow="20" aria-valuemin="0"
+															aria-valuemax="100" data-bs-toggle="tooltip"
+															data-bs-placement="top"
+															data-bs-title="Enterprise & E-commerce: 20% ($20M)"></div>
+													</div>
+
+													<div class="d-flex justify-content-end align-items-center -mt-5"
+														style="margin-top: -15px !important;">
+														<p class="mb-0"><b>20%</b></p>
+													</div>
+												</div>
+
+												<div class="d-flex flex-column">
+													<div class="d-flex justify-content-between align-items-center">
+														<p class="fw-400 mb-0">Subscription</p>
+														<p class="mb-0"><b>$14M</b></p>
+													</div>
+													<div class="progress mt-5" style="height:10px;">
+														<div class="progress-bar"
+															style="width:14%; cursor: pointer; background-color: #309fb3;"
+															role="progressbar" aria-valuenow="24" aria-valuemin="0"
+															aria-valuemax="100" data-bs-toggle="tooltip"
+															data-bs-placement="top"
+															data-bs-title="Subscription: 14% ($14M)"></div>
+													</div>
+
+													<div class="d-flex justify-content-end align-items-center -mt-5"
+														style="margin-top: -15px !important;">
+														<p class="mb-0"><b>14%</b></p>
+													</div>
+												</div>
+
+
 												<div class="d-flex justify-content-between align-items-center mt-20">
 													<p class="fw-400 mb-0 fw-bold">Total Revenue
 													</p>
-													<p class="mb-0"><b>$65.5M</b></p>
+													<p class="mb-0"><b>$100M</b></p>
 												</div>
 											</div>
 
 
 										</div>
 									</div>
-									<div class="col-xxl-6 col-xl-6 col-12">
+									<div class="col-xxl-4 col-xl-12 col-12">
 										<div class="custom-box box d-flex flex-column">
 											<div class="box-header fill-icon">
 												<!-- <div class="d-flex justify-content-between h-md-27" > -->
@@ -951,7 +1095,7 @@
 											</div>
 											<div class="custom-box-box-body box-body fill-icon occupancy">
 												<div class="row">
-													<div class="col-xxl-4 col-xl-6 col-lg-6 col-12 ">
+													<div class="col-xxl-12 col-xl-4 col-lg-6 col-12 ">
 														<div class="box box-body pull-up fill-icon income">
 															<div class="d-flex flex-column align-items-center gap-3">
 																<h4 class="mb-0 fw-500">
@@ -965,7 +1109,7 @@
 															</div>
 														</div>
 													</div>
-													<div class="col-xxl-4 col-xl-6 col-lg-6 col-12 ">
+													<div class="col-xxl-12 col-xl-4 col-lg-6 col-12 ">
 														<div class="box box-body pull-up fill-icon income">
 															<div class="d-flex flex-column align-items-center gap-3">
 																<h4 class="mb-0 fw-500">
@@ -980,7 +1124,7 @@
 															</div>
 														</div>
 													</div>
-													<div class="col-xxl-4 col-xl-6 col-lg-6 col-12 ">
+													<div class="col-xxl-12 col-xl-4 col-lg-6 col-12 ">
 														<div class="box box-body pull-up fill-icon income">
 															<div class="d-flex flex-column align-items-center gap-3">
 																<h4 class="mb-0 fw-500">
@@ -1027,9 +1171,9 @@
 
 														<div class="progress mt-3" style="height: 15px;">
 															<div class="progress-bar bg-primary"
-																style="width: 40%; cursor: pointer;"
+																style="width: 35%; cursor: pointer;"
 																data-bs-toggle="tooltip" data-bs-placement="top"
-																title="Jan : 40% Bookings">
+																title="Jan : 35% Bookings">
 															</div>
 															<div class="progress-bar bg-success"
 																style="width: 20%;  cursor: pointer;"
@@ -1037,19 +1181,37 @@
 																title="20% Advertisements">
 															</div>
 															<div class="progress-bar"
-																style="width: 40%; background-color: #6f42c1;  cursor: pointer;"
+																style="width: 15%; background-color: #6f42c1;  cursor: pointer;"
 																data-bs-toggle="tooltip" data-bs-placement="top"
-																title="40% Products">
+																title="15% Products">
 															</div>
+															<div class="progress-bar"
+																style="width: 20%; background-color: #b56edb;  cursor: pointer;"
+																data-bs-toggle="tooltip" data-bs-placement="top"
+																title="20% Enterprise & E-commerce">
+															</div>
+															<div class="progress-bar"
+																style="width: 10%; background-color: #309fb3;  cursor: pointer;"
+																data-bs-toggle="tooltip" data-bs-placement="top"
+																title="10% Subscription">
+															</div>
+
+
 														</div>
 
 														<div class="d-flex"
 															style="margin-top: -15px; font-size: 0.9em;">
-															<div style="width: 40%; text-align: center;">40% Bookings
+															<div style="width: 35%; text-align: center;">35% Bookings
 															</div>
 															<div style="width: 20%; text-align: center;">20%
 																Advertisements</div>
-															<div style="width: 40%; text-align: center;">40% Products
+															<div style="width: 15%; text-align: center;">15% Products
+															</div>
+															<div style="width: 20%; text-align: center;">20% Enterprise
+																& E-commerce
+															</div>
+															<div style="width: 10%; text-align: center;">10%
+																Subscription
 															</div>
 														</div>
 													</div>
@@ -1061,28 +1223,44 @@
 														</div>
 														<div class="progress mt-3" style="height: 15px;">
 															<div class="progress-bar bg-primary"
-																style="width: 67%; cursor: pointer;"
+																style="width: 50%; cursor: pointer;"
 																data-bs-toggle="tooltip" data-bs-placement="top"
-																title="Feb : 67% Bookings">
+																title="Feb : 50% Bookings">
 															</div>
 															<div class="progress-bar bg-success"
-																style="width: 22%; cursor: pointer;"
+																style="width: 12%; cursor: pointer;"
 																data-bs-toggle="tooltip" data-bs-placement="top"
-																title="Feb : 22% Advertisements">
+																title="Feb : 12% Advertisements">
 															</div>
 															<div class="progress-bar"
-																style="width: 11%; background-color: #6f42c1; cursor: pointer;"
+																style="width: 13%; background-color: #6f42c1; cursor: pointer;"
 																data-bs-toggle="tooltip" data-bs-placement="top"
-																title="Feb : 11% Products">
+																title="Feb : 13% Products">
+															</div>
+															<div class="progress-bar"
+																style="width: 9%; background-color: #b56edb;  cursor: pointer;"
+																data-bs-toggle="tooltip" data-bs-placement="top"
+																title="9% Enterprise & E-commerce">
+															</div>
+															<div class="progress-bar"
+																style="width: 16%; background-color: #309fb3;  cursor: pointer;"
+																data-bs-toggle="tooltip" data-bs-placement="top"
+																title="16% Subscription">
 															</div>
 														</div>
 														<div class="d-flex"
 															style="margin-top: -15px; font-size: 0.9em;">
-															<div style="width: 67%; text-align: center;">67% Bookings
+															<div style="width: 50%; text-align: center;">15% Bookings
 															</div>
-															<div style="width: 22%; text-align: center;">22%
+															<div style="width: 12%; text-align: center;">12%
 																Advertisements</div>
-															<div style="width: 11%; text-align: center;">11% Products
+															<div style="width: 13%; text-align: center;">13% Products
+															</div>
+															<div style="width: 9%; text-align: center;">9% Enterprise
+																& E-commerce
+															</div>
+															<div style="width: 16%; text-align: center;">16%
+																Subscription
 															</div>
 														</div>
 													</div>
@@ -1094,9 +1272,9 @@
 														</div>
 														<div class="progress mt-3" style="height: 15px;">
 															<div class="progress-bar bg-primary"
-																style="width: 42%; cursor: pointer;"
+																style="width: 30%; cursor: pointer;"
 																data-bs-toggle="tooltip" data-bs-placement="top"
-																title="Mar : 42% Bookings">
+																title="Mar : 30% Bookings">
 															</div>
 															<div class="progress-bar bg-success"
 																style="width: 35%; cursor: pointer;"
@@ -1104,18 +1282,34 @@
 																title="Mar : 35% Advertisements">
 															</div>
 															<div class="progress-bar"
-																style="width: 23%; background-color: #6f42c1; cursor: pointer;"
+																style="width: 20%; background-color: #6f42c1; cursor: pointer;"
 																data-bs-toggle="tooltip" data-bs-placement="top"
-																title="Mar : 23% Products">
+																title="Mar : 20% Products">
+															</div>
+															<div class="progress-bar"
+																style="width: 10%; background-color: #b56edb;  cursor: pointer;"
+																data-bs-toggle="tooltip" data-bs-placement="top"
+																title="10% Enterprise & E-commerce">
+															</div>
+															<div class="progress-bar"
+																style="width: 5%; background-color: #309fb3;  cursor: pointer;"
+																data-bs-toggle="tooltip" data-bs-placement="top"
+																title="5% Subscription">
 															</div>
 														</div>
 														<div class="d-flex"
 															style="margin-top: -15px; font-size: 0.9em;">
-															<div style="width: 42%; text-align: center;">42% Bookings
+															<div style="width: 30%; text-align: center;">30% Bookings
 															</div>
 															<div style="width: 35%; text-align: center;">35%
 																Advertisements</div>
-															<div style="width: 23%; text-align: center;">23% Products
+															<div style="width: 20%; text-align: center;">20% Products
+															</div>
+															<div style="width: 10%; text-align: center;">10% Enterprise
+																& E-commerce
+															</div>
+															<div style="width: 5%; text-align: center;">5%
+																Subscription
 															</div>
 														</div>
 													</div>
@@ -1127,28 +1321,44 @@
 														</div>
 														<div class="progress mt-3" style="height: 15px;">
 															<div class="progress-bar bg-primary"
-																style="width: 66%; cursor: pointer;"
+																style="width: 20%; cursor: pointer;"
 																data-bs-toggle="tooltip" data-bs-placement="top"
-																title="Apr : 66% Bookings">
+																title="Apr : 20% Bookings">
 															</div>
 															<div class="progress-bar bg-success"
-																style="width: 22%; cursor: pointer;"
+																style="width: 25%; cursor: pointer;"
 																data-bs-toggle="tooltip" data-bs-placement="top"
-																title="Apr : 22% Advertisements">
+																title="Apr : 25% Advertisements">
 															</div>
 															<div class="progress-bar"
-																style="width: 12%; background-color: #6f42c1; cursor: pointer;"
+																style="width: 40%; background-color: #6f42c1; cursor: pointer;"
 																data-bs-toggle="tooltip" data-bs-placement="top"
-																title="Apr : 12% Products">
+																title="Apr : 40% Products">
+															</div>
+															<div class="progress-bar"
+																style="width: 10%; background-color: #b56edb;  cursor: pointer;"
+																data-bs-toggle="tooltip" data-bs-placement="top"
+																title="10% Enterprise & E-commerce">
+															</div>
+															<div class="progress-bar"
+																style="width: 5%; background-color: #309fb3;  cursor: pointer;"
+																data-bs-toggle="tooltip" data-bs-placement="top"
+																title="5% Subscription">
 															</div>
 														</div>
 														<div class="d-flex"
 															style="margin-top: -15px; font-size: 0.9em;">
-															<div style="width: 66%; text-align: center;">66% Bookings
+															<div style="width: 20%; text-align: center;">20% Bookings
 															</div>
-															<div style="width: 22%; text-align: center;">22%
+															<div style="width: 25%; text-align: center;">25%
 																Advertisements</div>
-															<div style="width: 12%; text-align: center;">12% Products
+															<div style="width: 40%; text-align: center;">40% Products
+															</div>
+															<div style="width: 10%; text-align: center;">10% Enterprise
+																& E-commerce
+															</div>
+															<div style="width: 5%; text-align: center;">5%
+																Subscription
 															</div>
 														</div>
 													</div>
@@ -1165,23 +1375,39 @@
 																title="May : 66% Bookings">
 															</div>
 															<div class="progress-bar bg-success"
-																style="width: 22%; cursor: pointer;"
+																style="width: 14%; cursor: pointer;"
 																data-bs-toggle="tooltip" data-bs-placement="top"
-																title="May : 22% Advertisements">
+																title="May : 14% Advertisements">
 															</div>
 															<div class="progress-bar"
-																style="width: 12%; background-color: #6f42c1; cursor: pointer;"
+																style="width: 7%; background-color: #6f42c1; cursor: pointer;"
 																data-bs-toggle="tooltip" data-bs-placement="top"
-																title="May : 12% Products">
+																title="May : 7% Products">
+															</div>
+															<div class="progress-bar"
+																style="width: 7%; background-color: #b56edb;  cursor: pointer;"
+																data-bs-toggle="tooltip" data-bs-placement="top"
+																title="7% Enterprise & E-commerce">
+															</div>
+															<div class="progress-bar"
+																style="width: 6%; background-color: #309fb3;  cursor: pointer;"
+																data-bs-toggle="tooltip" data-bs-placement="top"
+																title="6% Subscription">
 															</div>
 														</div>
 														<div class="d-flex"
 															style="margin-top: -15px; font-size: 0.9em;">
 															<div style="width: 66%; text-align: center;">66% Bookings
 															</div>
-															<div style="width: 22%; text-align: center;">22%
+															<div style="width: 14%; text-align: center;">14%
 																Advertisements</div>
-															<div style="width: 12%; text-align: center;">12% Products
+															<div style="width: 7%; text-align: center;">7% Products
+															</div>
+															<div style="width: 7%; text-align: center;">7% Enterprise
+																& E-commerce
+															</div>
+															<div style="width: 6%; text-align: center;">6%
+																Subscription
 															</div>
 														</div>
 													</div>
@@ -1198,23 +1424,39 @@
 																title="Jun : 28% Bookings">
 															</div>
 															<div class="progress-bar bg-success"
-																style="width: 54%; cursor: pointer;"
+																style="width: 12%; cursor: pointer;"
 																data-bs-toggle="tooltip" data-bs-placement="top"
-																title="Jun : 54% Advertisements">
+																title="Jun : 12% Advertisements">
 															</div>
 															<div class="progress-bar"
-																style="width: 18%; background-color: #6f42c1; cursor: pointer;"
+																style="width: 10%; background-color: #6f42c1; cursor: pointer;"
 																data-bs-toggle="tooltip" data-bs-placement="top"
-																title="Jun : 18%Products">
+																title="Jun : 10%Products">
+															</div>
+															<div class="progress-bar"
+																style="width: 15%; background-color: #b56edb;  cursor: pointer;"
+																data-bs-toggle="tooltip" data-bs-placement="top"
+																title="15% Enterprise & E-commerce">
+															</div>
+															<div class="progress-bar"
+																style="width: 35%; background-color: #309fb3;  cursor: pointer;"
+																data-bs-toggle="tooltip" data-bs-placement="top"
+																title="35% Subscription">
 															</div>
 														</div>
 														<div class="d-flex"
 															style="margin-top: -15px; font-size: 0.9em;">
 															<div style="width: 28%; text-align: center;">28% Bookings
 															</div>
-															<div style="width: 54%; text-align: center;">54%
+															<div style="width: 12%; text-align: center;">12%
 																Advertisements</div>
-															<div style="width: 18%; text-align: center;">18% Products
+															<div style="width: 10%; text-align: center;">10% Products
+															</div>
+															<div style="width: 15%; text-align: center;">15% Enterprise
+																& E-commerce
+															</div>
+															<div style="width: 35%; text-align: center;">35%
+																Subscription
 															</div>
 														</div>
 													</div>
@@ -1233,9 +1475,10 @@
 													class="d-flex flex-column flex-md-row gap-2  justify-content-between h-md-27">
 													<h4 class="box-title"><i
 															class="fa-solid fa-dollar-sign text-secondary"
-															style="margin-right: 5px;"></i><span>Top Clients by
+															style="margin-right: 5px;"></i><span>Top Enterprise Partners
+															by
 															Revenue</span></h4>
-													<h6>Client performance comparison across regions</h6>
+													<h6> Enterprise Partner performance comparison across regions</h6>
 												</div>
 											</div>
 											<div class="box-body p-0 table-hover">
@@ -1331,7 +1574,7 @@
 
 							<div class="tab-pane" id="bs-modals-advertisement">
 								<div class="row">
-									<div class="col-xxl-3 col-xl-6 col-lg-6 col-12 ">
+									<div class="col-xxl-4 col-xl-4 col-lg-6 col-12 ">
 										<div class="box box-body pull-up fill-icon income">
 											<div class="d-flex flex-column align-items-center gap-3">
 												<h4 class="mb-0 fw-500">
@@ -1344,7 +1587,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="col-xxl-3 col-xl-6 col-lg-6 col-12 ">
+									<div class="col-xxl-4 col-xl-4 col-lg-6 col-12 ">
 										<div class="box box-body pull-up fill-icon income">
 											<div class="d-flex flex-column align-items-center gap-3">
 												<h4 class="mb-0 fw-500"><i
@@ -1357,7 +1600,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="col-xxl-3 col-xl-6 col-lg-6 col-12 ">
+									<!-- <div class="col-xxl-3 col-xl-6 col-lg-6 col-12 ">
 										<div class="box box-body pull-up fill-icon income">
 											<div class="d-flex flex-column align-items-center gap-3">
 												<h4 class="mb-0 fw-500">
@@ -1370,8 +1613,8 @@
 												</div>
 											</div>
 										</div>
-									</div>
-									<div class="col-xxl-3 col-xl-6 col-lg-6 col-12 ">
+									</div> -->
+									<div class="col-xxl-4 col-xl-4 col-lg-6 col-12 ">
 										<div class="box box-body pull-up fill-icon income">
 											<div class="d-flex flex-column align-items-center gap-3">
 												<h4 class="mb-0 fw-500">
@@ -1405,7 +1648,7 @@
 															<th scope="col">Status</th>
 															<th scope="col">Impressions</th>
 															<th scope="col">Clicks </th>
-															<th scope="col">CTR </th>
+															<!-- <th scope="col">CTR </th> -->
 															<th scope="col">Engagement</th>
 
 														</tr>
@@ -1420,8 +1663,8 @@
 															</td>
 															<td class="text-fade">3,420 </td>
 
-															<td class="text-fade">2.73%
-															</td>
+															<!-- <td class="text-fade">2.73%
+															</td> -->
 															<td class="text-fade">
 																<div class="progress mt-5" style="height:10px" ;>
 																	<div class="progress-bar bg-success"
@@ -1444,8 +1687,8 @@
 															<td class="text-fade">2,890
 															</td>
 
-															<td class="text-fade">2.93%
-															</td>
+															<!-- <td class="text-fade">2.93%
+															</td> -->
 															<td class="text-fade">
 																<div class="progress mt-5" style="height:10px" ;>
 																	<div class="progress-bar bg-success"
@@ -1468,8 +1711,8 @@
 															</td>
 															<td class="text-fade">2,156 </td>
 
-															<td class="text-fade">2.46%
-															</td>
+															<!-- <td class="text-fade">2.46%
+															</td> -->
 															<td class="text-fade">
 																<div class="progress mt-5" style="height:10px;">
 																	<div class="progress-bar bg-success"
@@ -1491,8 +1734,8 @@
 															<td class="text-fade">1,834
 															</td>
 
-															<td class="text-fade">2.4%
-															</td>
+															<!-- <td class="text-fade">2.4%
+															</td> -->
 															<td class="text-fade">
 																<div class="progress mt-5" style="height:10px" ;>
 																	<div class="progress-bar bg-success"
@@ -1513,9 +1756,9 @@
 															<td class="text-fade">1,923
 															</td>
 
-															<td class="text-fade">2.94%
+															<!-- <td class="text-fade">2.94%
 
-															</td>
+															</td> -->
 															<td class="text-fade">
 
 																<div class="progress mt-5" style="height:10px" ;>
@@ -1538,9 +1781,9 @@
 
 															</td>
 
-															<td class="text-fade">2.68%
+															<!-- <td class="text-fade">2.68%
 
-															</td>
+															</td> -->
 															<td class="text-fade">
 																<div class="progress mt-5" style="height:10px" ;>
 																	<div class="progress-bar bg-success"
@@ -1768,7 +2011,7 @@
 								<div class="col-xxl-6 col-xl-6 col-12 d-flex">
 									<div class="box flex-grow-1">
 										<div class="box-header fill-icon">
-											<h4 class="box-title">Occupancy of charging stations </h4>
+											<h4 class="box-title">Occupancy of Charging Venue </h4>
 										</div>
 										<div class="box-body fill-icon occupancy">
 

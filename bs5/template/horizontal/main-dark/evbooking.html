@@ -311,9 +311,9 @@
                     <ul>
                         <li><a href="evbooking.html"><i class="fa-solid fa-grip"></i>Booking Dashboard</a></li>
                         <li><a href="bookingform.html"><i class="icon-Commit"><span class="path1"></span><span
-                                        class="path2"></span></i>Booking Form</a></li>
+                                        class="path2"></span></i>Book a Slot</a></li>
                         <li><a href="bookingtable.html">
-                                <<i class="fa-solid fa-database"></i>Booking Data
+                                <<i class="fa-solid fa-database"></i>Booking List
                             </a></li>
                         <!-- <li><a href="booking.html"><i class="icon-Commit"><span class="path1"></span><span
                                         class="path2"></span></i>Session Logs</a></li> -->
@@ -490,7 +490,7 @@
                 <!-- Content Header (Page header) -->
                 <div class="content-header">
                     <div class="row">
-                        <div class="col-xxl-4 col-xl-6 col-lg-6 col-12">
+                        <!-- <div class="col-xxl-4 col-xl-6 col-lg-6 col-12">
                             <div class="form-group">
                                 <label class="form-label">Charging Type</label>
                                 <div class="controls">
@@ -516,8 +516,81 @@
                                     </select>
                                 </div>
                             </div>
+                        </div> -->
+
+                        <div class="col-xxl-2-4  col-xl-4 col-lg-6 col-12">
+                            <div class="form-group">
+                                <label class="form-label">Enterprise Partner</label>
+                                <div class="controls">
+                                    <select name="select" id="customSelect" required class="form-select">
+                                        <option value="All" selected>All Enterprise Partner</option>
+                                        <option value="Hospitality Plus">Hospitality Plus </option>
+                                        <option value="Retail Chain Ltd">Retail Chain Ltd</option>
+                                        <option value="Healthcare Network">Healthcare Network</option>
+                                        <option value="Education Hub">Education Hub </option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xxl-2-4  col-xl-4 col-lg-6 col-12">
+                            <div class="form-group">
+                                <label class="form-label">Venue</label>
+                                <div class="controls">
+                                    <select name="select" id="timePeriod" required class="form-select">
+                                        <option value="All" selected>All Venue</option>
+                                        <option value="Airport">Airport</option>
+                                        <option value="ParkingGarage">ParkingGarage</option>
+                                        <option value="Hotel">Hotel</option>
+                                        <option value="Mall">Mall</option>
+                                        <option value="Restaurant">Restaurant</option>
+                                        <option value="University">University</option>
+                                        <option value="Residential">Residential</option>
+                                    </select>
+                                </div>
+                            </div>
                         </div>
 
+                        <div class="col-xxl-2-4  col-xl-4 col-lg-6 col-12">
+                            <div class="form-group">
+                                <label class="form-label">Kiosk</label>
+                                <div class="controls">
+                                    <select name="select" id="timePeriod" required class="form-select">
+                                        <option value="All" selected>All Kiosk</option>
+                                        <option value="Daily">Kiosk 1</option>
+                                        <option value="Weekly">Kiosk 2</option>
+                                        <option value="Monthly">Kiosk 3</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xxl-2-4  col-xl-4 col-lg-6 col-12">
+                            <div class="form-group">
+                                <label class="form-label">Charger</label>
+                                <div class="controls">
+                                    <select name="select" id="timePeriod" required class="form-select">
+                                        <option value="All" selected>All Charger</option>
+                                        <option value="1">Slow Charging (120V AC)</option>
+                                        <option value="2">Fast Charging (240V AC)</option>
+                                        <option value="3">Rapid Charging / DC Fast Charging</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xxl-2-4  col-xl-4 col-lg-6 col-12">
+                            <div class="form-group">
+                                <label class="form-label">Connectors</label>
+                                <div class="controls">
+                                    <select name="select" id="timePeriod" required class="form-select">
+                                        <option value="All" selected>All Connectors</option>
+                                        <option value="CCS2">CCS Type 2</option>
+                                        <option value="Type2">Type 2 (Mennekes)</option>
+                                        <option value="CHAdeMO">CHAdeMO</option>
+                                        <option value="Tesla">Tesla (NACS)</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
 
                     </div>
 
@@ -543,7 +616,7 @@
                                     <a class="nav-link" href="bookingform.html">
                                         <div class="external-event bg-danger" style="cursor: pointer;"
                                             data-class="bg-success">
-                                            Book Appointment
+                                            Book a Slot
                                         </div>
                                     </a>
                                 </div>
