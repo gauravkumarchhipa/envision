@@ -130,7 +130,7 @@ body {
   font-size: 1rem;
   font-style: normal;
   font-weight: 400;
-  font-family: "Poppins", sans-serif;
+  font-family: "Plus Jakarta Sans", sans-serif !important;
   line-height: 1.5;
   background-color: #eaedf7;
 }
@@ -159,7 +159,7 @@ h6,
 .h4,
 .h5,
 .h6 {
-  font-family: "Poppins", sans-serif;
+  font-family: "Plus Jakarta Sans", sans-serif !important;
   font-weight: 400;
   line-height: 1.2;
 }
@@ -28257,7 +28257,7 @@ body .main-header .navbar .nav > li.search-box > a:focus {
   }
 }
 /*-----Preloader---*/
-#loader {
+/* #loader {
   position: fixed;
   width: 100%;
   height: 100vh;
@@ -28265,7 +28265,25 @@ body .main-header .navbar .nav > li.search-box > a:focus {
   overflow: visible;
   background: #fff url("../../../../images/preloaders/1.gif") no-repeat center
     center;
+     background: #fff url("../../../../images/preloaders/Loading-GIF.gif") no-repeat center
+    center;
+} */
+ 
+#loader {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 25vw;     /* 50% of viewport width */
+  height: 25vh;    /* 50% of viewport height */
+  transform: translate(-50%, -50%); /* perfectly center */
+  z-index: 999999;
+
+  background: url("../../../../images/preloaders/Loading-GIF.gif") no-repeat center center;
+  background-size: contain; /* scale GIF nicely inside */
+  border-radius: 8px;       /* optional */
 }
+
+
 
 .skin-toggle .switch {
   line-height: 24px;
@@ -28782,9 +28800,9 @@ body .main-header .navbar .nav > li.search-box > a:focus {
 }
 
 .nav-tabs .nav-link.active {
-  border-bottom-color: #2444e8;
-  background-color: #2444e8 !important;
-  color: #ffffff;
+  border-bottom-color: #00C3E5;
+  background-color: #00C3E5 !important;
+  color: #101828 !important;
 }
 
 @media (min-width: 768px) {
@@ -34327,7 +34345,7 @@ th.fc-day-header {
 .grid-stack-item-content {
   background: #ffffff;
   color: #0e0e23;
-  font-family: "Poppins", sans-serif;
+  font-family: "Plus Jakarta Sans", sans-serif !important;
   text-align: center;
   font-size: 1.429rem;
 }
@@ -43980,7 +43998,7 @@ button.btn.dropdown-toggle:after {
   color: #737373;
 }
 .select2-container--default .select2-results__option[aria-selected="true"] {
-  background-color: #d9d9d9;
+  background-color: #00C3E5;
   color: #0e0e23;
 }
 .select2-container--default
@@ -44437,7 +44455,7 @@ button.btn.dropdown-toggle:after {
 }
 
 .apex-charts text {
-  font-family: "Poppins", sans-serif;
+  font-family: "Plus Jakarta Sans", sans-serif !important;
   fill: #7f839a;
   font-weight: 500;
 }
@@ -44964,7 +44982,7 @@ ul.list-edit li:after {
   padding: 10px 12px;
   background: #ffffff;
   border: none;
-  font-family: "Poppins", sans-serif;
+  font-family: "Plus Jakarta Sans", sans-serif !important;
   box-shadow: 0 5px 25px 5px rgba(14, 14, 35, 0.14);
 }
 .morris-hover.morris-default-style .morris-hover-point {
@@ -44981,7 +44999,7 @@ ul.list-edit li:after {
 .c-progress-steps {
   margin: 0;
   list-style-type: none;
-  font-family: "Poppins", sans-serif;
+  font-family: "Plus Jakarta Sans", sans-serif !important;
 }
 .c-progress-steps li {
   position: relative;

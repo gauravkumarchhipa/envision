@@ -54,7 +54,7 @@ var options = {
       colors: isDarkMode ? ["#fff"] : ["#000"], // White color in dark mode, black in light mode
     },
   },
-  colors: ["#007bff"],
+  colors: ["#00C3E5"],
   tooltip: {
     y: {
       formatter: function (val) {
@@ -85,7 +85,7 @@ function optionFor(width) {
   const small = width < 480;
 
   return {
-    color: ["#34C38F", "#E1E4EC"],
+    color: ["#099250", "#D0D5DD"],
     tooltip: {
       trigger: "item",
       backgroundColor: "#000",

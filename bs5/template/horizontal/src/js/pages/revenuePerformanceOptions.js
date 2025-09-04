@@ -15,7 +15,7 @@ var revenuePerformanceOptions = {
       text: "", // Remove the title from the chart
     },
   },
-  colors: ["#0052cc"],
+  colors: ["#00C3E5"],
   dataLabels: {
     enabled: false, // Disable data labels on the chart by default
   },
@@ -26,7 +26,7 @@ var revenuePerformanceOptions = {
   },
   markers: {
     size: 5,
-    colors: "#0052cc",
+    colors: "#00C3E5",
     strokeColors: "#ffffff",
     strokeWidth: 2,
     fillOpacity: 1,
@@ -94,7 +94,8 @@ function makeOption(width) {
       data: ["Active", "Inactive"],
       textStyle: { color: "#fff", fontSize: small ? 10 : 12 }
     },
-    color: ["#057637", "#ada5a5"],
+    color: ["#3B7C0F", "#44403C"],
+    // color: ["#057637", "#ada5a5"],
     //  color: ["#34C38F", "#E1E4EC"],
     series: [{
       name: "Kiosk Status",

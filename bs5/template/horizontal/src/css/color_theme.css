@@ -633,16 +633,16 @@ Theme Primary Color
     color: #0052cc; } }
 /*---Main Nav---*/
 .theme-primary .sm-blue li.current > a, .theme-primary .sm-blue li.highlighted > a {
-  background: #0052cc;
-  color: #ffffff !important; }
+  background: #00C3E5;
+  color: #101828 !important; }
   .theme-primary .sm-blue li.current > a:hover, .theme-primary .sm-blue li.current > a:active, .theme-primary .sm-blue li.current > a:focus, .theme-primary .sm-blue li.highlighted > a:hover, .theme-primary .sm-blue li.highlighted > a:active, .theme-primary .sm-blue li.highlighted > a:focus {
-    background: #0052cc;
-    color: #ffffff !important; }
+    background: #00C3E5;
+    color: #101828 !important; }
 .theme-primary .sm-blue a.current, .theme-primary .sm-blue a.highlighted {
-  background: #0052cc;
+  background: #00C3E5;
   color: #ffffff !important; }
 .theme-primary .sm-blue a:hover, .theme-primary .sm-blue a:active, .theme-primary .sm-blue a:focus {
-  background: #0052cc;
+  background: #00C3E5;
   color: #ffffff !important; }
 .theme-primary .sm-blue ul a:hover, .theme-primary .sm-blue ul a:active, .theme-primary .sm-blue ul a:focus {
   background: #ebedf3;
@@ -652,16 +652,16 @@ Theme Primary Color
   color: #0052cc !important; }
 
 .dark-skin.theme-primary .sm-blue a.current, .dark-skin.theme-primary .sm-blue a.highlighted {
-  background: #0052cc;
-  color: #ffffff !important; }
+  background: #00C3E5;
+  color: #101828 !important; }
 .dark-skin.theme-primary .sm-blue a:hover, .dark-skin.theme-primary .sm-blue a:active, .dark-skin.theme-primary .sm-blue a:focus {
-  background: #0052cc;
-  color: #ffffff !important; }
+  background: #00C3E5;
+  color: #101828 !important; }
 .dark-skin.theme-primary .sm-blue ul a:hover, .dark-skin.theme-primary .sm-blue ul a:active, .dark-skin.theme-primary .sm-blue ul a:focus {
-  background: #29354b;
-  color: #0052cc !important; }
+  background: #00C3E5;
+  color: #101828 !important; }
 .dark-skin.theme-primary .sm-blue ul a.highlighted {
-  background: #29354b;
+  background: #00C3E5;
   color: #0052cc !important; }
 
 /*---Primary Button---*/

@@ -7,9 +7,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="">
 	<meta name="author" content="">
-	<link rel="icon" href="../../../images/favicon.ico">
+	<link rel="icon" href="../../../images/favicon.jpeg">
 
-	<title>EV Admin - Dashboard</title>
+	<title>EV Charging Admin | Dashboard</title>
 
 	<!-- Vendors Style-->
 	<link rel="stylesheet" href="../src/css/vendors_css.css">
@@ -42,11 +42,6 @@
 		-webkit-line-clamp: 1;
 		-webkit-box-orient: vertical;
 		overflow: hidden;
-	}
-</style>
-<style>
-	.btn-primary-color {
-		background-color: #84ADFF;
 	}
 </style>
 
@@ -85,6 +80,52 @@
 		display: none !important;
 	}
 </style>
+<style>
+	.btn-primary-color {
+		background-color: #00C3E5;
+		color: #fff;
+	}
+
+	.btn-primary-color:hover {
+		background-color: #00A3BF;
+	}
+
+	.btn-secondary-color {
+		background-color: #667085;
+		color: #fff;
+	}
+
+	.btn-secondary-color:hover {
+		background-color: #475467;
+	}
+
+	.btn-success-color {
+		background-color: #16B364;
+		color: #fff;
+	}
+
+	.btn-success-color:hover {
+		background-color: #087443;
+	}
+
+	.btn-warning-color {
+		background-color: #F79009;
+		color: #fff;
+	}
+
+	.btn-warning-color:hover {
+		background-color: #DC6803;
+	}
+
+	.btn-danger-color {
+		background-color: #F04438;
+		color: #fff;
+	}
+
+	.btn-danger-color:hover {
+		background-color: #D92D20;
+	}
+</style>
 
 <script>
 	document.addEventListener('DOMContentLoaded', function () {
@@ -111,6 +152,7 @@
 		height: 100%;
 		border-radius: 8px;
 		background: #0f1123;
+		background: #1D2939;
 		color: #fff;
 		padding: 1rem;
 	}
@@ -237,15 +279,66 @@
 			background-color: #000 !important;
 		}
 	}
+
+	@media (max-width: 767px) {
+		.main-header-zindex {
+			z-index: 99997 !important;
+		}
+	}
 </style>
 
+<style>
+	.main-header .app-menu .search-bx {
+		max-width: 400px !important;
+		width: 100%;
+	}
+
+	/* From 1050px and bigger */
+	@media (min-width: 1050px) {
+		.main-header .app-menu .search-bx {
+			max-width: 500px !important;
+		}
+	}
+
+	.input-grout-width {
+		width: 300px !important;
+	}
+
+	@media (min-width: 1050px) {
+		.input-grout-width {
+			width: 500px !important;
+		}
+	}
+
+	@media (min-width: 767px) {
+		.main-header-search-margin {
+			margin-left: 25px !important;
+		}
+	}
+</style>
+
+<style>
+	.text-color-white {
+		color: white !important
+	}
+</style>
+<style>
+	.theme-primary .btn-primary-light:hover,
+	.theme-primary .btn-primary-light:active,
+	.theme-primary .btn-primary-light:focus,
+	.theme-primary .btn-primary-light.active {
+		background-color: #00C3E5 !important;
+		border-color: #00C3E5 !important;
+		color: #ffffff !important;
+	}
+</style>
 
 <body class="layout-top-nav dark-skin theme-primary fixed">
 
 	<div class="wrapper">
 		<div id="loader"></div>
 
-		<header class="main-header" style="z-index: 99999;">
+		<header class="main-header main-header-zindex" style="z-index: 99999;">
 			<div class="inside-header">
 				<div class="d-flex align-items-center logo-box justify-content-start">
 					<!-- Logo -->
@@ -265,9 +358,10 @@
 						<ul class="header-megamenu nav">
 							<li class="btn-group d-md-inline-flex d-none">
 								<div class="app-menu">
-									<div class="search-bx mx-5">
+									<div class="search-bx mx-5 main-header-search-margin"
+										style="border : 1px solid #2f3545">
 										<form>
-											<div class="input-group">
+											<div class="input-group input-grout-width">
 												<input type="search" class="form-control" placeholder="Search">
 												<div class="input-group-append">
 													<button class="btn" type="submit" id="button-addon3"><i
@@ -284,7 +378,7 @@
 
 					<div class="navbar-custom-menu r-side">
 						<ul class="nav navbar-nav">
-							<li class="dropdown notifications-menu btn-group">
+							<!-- <li class="dropdown notifications-menu btn-group">
 								<label class="switch">
 									<a class="waves-effect waves-light btn-primary-light svg-bt-icon">
 										<input type="checkbox" data-mainsidebarskin="toggle"
@@ -293,8 +387,8 @@
 										<span class="switch-off"><i data-feather="sun"></i></span>
 									</a>
 								</label>
-							</li>
-							<li class="dropdown notifications-menu btn-group" style="z-index: 999999;">
+							</li> -->
+							<li class="dropdown notifications-menu btn-group" style="z-index: 999997;">
 								<a href="#" class="waves-effect waves-light btn-primary-light svg-bt-icon"
 									data-bs-toggle="dropdown" title="Notifications">
 									<i data-feather="bell"></i>
@@ -398,7 +492,7 @@
 			</div>
 		</header>
 
-		<nav class="main-nav" style="z-index: 99998;" role="navigation">
+		<nav class="main-nav" style="z-index: 99997;" role="navigation">
 
 			<!-- Mobile menu toggle button (hamburger/x icon) -->
 			<input id="main-menu-state" type="checkbox" />
@@ -407,7 +501,7 @@
 			</label>
 
 			<!-- Sample menu definition -->
-			<ul id="main-menu" class="sm sm-blue" style="background-color: #24243e;">
+			<ul id="main-menu" class="sm sm-blue" style="background-color: #101828;">
 				<li><a href="index.html"><i data-feather="home"><span class="path1"></span><span
 								class="path2"></span></i>Dashboard</a></li>
 				<li><a href="information.html"><i class="fa-solid fa-chart-line"></i>Performance Analytics</a></li>
@@ -425,10 +519,10 @@
 				<li><a href="#"><i class="fa-solid fa-user"></i>User
 						Management</a>
 					<ul>
-						<li><a href="createuser.html"><i class="icon-Commit"><span class="path1"></span><span
+						<!-- <li><a href="createuser.html"><i class="icon-Commit"><span class="path1"></span><span
 										class="path2"></span></i>Overview</a></li>
 						<li><a href="contact_app_chat.html"><i class="icon-Commit"><span class="path1"></span><span
-										class="path2"></span></i>Customers</a></li>
+										class="path2"></span></i>Customers</a></li> -->
 						<li><a href="enterpricepartner.html"><i class="fa-solid fa-handshake"></i>Enterprise
 								partners</a></li>
 						<li><a href="Technician.html"><i class="fa-solid fa-toolbox"></i>Technicians</a></li>
@@ -894,16 +988,16 @@
 										<div class="box body p-10 pull-up">
 											<div class="d-flex justify-content-between">
 												<div class="d-flex flex-column">
-													<p class="text-fade mb-0">Total</p>
-													<h1 class="text-fade mt-0">225</h1>
+													<p class="mb-0 text-color-white">Total</p>
+													<h1 class="mt-0 text-color-white">225</h1>
 												</div>
 												<div class="d-flex flex-column">
-													<p class="text-fade mb-0">Online</p>
-													<h1 class="text-fade mt-0">90%</h1>
+													<p class=" mb-0 text-color-white">Online</p>
+													<h1 class=" mt-0 text-color-white">90%</h1>
 												</div>
 												<div class="d-flex flex-column">
-													<p class="text-fade mb-0">Offline</p>
-													<h1 class="text-fade mt-0">10%</h1>
+													<p class=" mb-0 text-color-white">Offline</p>
+													<h1 class=" mt-0 text-color-white">10%</h1>
 												</div>
 											</div>
 										</div>
@@ -943,7 +1037,7 @@
 				<!-- Table -->
 				<div class="row">
 					<div class="col-12">
-						<div class="card">
+						<div class="card" style="box-shadow: none;">
 							<div class="card-header">
 								<h4 class="card-title">Advertisement Performance</h4>
 								<h6 class="mb-0 card-subtitle text-muted" style="color : white !important">Real-time
@@ -973,7 +1067,7 @@
 												</td>
 												<!-- <td class="text-fade">2.66%</td> -->
 												<td class="text-fade"><button type="button" style="color:white"
-														class="btn bg-primary rounded-5 text-white px-20 button1 btn-sm ">Active</button>
+														class="btn rounded-5 text-white px-20 button1 btn-sm btn-primary-color">Active</button>
 												</td>
 												<!-- <td class="text-fade">Progressbar</td> -->
 												<td class="text-fade">
@@ -995,7 +1089,7 @@
 												</td>
 												<!-- <td class="text-fade">2.77%</td> -->
 												<td class="text-fade"><button type="button" style="color:white"
-														class="btn bg-primary rounded-5 text-white px-20 button1 btn-sm">Active</button>
+														class="btn btn-primary-color rounded-5 text-white px-20 button1 btn-sm">Active</button>
 												</td>
 												<td class="text-fade">
 													<div class="progress mt-5" style="height:10px" ;>
@@ -1013,7 +1107,7 @@
 												</td>
 												<!-- <td class="text-fade">2.24% </td> -->
 												<td class="text-fade"><button type="button" style="color:white"
-														class="btn bg-info rounded-5 text-white px-20 button1 btn-sm">Paused</button>
+														class="btn btn-warning-color rounded-5 text-white px-20 button1 btn-sm">Paused</button>
 												</td>
 												<td class="text-fade">
 													<div class="progress mt-5" style="height:10px" ;>
@@ -1031,7 +1125,7 @@
 												</td>
 												<!-- <td class="text-fade">2.12% </td> -->
 												<td class="text-fade"><button type="button" style="color:white"
-														class="btn bg-primary rounded-5 text-white px-20 button1 btn-sm">Active</button>
+														class="btn btn-primary-color rounded-5 text-white px-20 button1 btn-sm">Active</button>
 												</td>
 												<td class="text-fade">
 													<div class="progress mt-5" style="height:10px" ;>
@@ -1049,7 +1143,7 @@
 												</td>
 												<!-- <td class="text-fade">2.44%</td> -->
 												<td class="text-fade"><button type="button"
-														class="btn rounded-5 bg-secondary px-20 button1 btn-sm"
+														class="btn rounded-5 btn-secondary-color px-20 button1 btn-sm"
 														style="color:white">Pending</button>
 												</td>
 												<td class="text-fade">
@@ -1126,14 +1220,20 @@
 							</div>
 							<div class="box-body">
 								<div class="col-12">
+
+
+									<iframe
+										src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d35187538.18644473!2d-93.53915974646645!3d31.139190620793354!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1susa%20in%2050%20all%20states%20in%20ev%20station%20location%20!5e1!3m2!1sen!2sin!4v1756788565966!5m2!1sen!2sin"
+										class="map" style="border:0; height:500px; width:100%;"
+										allowfullscreen></iframe>
 									<!-- <iframe
 									src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d27922998.171458017!2d-110.74713806890304!3d38.185886021067546!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sall%20word%20in%20ev%20station%20show%20and%20usa%20country%20by%20default%20located!5e1!3m2!1sen!2sin!4v1755523543862!5m2!1sen!2sin"
 										class="map" style="border:0; height:364px; width:100%;"
 										allowfullscreen></iframe> -->
-									<iframe
+									<!-- <iframe
 										src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d12123892.769586628!2d-105.07468248852173!3d37.82551374301417!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sall%20word%20in%20ev%20station%20show%20and%20usa%20country%20by%20default%20located!5e1!3m2!1sen!2sin!4v1755523656590!5m2!1sen!2sin"
 										class="map" style="border:0; height:500px; width:100%;"
-										allowfullscreen></iframe>
+										allowfullscreen></iframe> -->
 
 									<!-- <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d12123892.769586628!2d-105.07468248852173!3d37.82551374301417!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sall%20word%20in%20ev%20station%20show%20and%20usa%20country%20by%20default%20located!5e1!3m2!1sen!2sin!4v1755523656590!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
 
