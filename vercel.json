@@ -1,15 +1,6 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "bs5/template/horizontal/main-dark/index.html",
-      "use": "@vercel/static"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "bs5/template/horizontal/main-dark/index.html"
-    }
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/bs5/template/horizontal/main-dark/index.html" }
   ]
 }
