@@ -20,7 +20,26 @@
     <link rel="stylesheet" href="../src/css/skin_color.css">
 
 </head>
+<style>
+    @media (max-width: 950px) {
+        .table-custom-header {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            gap: 10px;
+        }
 
+        .card-header>* {
+            margin-left: 0px;
+        }
+    }
+
+    @media (max-width: 767px) {
+        .main-header-zindex {
+            z-index: 99997 !important;
+        }
+    }
+</style>
 <style>
     .btn-primary-color {
         background-color: #00C3E5;
@@ -236,7 +255,7 @@
     <div class="wrapper">
         <div id="loader"></div>
 
-         <header class="main-header main-header-zindex" style="z-index: 99999;">
+        <header class="main-header main-header-zindex" style="z-index: 99999;">
             <div class="inside-header">
                 <div class="d-flex align-items-center logo-box justify-content-start">
                     <!-- Logo -->

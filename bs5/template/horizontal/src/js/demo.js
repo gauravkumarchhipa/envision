@@ -187,21 +187,21 @@ $(function () {
   var $demoSettings = $("<div />");
 
   // Layout options
-  $demoSettings.append(
-    '<h4 class="control-sidebar-heading p-0">' +
-      "</h4>" +
-      // Theme Skin Toggle
-      '<div class="flexbox mb-10 pb-10 bb-1 light-on-off">' +
-      '<label for="toggle_left_sidebar_skin" class="control-sidebar-subheading">' +
-      "Dark or Light Skin" +
-      "</label>" +
-      '<label class="switch">' +
-      '<input type="checkbox" data-mainsidebarskin="toggle" id="toggle_left_sidebar_skin">' +
-      '<span class="switch-on fs-30"><i data-feather="moon"></i></span>' +
-      '<span class="switch-off fs-30"><i data-feather="sun"></i></span>' +
-      "</label>" +
-      "</div>"
-  );
+  // $demoSettings.append(
+  //   '<h4 class="control-sidebar-heading p-0">' +
+  //     "</h4>" +
+  //     // Theme Skin Toggle
+  //     '<div class="flexbox mb-10 pb-10 bb-1 light-on-off">' +
+  //     '<label for="toggle_left_sidebar_skin" class="control-sidebar-subheading">' +
+  //     "Dark or Light Skinnn" +
+  //     "</label>" +
+  //     '<label class="switch">' +
+  //     '<input type="checkbox" data-mainsidebarskin="toggle" id="toggle_left_sidebar_skin">' +
+  //     '<span class="switch-on fs-30"><i data-feather="moon"></i></span>' +
+  //     '<span class="switch-off fs-30"><i data-feather="sun"></i></span>' +
+  //     "</label>" +
+  //     "</div>"
+  // );
 
   // Layout options
   $demoSettings.append(

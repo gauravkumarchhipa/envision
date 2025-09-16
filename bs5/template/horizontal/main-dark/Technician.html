@@ -21,6 +21,26 @@
 
 </head>
 <style>
+    @media (max-width: 950px) {
+        .table-custom-header {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            gap: 10px;
+        }
+
+        .card-header>* {
+            margin-left: 0px;
+        }
+    }
+
+    @media (max-width: 767px) {
+        .main-header-zindex {
+            z-index: 99997 !important;
+        }
+    }
+</style>
+<style>
     .dark-skin .select2-container--default .select2-selection--single {
         border: 1px solid #ffffff2b !important;
     }
